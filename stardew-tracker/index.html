@@ -1,0 +1,2500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-family: Roboto, Helvetica, sans-serif;
+            color: #525252;
+            background: url('./stardewbackground.png');
+            background-attachment: fixed;
+        }
+
+        .card {
+            background: linear-gradient(#aabbdd99, #ffffff87);
+            backdrop-filter: blur(16px);
+            margin: 8px;
+            width: 320px;
+            height: 250px;
+            padding: 1em;
+            border-bottom: 12px solid transparent;
+            border-radius: 3px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 3px #0000002b;
+        }
+
+        .profile {
+            background: #ffffff61;
+            border-radius: 3px;
+            width: 128px;
+            outline: 1px solid #dddddd;
+        }
+
+        .wrapper {
+            padding-left: 8px;
+            margin-left: 12px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        a {
+            text-align: left;
+            text-decoration: dotted;
+            color: #0645ad;
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            margin-right: 8px;
+        }
+
+        .item {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script>
+    function stringToDomElement(string) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(string, "text/html");
+        return doc.body.firstChild;
+    }
+    const villagers = [
+        {
+            "villager": {
+                "name": "Alex",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/0/04/Alex.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Complete Breakfast",
+                    "Description\n": "You'll feel ready to take on the world!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Fried Egg (1) Milk (1) Hashbrowns (1) Pancakes (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Complete_Breakfast.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Salmon Dinner",
+                    "Description\n": "The lemon spritz makes it special.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Salmon (1) Amaranth (1) Kale (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Salmon_Dinner.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Haley",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1b/Haley.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Coconut",
+                    "Description\n": "A seed of the coconut palm. It has many culinary uses.",
+                    "Source\n": "Foraging - Desert",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Coconut.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Fruit Salad",
+                    "Description\n": "A delicious combination of summer fruits.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Blueberry (1) Melon (1) Apricot (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fruit_Salad.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pink Cake",
+                    "Description\n": "There's little heart candies on top.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pink_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Sunflower",
+                    "Description\n": "A common misconception is that the flower turns so it's always facing the sun.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Sunflower.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Abigail",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/8/88/Abigail.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Amethyst",
+                    "Description\n": "A purple variant of quartz.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Amethyst.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Banana Pudding",
+                    "Description\n": "A creamy dessert with a wonderful tropical flavor.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Banana (1) Milk (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Banana_Pudding.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Blackberry Cobbler",
+                    "Description\n": "There's nothing quite like it.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Blackberry (2) Sugar (1) Wheat Flour (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Blackberry_Cobbler.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Chocolate Cake",
+                    "Description\n": "Rich and moist with a thick fudge icing.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Chocolate_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pufferfish",
+                    "Description\n": "Inflates when threatened.",
+                    "Source\n": "Fishing",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Pufferfish.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pumpkin",
+                    "Description\n": "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Pumpkin.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Spicy Eel",
+                    "Description\n": "It's really spicy! Be careful.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Eel (1) Hot Pepper (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Spicy_Eel.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Sebastian",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a8/Sebastian.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Frozen Tear",
+                    "Description\n": "A crystal fabled to be the frozen tears of a yeti.",
+                    "Source\n": "Minerals - The Mines",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Frozen_Tear.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Obsidian",
+                    "Description\n": "A volcanic glass that forms when lava cools rapidly.",
+                    "Source\n": " Magma Geode Omni Geode",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Obsidian.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pumpkin Soup",
+                    "Description\n": "A seasonal favorite.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Pumpkin (1) Milk (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pumpkin_Soup.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Sashimi",
+                    "Description\n": "Raw fish sliced into thin pieces.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Fish (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Sashimi.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Void Egg",
+                    "Description\n": "A jet-black egg with red flecks. It's warm to the touch.",
+                    "Source\n": "Void Chicken",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Void_Egg.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Gus",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/5/52/Gus.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Escargot",
+                    "Description\n": "Butter-soaked snails cooked to perfection.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Snail (1) Garlic (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Escargot.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Fish Taco",
+                    "Description\n": "It smells delicious.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fish_Taco.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Orange",
+                    "Description\n": "Juicy, tangy, and bursting with sweet summer aroma.",
+                    "Source\n": "Fruit Trees",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Orange.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tropical Curry",
+                    "Description\n": "An exotic, fragrant curry served in a pineapple bowl.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Coconut (1) Pineapple (1) Hot Pepper (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Tropical_Curry.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Vincent",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f1/Vincent.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Cranberry Candy",
+                    "Description\n": "It's sweet enough to mask the bitter fruit.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Cranberries (1) Apple (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Cranberry_Candy.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Ginger Ale",
+                    "Description\n": "A zesty soda known for its soothing effect on the stomach.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Ginger (3) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Ginger_Ale.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Grape",
+                    "Description\n": "A sweet cluster of fruit.",
+                    "Source\n": "Farming - Fall",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Grape.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pink Cake",
+                    "Description\n": "There's little heart candies on top.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pink_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Snail",
+                    "Description\n": "A wide-ranging mollusc that lives in a spiral shell.",
+                    "Source\n": "Crab Pot",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Snail.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "George",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/7/78/George.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Fried Mushroom",
+                    "Description\n": "Earthy and aromatic.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Common Mushroom (1) Morel (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fried_Mushroom.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Leek",
+                    "Description\n": "A tasty relative of the onion.",
+                    "Source\n": "Foraging - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Leek.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Sam",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/9/94/Sam.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Cactus Fruit",
+                    "Description\n": "The sweet fruit of the prickly pear cactus.",
+                    "Source\n": "Foraging - The Desert",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Cactus_Fruit.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Maple Bar",
+                    "Description\n": "It's a sweet doughnut topped with a rich maple glaze.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Maple Syrup (1) Sugar (1) Wheat Flour (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Maple_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pizza",
+                    "Description\n": "It's popular for all the right reasons.",
+                    "Source\n": "Cooking, The Stardrop Saloon",
+                    "Ingredients\n": " Wheat Flour (1) Tomato (1) Cheese (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pizza.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tigerseye",
+                    "Description\n": "A stripe of shimmering gold gives this gem a warm luster.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Tigerseye.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Leo",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1d/Leo.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Duck Feather",
+                    "Description\n": "It's so colorful.",
+                    "Source\n": "Ducks",
+                    "Image": "https://stardewcommunitywiki.com/File:Duck_Feather.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Mango",
+                    "Description\n": "A big, sweet tropical fruit with a unique flavor.",
+                    "Source\n": "Mango Tree",
+                    "Image": "https://stardewcommunitywiki.com/File:Mango.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Ostrich Egg",
+                    "Description\n": "It may be the world's largest egg.",
+                    "Source\n": "Ostrich",
+                    "Image": "https://stardewcommunitywiki.com/File:Ostrich_Egg.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Poi",
+                    "Description\n": "A traditional food with a delicate, sweet flavor when eaten fresh.",
+                    "Source\n": "Cooking",
+                    "Image": "https://stardewcommunitywiki.com/File:Poi.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Lewis",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2b/Lewis.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Autumn's Bounty",
+                    "Description\n": "A taste of the season.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Yam (1) Pumpkin (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Autumn's_Bounty.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Glazed Yams",
+                    "Description\n": "Sweet and satisfying... The sugar gives it a hint of caramel.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Yam (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Glazed_Yams.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Green Tea",
+                    "Description\n": "A pleasant, energizing beverage made from lightly processed tea leaves.",
+                    "Source\n": "Keg",
+                    "Ingredients\n": " Tea Leaves (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Green_Tea.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Hot Pepper",
+                    "Description\n": "Fiery hot with a hint of sweetness.",
+                    "Source\n": "Farming - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Hot_Pepper.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Vegetable Medley",
+                    "Description\n": "This is very nutritious.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Tomato (1) Beet (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Vegetable_Medley.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Marnie",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/5/52/Marnie.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Farmer's Lunch",
+                    "Description\n": "This'll keep you going.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Omelet (1) Parsnip (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Farmer's_Lunch.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pink Cake",
+                    "Description\n": "There's little heart candies on top.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pink_Cake.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pumpkin Pie",
+                    "Description\n": "Silky pumpkin cream in a flakey crust.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Pumpkin (1) Wheat Flour (1) Milk (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pumpkin_Pie.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Shane",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8b/Shane.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Beer",
+                    "Description\n": "Drink in moderation.",
+                    "Source\n": "Keg, The Stardrop Saloon",
+                    "Ingredients\n": " Wheat (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Beer.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Hot Pepper",
+                    "Description\n": "Fiery hot with a hint of sweetness.",
+                    "Source\n": "Farming - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Hot_Pepper.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pepper Poppers",
+                    "Description\n": "Spicy breaded peppers filled with cheese.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Hot Pepper (1) Cheese (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pepper_Poppers.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pizza",
+                    "Description\n": "It's popular for all the right reasons.",
+                    "Source\n": "Cooking, The Stardrop Saloon",
+                    "Ingredients\n": " Wheat Flour (1) Tomato (1) Cheese (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pizza.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Krobus",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/7/71/Krobus.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Iridium Bar",
+                    "Description\n": "A bar of pure iridium.",
+                    "Source\n": "Furnace",
+                    "Image": "https://stardewcommunitywiki.com/File:Iridium_Bar.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pumpkin",
+                    "Description\n": "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+                    "Source\n": "Farming - Fall",
+                    "Image": "https://stardewcommunitywiki.com/File:Pumpkin.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Void Egg",
+                    "Description\n": "A jet-black egg with red flecks. It's warm to the touch.",
+                    "Source\n": "Void ChickenKrobus' shop",
+                    "Image": "https://stardewcommunitywiki.com/File:Void_Egg.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Void Mayonnaise",
+                    "Description\n": "A thick, black paste that smells like burnt hair.",
+                    "Source\n": "Mayonnaise Machine",
+                    "Image": "https://stardewcommunitywiki.com/File:Void_Mayonnaise.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Wild Horseradish",
+                    "Description\n": "A spicy root found in the spring.",
+                    "Source\n": "Foraging - Spring",
+                    "Image": "https://stardewcommunitywiki.com/File:Wild_Horseradish.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Elliot",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/b/bd/Elliott.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Crab Cakes",
+                    "Description\n": "Crab, bread crumbs, and egg formed into patties then fried to a golden brown.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Crab (1) Wheat Flour (1) Egg (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Crab_Cakes.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Duck Feather",
+                    "Description\n": "It's so colorful.",
+                    "Source\n": "Ducks",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Duck_Feather.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Lobster",
+                    "Description\n": "A large ocean-dwelling crustacean with a strong tail.",
+                    "Source\n": "Crab Pot",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Lobster.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pomegranate",
+                    "Description\n": "Within the fruit are clusters of juicy seeds.",
+                    "Source\n": "Pomegranate Tree",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Pomegranate.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Squid Ink",
+                    "Description\n": "Squid use this ink to confuse would-be predators.",
+                    "Source\n": "Squid Kid, Fish Pond",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Squid_Ink.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tom Kha Soup",
+                    "Description\n": "These flavors are incredible!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Coconut (1) Shrimp (1) Common Mushroom (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Tom_Kha Soup.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Caroline",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/8/87/Caroline.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Fish Taco",
+                    "Description\n": "It smells delicious.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Tuna (1) Tortilla (1) Red Cabbage (1) Mayonnaise (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fish_Taco.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Green Tea",
+                    "Description\n": "A pleasant, energizing beverage made from lightly processed tea leaves.",
+                    "Source\n": "Keg",
+                    "Ingredients\n": " Tea Leaves (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Green_Tea.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Summer Spangle",
+                    "Description\n": "A tropical bloom that thrives in the humid summer air. Has a sweet, tangy aroma.",
+                    "Source\n": "Farming - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Summer_Spangle.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tropical Curry",
+                    "Description\n": "An exotic, fragrant curry served in a pineapple bowl.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Coconut (1) Pineapple (1) Hot Pepper (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Tropical_Curry.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Kent",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/9/99/Kent.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Fiddlehead Risotto",
+                    "Description\n": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Oil (1) Fiddlehead Fern (1) Garlic (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fiddlehead_Risotto.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Roasted Hazelnuts",
+                    "Description\n": "The roasting process creates a rich forest flavor.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Hazelnut (3)",
+                    "Image": "https://stardewcommunitywiki.com/File:Roasted_Hazelnuts.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Clint",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/3/31/Clint.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Amethyst",
+                    "Description\n": "A purple variant of quartz.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Amethyst.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Aquamarine",
+                    "Description\n": "A shimmery blue-green gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Aquamarine.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Artichoke Dip",
+                    "Description\n": "It's cool and refreshing.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Artichoke (1) Milk (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Artichoke_Dip.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Emerald",
+                    "Description\n": "A precious stone with a brilliant green color.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Emerald.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Fiddlehead Risotto",
+                    "Description\n": "A creamy rice dish served with sauteed fern heads. It's a little bland.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Oil (1) Fiddlehead Fern (1) Garlic (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fiddlehead_Risotto.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Gold Bar",
+                    "Description\n": "A bar of pure gold.",
+                    "Source\n": "Furnace",
+                    "Ingredients\n": " Gold Ore (5) Coal (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Gold_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Iridium Bar",
+                    "Description\n": "A bar of pure iridium.",
+                    "Source\n": "Furnace",
+                    "Ingredients\n": " Iridium Ore (5) Coal (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Iridium_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Jade",
+                    "Description\n": "A pale green ornamental stone.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Jade.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Omni Geode",
+                    "Description\n": "A blacksmith can break this open for you. These geodes contain a wide variety of Minerals.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Omni_Geode.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Ruby",
+                    "Description\n": "A precious stone that is sought after for its rich color and beautiful luster.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Ruby.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Topaz",
+                    "Description\n": "Fairly common but still prized for its beauty.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Topaz.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Harvey",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/9/95/Harvey.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Coffee",
+                    "Description\n": "It smells delicious. This is sure to give you a boost.",
+                    "Source\n": "Keg, The Stardrop Saloon",
+                    "Ingredients\n": " Coffee Bean (5)",
+                    "Image": "https://stardewcommunitywiki.com/File:Coffee.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pickles",
+                    "Description\n": "A jar of your home-made pickles.",
+                    "Source\n": "Preserves Jar",
+                    "Ingredients\n": "Any vegetable (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pickles.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Super Meal",
+                    "Description\n": "It's a really energizing meal.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Bok Choy (1) Cranberries (1) Artichoke (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Super_Meal.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Truffle Oil",
+                    "Description\n": "A gourmet cooking ingredient.",
+                    "Source\n": "Oil Maker",
+                    "Ingredients\n": " Truffle (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Truffle_Oil.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Wine",
+                    "Description\n": "Drink in moderation.",
+                    "Source\n": "Keg",
+                    "Ingredients\n": "Any fruit (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Wine.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Emily",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/2/28/Emily.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Amethyst",
+                    "Description\n": "A purple variant of quartz.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Amethyst.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Aquamarine",
+                    "Description\n": "A shimmery blue-green gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Aquamarine.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Cloth",
+                    "Description\n": "A bolt of fine wool cloth.",
+                    "Source\n": "Loom",
+                    "Ingredients\n": " Wool",
+                    "Image": "https://stardewcommunitywiki.com/File:Cloth.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Emerald",
+                    "Description\n": "A precious stone with a brilliant green color.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Emerald.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Jade",
+                    "Description\n": "A pale green ornamental stone.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Jade.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Ruby",
+                    "Description\n": "A precious stone that is sought after for its rich color and beautiful luster.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Ruby.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Survival Burger",
+                    "Description\n": "A convenient snack for the explorer.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Bread (1) Cave Carrot (1) Eggplant (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Survival_Burger.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Topaz",
+                    "Description\n": "Fairly common but still prized for its beauty.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Topaz.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Wool",
+                    "Description\n": "Soft, fluffy wool.",
+                    "Source\n": "Sheep, Rabbit",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Wool.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Penny",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/a/ab/Penny.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Emerald",
+                    "Description\n": "A precious stone with a brilliant green color.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Emerald.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Melon",
+                    "Description\n": "A cool, sweet summer treat.",
+                    "Source\n": "Farming - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Melon.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Poppy",
+                    "Description\n": "In addition to its colorful flower, the Poppy has culinary and medicinal uses.",
+                    "Source\n": "Farming - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Poppy.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Poppyseed Muffin",
+                    "Description\n": "It has a soothing effect.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Poppy (1) Wheat Flour (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Poppyseed_Muffin.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Red Plate",
+                    "Description\n": "Full of antioxidants.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Red Cabbage (1) Radish (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Red_Plate.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Roots Platter",
+                    "Description\n": "This'll get you digging for more.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Cave Carrot (1) Winter Root (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Roots_Platter.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Sandfish",
+                    "Description\n": "It tries to hide using camouflage.",
+                    "Source\n": "Fishing",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Sandfish.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tom Kha Soup",
+                    "Description\n": "These flavors are incredible!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Coconut (1) Shrimp (1) Common Mushroom (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Tom_Kha Soup.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Dwarf",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ed/Dwarf.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Amethyst",
+                    "Description\n": "A purple variant of quartz.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Amethyst.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Aquamarine",
+                    "Description\n": "A shimmery blue-green gem.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Aquamarine.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Emerald",
+                    "Description\n": "A precious stone with a brilliant green color.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Emerald.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Jade",
+                    "Description\n": "A pale green ornamental stone.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Jade.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Lemon Stone",
+                    "Description\n": "Some claim the powdered crystal is a dwarvish delicacy.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Lemon_Stone.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Omni Geode",
+                    "Description\n": "A blacksmith can break this open for you. These geodes contain a wide variety of Minerals.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Omni_Geode.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Ruby",
+                    "Description\n": "A precious stone that is sought after for its rich color and beautiful luster.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Ruby.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Topaz",
+                    "Description\n": "Fairly common but still prized for its beauty.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Topaz.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Maru",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f8/Maru.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Battery Pack",
+                    "Description\n": "It's fully charged with precious energy.",
+                    "Source\n": "Lightning Rod",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Battery_Pack.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Cauliflower",
+                    "Description\n": "Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",
+                    "Source\n": "Farming - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Cauliflower.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Cheese Cauliflower",
+                    "Description\n": "It smells great!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Cauliflower (1) Cheese (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Cheese_Cauliflower.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Gold Bar",
+                    "Description\n": "A bar of pure gold.",
+                    "Source\n": "Furnace",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Gold_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Iridium Bar",
+                    "Description\n": "A bar of pure iridium.",
+                    "Source\n": "Furnace",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Iridium_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Miner's Treat",
+                    "Description\n": "This should keep your energy up.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Cave Carrot (2) Sugar (1) Milk (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Miner's_Treat.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pepper Poppers",
+                    "Description\n": "Spicy breaded peppers filled with cheese.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Hot Pepper (1) Cheese (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pepper_Poppers.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Radioactive Bar",
+                    "Description\n": "Known by the Zuzu City Safety Commission to cause irreversible bodily harm.",
+                    "Source\n": "Furnace",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Radioactive_Bar.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Rhubarb Pie",
+                    "Description\n": "Mmm, tangy and sweet!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Rhubarb (1) Wheat Flour (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Rhubarb_Pie.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Strawberry",
+                    "Description\n": "A sweet, juicy favorite with an appealing red color.",
+                    "Source\n": "Farming - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Strawberry.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Sandy",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4e/Sandy.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Crocus",
+                    "Description\n": "A flower that can bloom in the winter.",
+                    "Source\n": "Foraging - Winter",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Crocus.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Daffodil",
+                    "Description\n": "A traditional spring flower that makes a nice gift.",
+                    "Source\n": "Foraging - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Daffodil.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Mango Sticky Rice",
+                    "Description\n": "Sweet mango and coconut transforms this rice into something very special.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Mango (1) Coconut (1) Rice (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Mango_Sticky Rice.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Sweet Pea",
+                    "Description\n": "A fragrant summer flower.",
+                    "Source\n": "Foraging - Summer",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Sweet_Pea.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Pam",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/d/da/Pam.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Beer",
+                    "Description\n": "Drink in moderation.",
+                    "Source\n": "The Stardrop SaloonKeg",
+                    "Ingredients\n": " Wheat (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Beer.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Cactus Fruit",
+                    "Description\n": "The sweet fruit of the prickly pear cactus.",
+                    "Source\n": "Foraging - The Desert",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Cactus_Fruit.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Glazed Yams",
+                    "Description\n": "Sweet and satisfying... The sugar gives it a hint of caramel.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Yam (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Glazed_Yams.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Mead",
+                    "Description\n": "A fermented beverage made from honey. Drink in moderation.",
+                    "Source\n": "Keg",
+                    "Ingredients\n": " Honey (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Mead.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pale Ale",
+                    "Description\n": "Drink in moderation.",
+                    "Source\n": "Keg",
+                    "Ingredients\n": " Hops (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pale_Ale.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Parsnip",
+                    "Description\n": "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",
+                    "Source\n": "Farming - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Parsnip.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Parsnip Soup",
+                    "Description\n": "It's fresh and hearty.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Parsnip (1) Milk (1) Vinegar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Parsnip_Soup.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Piña Colada",
+                    "Description\n": "Drink in moderation.",
+                    "Source\n": "Beach Resort on Sundays",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Piña_Colada.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Pierre",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7e/Pierre.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Fried Calamari",
+                    "Description\n": "It's so chewy.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Squid (1) Wheat Flour (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fried_Calamari.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Wizard",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c7/Wizard.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Purple Mushroom",
+                    "Description\n": "A rare mushroom found deep in caves.",
+                    "Source\n": "Foraging - The Mines",
+                    "Image": "https://stardewcommunitywiki.com/File:Purple_Mushroom.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Solar Essence",
+                    "Description\n": "The glowing face is warm to the touch.",
+                    "Source\n": "Monster Loot",
+                    "Image": "https://stardewcommunitywiki.com/File:Solar_Essence.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Super Cucumber",
+                    "Description\n": "A rare, purple variety of sea cucumber.",
+                    "Source\n": "Fishing",
+                    "Image": "https://stardewcommunitywiki.com/File:Super_Cucumber.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Void Essence",
+                    "Description\n": "It's quivering with dark energy.",
+                    "Source\n": "Monster Loot",
+                    "Image": "https://stardewcommunitywiki.com/File:Void_Essence.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Robin",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1b/Robin.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Goat Cheese",
+                    "Description\n": "Soft cheese made from goat's milk.",
+                    "Source\n": "Cheese Press",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Goat_Cheese.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Peach",
+                    "Description\n": "It's almost fuzzy to the touch.",
+                    "Source\n": "Peach Tree",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Peach.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Spaghetti",
+                    "Description\n": "An old favorite.",
+                    "Source\n": "Cooking, The Stardrop Saloon",
+                    "Ingredients\n": " Wheat Flour (1) Tomato (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Spaghetti.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Willy",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/8/82/Willy.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Catfish",
+                    "Description\n": "An uncommon fish found in streams.",
+                    "Source\n": "Fishing",
+                    "Image": "https://stardewcommunitywiki.com/File:Catfish.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Iridium Bar",
+                    "Description\n": "A bar of pure iridium.",
+                    "Source\n": "Furnace",
+                    "Image": "https://stardewcommunitywiki.com/File:Iridium_Bar.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Mead",
+                    "Description\n": "A fermented beverage made from honey. Drink in moderation.",
+                    "Source\n": "Artisan Goods",
+                    "Image": "https://stardewcommunitywiki.com/File:Mead.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Octopus",
+                    "Description\n": "A mysterious and intelligent creature.",
+                    "Source\n": "Fishing",
+                    "Image": "https://stardewcommunitywiki.com/File:Octopus.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Pumpkin",
+                    "Description\n": "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+                    "Source\n": "Farming",
+                    "Image": "https://stardewcommunitywiki.com/File:Pumpkin.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Sea Cucumber",
+                    "Description\n": "A slippery, slimy creature found on the ocean floor.",
+                    "Source\n": "Fishing",
+                    "Image": "https://stardewcommunitywiki.com/File:Sea_Cucumber.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Sturgeon",
+                    "Description\n": "An ancient bottom-feeder with a dwindling population. Females can live up to 150 years.",
+                    "Source\n": "Fishing",
+                    "Image": "https://stardewcommunitywiki.com/File:Sturgeon.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Demetrius",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f9/Demetrius.png"
+            },
+            "loved": [
+                {
+                    " Image\n": "",
+                    "Name\n": "Bean Hotpot",
+                    "Description\n": "It sure is healthy.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Green Bean (2)",
+                    "Image": "https://stardewcommunitywiki.com/File:Bean_Hotpot.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Ice Cream",
+                    "Description\n": "It's hard to find someone who doesn't like this.",
+                    "Source\n": "Cooking or Ice Cream Stand",
+                    "Ingredients\n": " Milk (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Ice_Cream.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Rice Pudding",
+                    "Description\n": "It's creamy, sweet, and fun to eat.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Milk (1) Sugar (1) Rice (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Rice_Pudding.png"
+                },
+                {
+                    " Image\n": "",
+                    "Name\n": "Strawberry",
+                    "Description\n": "A sweet, juicy favorite with an appealing red color.",
+                    "Source\n": "Farming - Spring",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Strawberry.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Jodi",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/4/41/Jodi.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Chocolate Cake",
+                    "Description\n": "Rich and moist with a thick fudge icing.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Chocolate_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Crispy Bass",
+                    "Description\n": "Wow, the breading is perfect.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Largemouth Bass (1) Wheat Flour (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Crispy_Bass.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Eggplant Parmesan",
+                    "Description\n": "Tangy, cheesy, and wonderful.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Eggplant (1) Tomato (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Eggplant_Parmesan.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Fried Eel",
+                    "Description\n": "Greasy but flavorful.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Eel (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Fried_Eel.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pancakes",
+                    "Description\n": "A double stack of fluffy, soft pancakes.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Wheat Flour (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pancakes.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Rhubarb Pie",
+                    "Description\n": "Mmm, tangy and sweet!",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Rhubarb (1) Wheat Flour (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Rhubarb_Pie.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Vegetable Medley",
+                    "Description\n": "This is very nutritious.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Tomato (1) Beet (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Vegetable_Medley.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Linus",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/3/31/Linus.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Blueberry Tart",
+                    "Description\n": "It's subtle and refreshing.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Blueberry (1) Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Blueberry_Tart.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Cactus Fruit",
+                    "Description\n": "The sweet fruit of the prickly pear cactus.",
+                    "Source\n": "Foraging - The Desert",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Cactus_Fruit.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Coconut",
+                    "Description\n": "A seed of the coconut palm. It has many culinary uses.",
+                    "Source\n": "Foraging - The Desert",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Coconut.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Dish o' The Sea",
+                    "Description\n": "This'll keep you warm in the cold sea air.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Sardine (2) Hashbrowns (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Dish_o' The Sea.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Yam",
+                    "Description\n": "A starchy tuber with a lot of culinary versatility.",
+                    "Source\n": "Farming - Fall",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Yam.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Evelyn",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8e/Evelyn.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Beet",
+                    "Description\n": "A sweet and earthy root vegatable. As a bonus, the leaves make a great salad.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Beet.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Chocolate Cake",
+                    "Description\n": "Rich and moist with a thick fudge icing.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Chocolate_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Diamond",
+                    "Description\n": "A rare and valuable gem.",
+                    "Source\n": "Mining",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Diamond.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Fairy Rose",
+                    "Description\n": "An old folk legend suggests that the sweet smell of this flower attracts fairies.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Fairy_Rose.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Stuffing",
+                    "Description\n": "Ahh... the smell of warm bread and sage.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Bread (1) Cranberries (1) Hazelnut (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Stuffing.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Tulip",
+                    "Description\n": "The most popular spring flower. Has a very faint sweet smell.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Tulip.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Leah",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/e/e6/Leah.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    " Name\n": "Goat Cheese",
+                    " Description\n": "Soft cheese made from goat's milk.",
+                    " Source\n": "Cheese Press",
+                    " Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Poppyseed Muffin",
+                    " Description\n": "It has a soothing effect.",
+                    " Source\n": "Cooking",
+                    " Ingredients\n": " Poppy (1) Wheat Flour (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Salad",
+                    " Description\n": "A healthy garden salad.",
+                    " Source\n": "Cooking, The Stardrop Saloon",
+                    " Ingredients\n": " Leek (1) Dandelion (1) Vinegar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Stir Fry",
+                    " Description\n": "Julienned vegetables on a bed of rice.",
+                    " Source\n": "Cooking",
+                    " Ingredients\n": " Cave Carrot (1) Common Mushroom (1) Kale (1) Oil (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Truffle",
+                    " Description\n": "A gourmet type of mushroom with a unique taste.",
+                    " Source\n": "Pigs",
+                    " Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Vegetable Medley",
+                    " Description\n": "This is very nutritious.",
+                    " Source\n": "Cooking",
+                    " Ingredients\n": " Tomato (1) Beet (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                },
+                {
+                    "Image\n": "",
+                    " Name\n": "Wine",
+                    " Description\n": "Drink in moderation.",
+                    " Source\n": "Keg",
+                    " Ingredients\n": "Any fruit (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:undefined.png"
+                }
+            ]
+        },
+        {
+            "villager": {
+                "name": "Jas",
+                "img": "https://stardewcommunitywiki.com/mediawiki/images/5/55/Jas.png"
+            },
+            "loved": [
+                {
+                    "Image\n": "",
+                    "Name\n": "Fairy Rose",
+                    "Description\n": "An old folk legend suggests that the sweet smell of this flower attracts fairies.",
+                    "Source\n": "Farming",
+                    "Ingredients\n": "",
+                    "Image": "https://stardewcommunitywiki.com/File:Fairy_Rose.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Pink Cake",
+                    "Description\n": "There's little heart candies on top.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Melon (1) Wheat Flour (1) Sugar (1) Egg (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Pink_Cake.png"
+                },
+                {
+                    "Image\n": "",
+                    "Name\n": "Plum Pudding",
+                    "Description\n": "A traditional holiday treat.",
+                    "Source\n": "Cooking",
+                    "Ingredients\n": " Wild Plum (2) Wheat Flour (1) Sugar (1)",
+                    "Image": "https://stardewcommunitywiki.com/File:Plum_Pudding.png"
+                }
+            ]
+        }
+    ]
+    const foods = [
+        {
+            "name": "Coconut",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2f/Coconut.png"
+        },
+        {
+            "name": "Sunflower",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/81/Sunflower.png"
+        },
+        {
+            "name": "Amethyst",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2e/Amethyst.png"
+        },
+        {
+            "name": "Orange",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/43/Orange.png"
+        },
+        {
+            "name": "Pufferfish",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/b/ba/Pufferfish.png"
+        },
+        {
+            "name": "Snail",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d2/Snail.png"
+        },
+        {
+            "name": "Mango",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/38/Mango.png"
+        },
+        {
+            "name": "Obsidian",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/23/Obsidian.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Pumpkin",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/64/Pumpkin.png"
+        },
+        {
+            "name": "Leek",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/57/Leek.png"
+        },
+        {
+            "name": "Poi",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f1/Poi.png"
+        },
+        {
+            "name": "Grape",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c2/Grape.png"
+        },
+        {
+            "name": "Sashimi",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/41/Sashimi.png"
+        },
+        {
+            "name": "Beer",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/b/b3/Beer.png"
+        },
+        {
+            "name": "Escargot",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/78/Escargot.png"
+        },
+        {
+            "name": "Coffee",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/e9/Coffee.png"
+        },
+        {
+            "name": "Pomegranate",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1b/Pomegranate.png"
+        },
+        {
+            "name": "Melon",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/19/Melon.png"
+        },
+        {
+            "name": "Emerald",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6a/Emerald.png"
+        },
+        {
+            "name": "Jade",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7e/Jade.png"
+        },
+        {
+            "name": "Pickles",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1e/Preserves_Jar.png"
+        },
+        {
+            "name": "Parsnip",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/db/Parsnip.png"
+        },
+        {
+            "name": "Sturgeon",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/42/Sturgeon.png"
+        },
+        {
+            "name": "Coconut",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2f/Coconut.png"
+        },
+        {
+            "name": "Spaghetti",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/08/Spaghetti.png"
+        },
+        {
+            "name": "Aquamarine",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a2/Aquamarine.png"
+        },
+        {
+            "name": "Lobster",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9f/Lobster.png"
+        },
+        {
+            "name": "Poppy",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/37/Poppy.png"
+        },
+        {
+            "name": "Wine",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/69/Wine.png"
+        },
+        {
+            "name": "Strawberry",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6d/Strawberry.png"
+        },
+        {
+            "name": "Topaz",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a5/Topaz.png"
+        },
+        {
+            "name": "Stuffing",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9a/Stuffing.png"
+        },
+        {
+            "name": "Octopus",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/5a/Octopus.png"
+        },
+        {
+            "name": "Ruby",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a9/Ruby.png"
+        },
+        {
+            "name": "Pink Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Pink_Cake.png"
+        },
+        {
+            "name": "Cauliflower",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/aa/Cauliflower.png"
+        },
+        {
+            "name": "Pancakes",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6b/Pancakes.png"
+        },
+        {
+            "name": "Daffodil",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4b/Daffodil.png"
+        },
+        {
+            "name": "Sandfish",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/b/bb/Sandfish.png"
+        },
+        {
+            "name": "Cloth",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/51/Cloth.png"
+        },
+        {
+            "name": "Wool",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/34/Wool.png"
+        },
+        {
+            "name": "Tulip",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/cf/Tulip.png"
+        },
+        {
+            "name": "Beet",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a4/Beet.png"
+        },
+        {
+            "name": "Fruit Salad",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9e/Fruit_Salad.png"
+        },
+        {
+            "name": "Complete Breakfast",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/3d/Complete_Breakfast.png"
+        },
+        {
+            "name": "Tigerseye",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6e/Tigerseye.png"
+        },
+        {
+            "name": "Pizza",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f4/Pizza.png"
+        },
+        {
+            "name": "Amethyst",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2e/Amethyst.png"
+        },
+        {
+            "name": "Pumpkin",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/64/Pumpkin.png"
+        },
+        {
+            "name": "Chocolate Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/87/Chocolate_Cake.png"
+        },
+        {
+            "name": "Fish Taco",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d5/Fish_Taco.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Beer",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/b/b3/Beer.png"
+        },
+        {
+            "name": "Spicy Eel",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f2/Spicy_Eel.png"
+        },
+        {
+            "name": "Ginger Ale",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1a/Ginger_Ale.png"
+        },
+        {
+            "name": "Farmer's Lunch",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/79/Farmer%27s_Lunch.png"
+        },
+        {
+            "name": "Void Egg",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/58/Void_Egg.png"
+        },
+        {
+            "name": "Tropical Curry",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Tropical_Curry.png"
+        },
+        {
+            "name": "Frozen Tear",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ec/Frozen_Tear.png"
+        },
+        {
+            "name": "Pumpkin Soup",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/59/Pumpkin_Soup.png"
+        },
+        {
+            "name": "Jade",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7e/Jade.png"
+        },
+        {
+            "name": "Emerald",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6a/Emerald.png"
+        },
+        {
+            "name": "Blackberry Cobbler",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/70/Blackberry_Cobbler.png"
+        },
+        {
+            "name": "Aquamarine",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a2/Aquamarine.png"
+        },
+        {
+            "name": "Maple Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/18/Maple_Bar.png"
+        },
+        {
+            "name": "Strawberry",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6d/Strawberry.png"
+        },
+        {
+            "name": "Iridium Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c4/Iridium_Bar.png"
+        },
+        {
+            "name": "Cactus Fruit",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Cactus_Fruit.png"
+        },
+        {
+            "name": "Topaz",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a5/Topaz.png"
+        },
+        {
+            "name": "Ruby",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a9/Ruby.png"
+        },
+        {
+            "name": "Cranberry Candy",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9d/Cranberry_Candy.png"
+        },
+        {
+            "name": "Pepper Poppers",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/08/Pepper_Poppers.png"
+        },
+        {
+            "name": "Autumn's Bounty",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f4/Autumn%27s_Bounty.png"
+        },
+        {
+            "name": "Void Mayonnaise",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f3/Void_Mayonnaise.png"
+        },
+        {
+            "name": "Fried Calamari",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/25/Fried_Calamari.png"
+        },
+        {
+            "name": "Poppyseed Muffin",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8e/Poppyseed_Muffin.png"
+        },
+        {
+            "name": "Summer Spangle",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9f/Summer_Spangle.png"
+        },
+        {
+            "name": "Pumpkin Pie",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7d/Pumpkin_Pie.png"
+        },
+        {
+            "name": "Super Meal",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d2/Super_Meal.png"
+        },
+        {
+            "name": "Goat Cheese",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c8/Goat_Cheese.png"
+        },
+        {
+            "name": "Pizza",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f4/Pizza.png"
+        },
+        {
+            "name": "Amethyst",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2e/Amethyst.png"
+        },
+        {
+            "name": "Gold Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4e/Gold_Bar.png"
+        },
+        {
+            "name": "Duck Feather",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f9/Duck_Feather.png"
+        },
+        {
+            "name": "Red Plate",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/45/Red_Plate.png"
+        },
+        {
+            "name": "Vegetable Medley",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/0a/Vegetable_Medley.png"
+        },
+        {
+            "name": "Piña Colada",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/12/Pi%C3%B1a_Colada.png"
+        },
+        {
+            "name": "Crab Cakes",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/70/Crab_Cakes.png"
+        },
+        {
+            "name": "Super Cucumber",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d5/Super_Cucumber.png"
+        },
+        {
+            "name": "Purple Mushroom",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4b/Purple_Mushroom.png"
+        },
+        {
+            "name": "Roots Platter",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/e0/Roots_Platter.png"
+        },
+        {
+            "name": "Fiddlehead Risotto",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2d/Fiddlehead_Risotto.png"
+        },
+        {
+            "name": "Pumpkin",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/64/Pumpkin.png"
+        },
+        {
+            "name": "Glazed Yams",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/30/Glazed_Yams.png"
+        },
+        {
+            "name": "Battery Pack",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/25/Battery_Pack.png"
+        },
+        {
+            "name": "Squid Ink",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/ac/Squid_Ink.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Fairy Rose",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/5c/Fairy_Rose.png"
+        },
+        {
+            "name": "Artichoke Dip",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/77/Artichoke_Dip.png"
+        },
+        {
+            "name": "Truffle Oil",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/3d/Truffle_Oil.png"
+        },
+        {
+            "name": "Jade",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7e/Jade.png"
+        },
+        {
+            "name": "Omni Geode",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/09/Omni_Geode.png"
+        },
+        {
+            "name": "Parsnip Soup",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/76/Parsnip_Soup.png"
+        },
+        {
+            "name": "Fried Eel",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/84/Fried_Eel.png"
+        },
+        {
+            "name": "Tom Kha Soup",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/3b/Tom_Kha_Soup.png"
+        },
+        {
+            "name": "Hot Pepper",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f1/Hot_Pepper.png"
+        },
+        {
+            "name": "Pink Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Pink_Cake.png"
+        },
+        {
+            "name": "Lemon Stone",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/31/Lemon_Stone.png"
+        },
+        {
+            "name": "Survival Burger",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/87/Survival_Burger.png"
+        },
+        {
+            "name": "Blueberry Tart",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/9b/Blueberry_Tart.png"
+        },
+        {
+            "name": "Wild Horseradish",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/90/Wild_Horseradish.png"
+        },
+        {
+            "name": "Void Essence",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/1f/Void_Essence.png"
+        },
+        {
+            "name": "Green Tea",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8f/Green_Tea.png"
+        },
+        {
+            "name": "Bean Hotpot",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/24/Bean_Hotpot.png"
+        },
+        {
+            "name": "Rhubarb Pie",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/21/Rhubarb_Pie.png"
+        },
+        {
+            "name": "Mango Sticky Rice",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6e/Mango_Sticky_Rice.png"
+        },
+        {
+            "name": "Sweet Pea",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d9/Sweet_Pea.png"
+        },
+        {
+            "name": "Radioactive Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/7e/Radioactive_Bar.png"
+        },
+        {
+            "name": "Ostrich Egg",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c3/Ostrich_Egg.png"
+        },
+        {
+            "name": "Sea Cucumber",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a9/Sea_Cucumber.png"
+        },
+        {
+            "name": "Ice Cream",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/5d/Ice_Cream.png"
+        },
+        {
+            "name": "Emerald",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6a/Emerald.png"
+        },
+        {
+            "name": "Solar Essence",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f4/Solar_Essence.png"
+        },
+        {
+            "name": "Dish o' The Sea",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f0/Dish_o%27_The_Sea.png"
+        },
+        {
+            "name": "Chocolate Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/87/Chocolate_Cake.png"
+        },
+        {
+            "name": "Fish Taco",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/d/d5/Fish_Taco.png"
+        },
+        {
+            "name": "Aquamarine",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a2/Aquamarine.png"
+        },
+        {
+            "name": "Topaz",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a5/Topaz.png"
+        },
+        {
+            "name": "Tropical Curry",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Tropical_Curry.png"
+        },
+        {
+            "name": "Peach",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/e2/Peach.png"
+        },
+        {
+            "name": "Catfish",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/9/99/Catfish.png"
+        },
+        {
+            "name": "Ruby",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/a/a9/Ruby.png"
+        },
+        {
+            "name": "Void Egg",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/58/Void_Egg.png"
+        },
+        {
+            "name": "Mead",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/84/Mead.png"
+        },
+        {
+            "name": "Cactus Fruit",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Cactus_Fruit.png"
+        },
+        {
+            "name": "Pepper Poppers",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/08/Pepper_Poppers.png"
+        },
+        {
+            "name": "Crocus",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2f/Crocus.png"
+        },
+        {
+            "name": "Iridium Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c4/Iridium_Bar.png"
+        },
+        {
+            "name": "Yam",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/52/Yam.png"
+        },
+        {
+            "name": "Salmon Dinner",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8b/Salmon_Dinner.png"
+        },
+        {
+            "name": "Duck Feather",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f9/Duck_Feather.png"
+        },
+        {
+            "name": "Vegetable Medley",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/0a/Vegetable_Medley.png"
+        },
+        {
+            "name": "Gold Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4e/Gold_Bar.png"
+        },
+        {
+            "name": "Amethyst",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2e/Amethyst.png"
+        },
+        {
+            "name": "Fiddlehead Risotto",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/2d/Fiddlehead_Risotto.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Glazed Yams",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/30/Glazed_Yams.png"
+        },
+        {
+            "name": "Tom Kha Soup",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/3b/Tom_Kha_Soup.png"
+        },
+        {
+            "name": "Hot Pepper",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/f/f1/Hot_Pepper.png"
+        },
+        {
+            "name": "Pink Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Pink_Cake.png"
+        },
+        {
+            "name": "Omni Geode",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/0/09/Omni_Geode.png"
+        },
+        {
+            "name": "Banana Pudding",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/40/Banana_Pudding.png"
+        },
+        {
+            "name": "Rhubarb Pie",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/2/21/Rhubarb_Pie.png"
+        },
+        {
+            "name": "Emerald",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6a/Emerald.png"
+        },
+        {
+            "name": "Mead",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/84/Mead.png"
+        },
+        {
+            "name": "Chocolate Cake",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/87/Chocolate_Cake.png"
+        },
+        {
+            "name": "Cactus Fruit",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Cactus_Fruit.png"
+        },
+        {
+            "name": "Eggplant Parmesan",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/73/Eggplant_Parmesan.png"
+        },
+        {
+            "name": "Iridium Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c4/Iridium_Bar.png"
+        },
+        {
+            "name": "Roasted Hazelnuts",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/18/Roasted_Hazelnuts.png"
+        },
+        {
+            "name": "Cheese Cauliflower",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/6/6e/Cheese_Cauliflower.png"
+        },
+        {
+            "name": "Miner's Treat",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/1/12/Miner%27s_Treat.png"
+        },
+        {
+            "name": "Rice Pudding",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ec/Rice_Pudding.png"
+        },
+        {
+            "name": "Crispy Bass",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/5/53/Crispy_Bass.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Fried Mushroom",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/4/4a/Fried_Mushroom.png"
+        },
+        {
+            "name": "Iridium Bar",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/c/c4/Iridium_Bar.png"
+        },
+        {
+            "name": "Pale Ale",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/7/78/Pale_Ale.png"
+        },
+        {
+            "name": "Green Tea",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/8/8f/Green_Tea.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        },
+        {
+            "name": "Diamond",
+            "img": "https://stardewcommunitywiki.com/mediawiki/images/e/ea/Diamond.png"
+        }
+    ]
+    villagers.forEach(villager => document.body.appendChild(stringToDomElement(`
+        <div class="card">
+            <div>    
+                <img class="profile" src="${villager.villager.img}"/>
+                <p>${villager.villager.name}</p>
+            </div>
+            <div class=wrapper>
+                ${villager.loved.map(l => `<div class="item"><img class="icon" src="${foods.find(f => f.name === l["Name\n"])?.img}"/><a target="_blank" rel="noopener noreferrer" href="https://stardewcommunitywiki.com/${l["Name\n"].replace(' ', '_')}">${l["Name\n"]}</a></div>`).join('')}
+            </div>
+        </div>
+    `)))
+</script>
+
+</html>
