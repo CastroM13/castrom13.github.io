@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        body {
+            overflow-x: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-family: Roboto, Helvetica, sans-serif;
+            color: #525252;
+            background-attachment: fixed;
+        }
+
+        .bg {
+            opacity: 0.05;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: url('./bg.jpg');
+        }
+
+        .card {
+            width: 300px;
+            height: 460px;
+            background: transparent;
+            backdrop-filter: blur(16px);
+            margin: 8px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 3px #0000002b;
+        }
+
+        .card>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .profile {
+            background: #ffffff61;
+            border-radius: 3px;
+            width: 128px;
+            outline: 1px solid #dddddd;
+        }
+
+        .wrapper {
+            padding-left: 8px;
+            margin-left: 12px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        a {
+            text-align: left;
+            text-decoration: dotted;
+            color: #0645ad;
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            margin-right: 8px;
+        }
+
+        .item {
+            display: flex;
+        }
+
+        .observer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: .2s;
+            background: linear-gradient(transparent, black);
+            color: white;
+            backdrop-filter: blur(0px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .observer:hover {
+            background: linear-gradient(transparent, black);
+            color: white;
+            backdrop-filter: blur(8px);
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .inner-observer {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .badge {
+            background: #8984c5;
+            padding: 2px 6px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+
+</body>
+<script>
+    function stringToDomElement(string) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(string, "text/html");
+        return doc.body.firstChild;
+    }
+    fetch('https://filminho-api.onrender.com/tracker')
+        .then(e => e.json())
+        .then(i => {
+            i.reverse().forEach(data => document.body.appendChild(stringToDomElement(
+                `<div class="card">
+                    <img src="${data.Poster}"/>
+                    <div class="observer">
+                        <p>${data.Title}</p>
+                        <span class="badge">${data.Status}</span>
+                        <div class="inner-observer">
+                            <p>Julya: ${data.Remarks.jujuba}/5</p>
+                            <p>Matheus: ${data.Remarks.tito}/5</p>
+                        </div>
+                    </div>
+                </div>`
+            )))
+        })
+</script>
+
+</html>
