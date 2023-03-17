@@ -22,3 +22,23 @@ const leave = () => {
     cnt.classList.toggle('active');
     hm.classList.toggle('active');
 }
+
+window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+
+function onInitFs(fs) {
+  fs.root.getDirectory('other_folder', {}, function(dirEntry) {
+    var dirReader = dirEntry.createReader();
+
+    dirReader.readEntries(function(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        console.log(entries[i].name);
+      }
+    }, errorHandler);
+  }, errorHandler);
+}
+
+function errorHandler(error) {
+  console.log(error);
+}
+
+window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);
