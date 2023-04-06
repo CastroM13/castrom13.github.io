@@ -5,6 +5,7 @@
     --background: black;
     --font-main: white;
     --bg-highlight: rgba(244, 244, 244, 0.132);
+    --invert: 1;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,6 +13,8 @@
 :root.light {
     --background: white;
     --font-main: black;
+    --bg-highlight: rgba(0, 0, 0, 0.132);
+    --invert: 0;
 }
 
 body {
@@ -51,17 +54,21 @@ ul {
 }
 
 .navigation[loading]::after {
-    background: linear-gradient(blue, blueviolet, blueviolet,  blue) 0 0/100% 200%;;
-    animation:slide 2s linear infinite;
+    background: linear-gradient(blue, blueviolet, blueviolet, blue) 0 0/100% 200%;
+    ;
+    animation: slide 2s linear infinite;
 }
 
 @keyframes slide {
-    to {background-position:0 -200%}
+    to {
+        background-position: 0 -200%
+    }
 }
 
 .router {
     width: calc(100% - 300px);
     height: 100%;
+    overflow-y: scroll;
 }
 
 .tag {
@@ -103,7 +110,7 @@ section[id*=page] {
     align-items: center;
 }
 
-.menu > li {
+.menu>li {
     width: fit-content;
     padding: 4px 15px;
     border-radius: 12px;
@@ -113,7 +120,7 @@ section[id*=page] {
     user-select: none;
 }
 
-.menu > li:hover {
+.menu>li:hover {
     background: var(--bg-highlight);
 }
 
@@ -124,9 +131,57 @@ li.active::before {
     position: absolute;
     left: 1em
 }
+
 li::before {
     opacity: 0;
     content: '›';
     position: absolute;
     left: 1em
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-highlight);
+}
+
+#md-1 {
+    padding: 2em;
+}
+
+.markdown>h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid grey;
+}
+
+#socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    cursor: pointer;
+    filter: invert(var(--invert));
+    width: 2em;
+    opacity: .5;
+    padding: 9px 18px;
+    position: relative;
+}
+
+.bagde:hover {
+    opacity: .8 !important;
+}
+
+.badge:hover::after {
+    content: 'attr(data-name)';
+    background-color: aqua;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    height: 1em;
 }
