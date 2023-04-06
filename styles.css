@@ -1,86 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Dark Theme by Default */
+:root {
+    --background: black;
+    --font-main: white;
+    --bg-highlight: rgba(244, 244, 244, 0.132);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Light Theme when chosen */
+:root.light {
+    --background: white;
+    --font-main: black;
+}
+
 body {
-    background: black;
-    padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.artifact {
-    background: linear-gradient(90deg, transparent,white,transparent);
-    width: 40vw;
-    height: 1px;
-    position: absolute;
-    top: calc(50vh - 1px);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-}
-
-#w1 {
-    left: 0;
-}
-
-#w2 {
-    right: 0;
-}
-
-#cnt {
-    background: url(assets/plus.svg);
-    position: absolute;
-    top: calc(50vh - 50px);
-    right: calc(50vw - 50px);
-    width: 100px;
-    height: 100px;
-    color: white;
-    transform: scale(1);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-}
-
-#cnt.active {
-    opacity: 0;
-}
-
-#cnt:hover {
-    transform: scale(1.6) rotate(180deg);
-}
-
-#w1.active {
-    opacity: 0;
-    left: 30%;
-    height: 3px;
-}
-
-#w2.active {
-    opacity: 0;
-    right: 30%;
-    height: 3px;
-}
-
-.chevron-down {
-    height: 20px;
-    width: 38px;
-    background: url(assets/chevron-down.svg);
-}
-
-#hover-me {
-    font-weight: 100;
-    position: absolute;
-    top: calc(50% - 180px);
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 100px;
-    color: white;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    background: var(--background);
+    color: var(--font-main);
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation {
+    width: calc(300px - 2em);
+    height: calc(100% - 2em);
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navigation::after {
+    content: ' ';
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.312);
+    transition: 1s ease;
+}
+
+.navigation[loading]::after {
+    background: linear-gradient(blue, blueviolet, blueviolet,  blue) 0 0/100% 200%;;
+    animation:slide 2s linear infinite;
+}
+
+@keyframes slide {
+    to {background-position:0 -200%}
+}
+
+.router {
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+.tag {
+    color: gray;
+    text-transform: lowercase;
+    padding: 0;
+}
+
+.tag::before {
+    content: '@';
+    position: absolute;
+    transform: translateX(-0.9em);
+}
+
+#name {
+    margin-bottom: 0;
+}
+
+#picture {
+    border-radius: 100%;
+}
+
+a[download] {
+    text-decoration: none;
+    color: var(--font-main)
+}
+
+section[id*=page] {
+    display: none;
+}
+
+.visible {
+    display: initial !important;
+}
+
+.menu {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    animation: bounce 3s infinite ease-in-out;
 }
 
-@keyframes bounce {
-    0% {transform:translateY(20px)}
-    50% {transform:translateY(-20px); opacity: .3;}
-    100% {transform:translateY(20px)}
-  }
-  
-#hover-me.active {
-    opacity: 0 !important;
+.menu > li {
+    width: fit-content;
+    padding: 4px 15px;
+    border-radius: 12px;
+    margin: 0.5em 0;
+    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu > li:hover {
+    background: var(--bg-highlight);
+}
+
+li.active::before {
+    opacity: 1;
+    transition: .2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    content: '›';
+    position: absolute;
+    left: 1em
+}
+li::before {
+    opacity: 0;
+    content: '›';
+    position: absolute;
+    left: 1em
 }
