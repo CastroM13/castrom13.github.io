@@ -1,0 +1,65 @@
+.header {
+    padding: 1em;
+    width: calc(100% - 2em);
+    border-bottom: 1px solid grey;
+}
+
+.body {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.card {
+    max-width: 450px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0 0 5px 5px;
+}
+
+.header > input[type=text] {
+    padding: 0.5em;
+    font-size: 1.5em;
+    background: transparent;
+    border: 1px solid grey;
+    border-radius: 25px;
+    width: calc(100% - 2em);
+    margin: 0 0.5em;
+    color: white;
+    text-align: center;
+}
+
+.card-body {
+    margin: 1em;
+}
+
+.card-body > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-right: 1em;
+}
+
+.fallback {
+    opacity: 0.6;
+    filter: invert(1);  
+}
+
+.link {
+    float: right;
+    opacity: 0.6;
+    filter: invert(1);
+    cursor: pointer;
+}
