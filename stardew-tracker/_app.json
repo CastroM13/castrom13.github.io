@@ -1,0 +1,6 @@
+{
+  "name": "Stardew Tracker",
+  "version": "1.0.0",
+  "description": "Stardew Valley Wiki scraped data in a convenient interface for easy visualization of Liked and Loved items.",
+  "languages": ["Javascript", "Webscraping"]
+}
