@@ -5,10 +5,10 @@ const definitelyNotEval = eval;
 window['eval'] = null
 
 
-const renderer = async (page) => await Promise.all([`_pages/${page}/index.html`,`_pages/${page}/script.js`, `_pages/${page}/styles.css`].map(r => fetch(r).then(r => r.ok ? r : null)))
+const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`pages/${page}/script.js`, `pages/${page}/styles.css`].map(r => fetch(r).then(r => r.ok ? r : null)))
   .then(result => result.map(r => r && r.text()))
   .then(async results => {
-    const html = await results[0] || await fetch('_pages/error/404.html').then(e => e.text())
+    const html = await results[0] || await fetch('pages/error/404.html').then(e => e.text())
     const js = await results[1]
     const css = await results[2]
 
@@ -22,8 +22,8 @@ const renderer = async (page) => await Promise.all([`_pages/${page}/index.html`,
       styles.rel = 'stylesheet';
       styles.type = 'text/css';
       styles.media = 'screen';
-      styles.id = `_pages/${page}/styles.css`;
-      styles.href = `_pages/${page}/styles.css`;
+      styles.id = `pages/${page}/styles.css`;
+      styles.href = `pages/${page}/styles.css`;
       document.head.appendChild(styles);
     }
     if (js) {
