@@ -98,11 +98,15 @@ a[download] {
 }
 
 section[id*=page] {
+    position: relative;
     display: none;
 }
 
 .visible {
-    display: initial !important;
+    display: block !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .menu {

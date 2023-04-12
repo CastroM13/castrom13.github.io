@@ -1,7 +1,8 @@
 const defaultPage = 'about-me';
 
-// eval is evil, so no eval for u
 const definitelyNotEval = eval;
+
+// eval is evil, so no eval for u
 window['eval'] = null
 
 

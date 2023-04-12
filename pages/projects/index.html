@@ -1,8 +1,17 @@
 <section>
     <div class="header">
-        <input type="text" onchange="search(event)">
+        <div class="input">
+            <img class="search link" src="assets/search.svg" width="32px" height="32px" alt="">
+            <input placeholder="Search projects by name" id="search" type="text">
+            <div class="custom-select" style="width:200px;">
+                <select id="language" onchange="changeLanguage(event)">
+                    <option value="null">Select language</option>
+                    <option value="All">All</option>
+                </select>
+            </div>
+        </div>
     </div>
     <div id="render" class="body">
-        
     </div>
+    <div id="loading">Loading</div>
 </section>
