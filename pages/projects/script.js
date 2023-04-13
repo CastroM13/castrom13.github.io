@@ -64,6 +64,7 @@ const loadSelect = () => {
                             y[k].removeAttribute("class");
                         }
                         this.setAttribute("class", "same-as-selected");
+                        s.addEventListener("change", changeLanguage)
                         s.dispatchEvent(new Event("change"));
                         break;
                     }
@@ -142,9 +143,14 @@ const handleInput = () => {
     renderProjects(projects.filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true))
 }
 
-const changeLanguage = (language) => {
-    console.log(language)
-    // renderProjects(projects.filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true))
+const changeLanguage = (event) => {
+    const language = event.target.value;
+    console.log(projects)
+    if (language === 'All') {
+        renderProjects(projects)
+    } else {
+        renderProjects(projects.filter(t => t.app ? t.app.languages.includes(language) : false))
+    }
 }
 
 inputElement.addEventListener('input', debounce(handleInput, 500));
