@@ -103,7 +103,7 @@ section[id*=page] {
 }
 
 .visible {
-    display: block !important;
+    display: contents !important;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100vh;

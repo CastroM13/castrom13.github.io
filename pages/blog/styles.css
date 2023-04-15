@@ -1,0 +1,52 @@
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 300px;
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.slide:nth-child(odd) {
+    background-color: #2196f3;
+}
+
+.slide:nth-child(even) {
+    background-color: #f44336;
+}
+
+.slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.btn {
+    color: black;
+    position: absolute;
+    z-index: 99999;
+    background: #ffffff5c;
+    border: 0;
+    font-size: 32px;
+    top: calc(150px - 24px);
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0 8px;
+}
+
+.right {
+    right: 0;
+}
