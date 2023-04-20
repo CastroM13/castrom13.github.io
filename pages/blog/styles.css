@@ -100,3 +100,19 @@
 .slider:hover > #pager {
     opacity: 1;
 }
+
+#blog-wrapper {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#blog-wrapper > p {
+    cursor: pointer;
+    background: #181818;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    color: #bababa;
+    text-decoration: none;
+}
