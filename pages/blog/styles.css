@@ -1,3 +1,7 @@
+.main {
+    position: relative;
+}
+
 .slider {
     display: flex;
     overflow-x: scroll;
@@ -8,6 +12,7 @@
 }
 
 .slide {
+    user-select: none;
     flex: 0 0 100%;
     scroll-snap-align: center;
     height: 100%;
@@ -36,17 +41,30 @@
     color: black;
     position: absolute;
     z-index: 99999;
-    background: #ffffff5c;
+    opacity: 0;
     border: 0;
     font-size: 32px;
-    top: calc(150px - 24px);
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
+    top: 0;
+    width: 128px;
     padding: 0;
-    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity .4s cubic-bezier(0.448, 0.032, 0.558, 0.995);
+}
+
+.btn:hover {
+    opacity: 1;
 }
 
 .right {
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.358),rgba(0, 0, 0, 0.158),transparent);
     right: 0;
+}
+
+.left {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.358),rgba(0, 0, 0, 0.158),transparent);
+    left: 0;
 }
