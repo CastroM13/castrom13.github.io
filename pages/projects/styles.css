@@ -1,7 +1,6 @@
 .header {
     padding: 1em;
     width: calc(100% - 2em);
-    border-bottom: 1px solid grey;
 }
 
 .body {
@@ -15,7 +14,6 @@
 .card {
     width: calc(100% - 2em);
     max-width: 600px;
-    border: 1px solid grey;
     border-radius: 5px;
     overflow: hidden;
     margin: 1em;
@@ -85,9 +83,8 @@
 }
 
 .input {
-    background: transparent;
-    border: 1px solid grey;
-    border-radius: 25px;
+    background: #1f1f1f;
+    border-radius: 5px;
     width: calc(100% - 2em);
     margin: 0 0.5em;
     color: white;

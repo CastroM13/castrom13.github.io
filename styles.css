@@ -51,11 +51,11 @@ ul {
     top: 0;
     background: rgba(255, 255, 255, 0.312);
     transition: 1s ease;
+    display: none;
 }
 
 .navigation[loading]::after {
     background: linear-gradient(blue, blueviolet, blueviolet, blue) 0 0/100% 200%;
-    ;
     animation: slide 2s linear infinite;
 }
 
