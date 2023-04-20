@@ -35,7 +35,7 @@ const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`
 const main = () => {
   fetch('socials.json')
     .then(result => result.json())
-    .then(result => result.forEach((social) => document.querySelector('#socials').appendChild(stringToDomElement(`<img src="${social.image}" ${social.url ? `onclick="open('${social.url}', '_blank').focus()"` : ''} class="badge" data-name="${social.name}" ${social.username ? `onclick="navigator.clipboard.writeText('${social.username}')"` : ''} ${social.username ? `data-username="${social.username}"` : ''}/>`))));
+    .then(result => result.forEach((social) => document.querySelector('#socials').appendChild(stringToDomElement(`<img src="${social.image}" ${social.url ? `onclick="window.open('${social.url}', '_blank').focus()"` : ''} class="badge" data-name="${social.name}" ${social.username ? `onclick="navigator.clipboard.writeText('${social.username}')"` : ''} ${social.username ? `data-username="${social.username}"` : ''}/>`))));
   
   renderer(defaultPage)
   document.querySelector(`section[id='pages/${defaultPage}']`).classList.toggle('visible');
