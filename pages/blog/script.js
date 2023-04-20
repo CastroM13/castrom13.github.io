@@ -15,7 +15,7 @@ fetch('https://api.github.com/repos/CastroM13/CastroM13/git/trees/ac51b3e76346df
     console.log(link)
     document.querySelector('#blog-wrapper').appendChild(link)
   }));
-ß
+
 const slider = document.querySelector('.slider');
 const btnLeft = document.querySelector('.left');
 const btnRight = document.querySelector('.right');
