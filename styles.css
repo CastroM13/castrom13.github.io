@@ -32,8 +32,11 @@ ul {
 }
 
 .navigation {
-    width: calc(300px - 2em);
-    height: calc(100% - 2em);
+    background: linear-gradient(45deg, #752727, #18205c);
+    margin: 1em 0 1em 1em;
+    border-radius: 5px;
+    width: calc(300px - 4em);
+    height: calc(100% - 4em);
     padding: 1em;
     text-align: center;
     position: relative;
