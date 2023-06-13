@@ -21,6 +21,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    justify-content: space-around;
     background: var(--background);
     color: var(--font-main);
     overflow: hidden;
@@ -69,7 +70,7 @@ ul {
 }
 
 .router {
-    width: calc(100% - 300px);
+    width: calc(100% - calc(300px - 4em));
     height: 100%;
     overflow-y: scroll;
     display: inline-table;
@@ -105,10 +106,17 @@ section[id*=page] {
     display: none;
 }
 
+section[id*=page] > section {
+    overflow-y: overlay;
+    display: inline-table;
+    height: 100vh;
+    width: 100%;
+}
+
 .visible {
-    display: contents !important;
+    display: block !important;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: overlay;
     height: 100vh;
 }
 
@@ -153,19 +161,16 @@ li::before {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-corner { 
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--bg-highlight);
-}
-
-#md-1 {
-    padding: 2em;
-}
-
-.markdown>h1, h2, h3, h4, h5, h6 {
-    border-bottom: 1px solid grey;
+    border-radius: 5px;
 }
 
 #socials {
@@ -200,4 +205,10 @@ li::before {
     top: 0;
     width: fit-content;
     height: 1em;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
