@@ -5,7 +5,6 @@ const definitelyNotEval = eval;
 // eval is evil, so no eval for u
 window['eval'] = null
 
-
 const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`pages/${page}/script.js`, `pages/${page}/styles.css`].map(r => fetch(r).then(r => r.ok ? r : null)))
   .then(result => result.map(r => r && r.text()))
   .then(async results => {
@@ -14,7 +13,12 @@ const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`
     const css = await results[2]
 
     document.querySelector(`section[id='pages/${page}']`).innerHTML = null;
-    document.head.querySelectorAll(`link[id*='pages/']`).forEach(d => d.remove());
+    setTimeout(() => 
+    document.head.querySelectorAll(`link[id*='pages/']`).forEach(d => {
+      if (!d.id.includes(page)) {
+        d.remove();
+      }
+    }), 1000)
     if (html) {
       document.querySelector(`section[id='pages/${page}']`).appendChild(stringToDomElement(html))
     }

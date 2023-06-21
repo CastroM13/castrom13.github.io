@@ -1,14 +1,14 @@
 <section>
     <div class="header">
-        <div class="input">
-            <img class="search link" src="assets/search.svg" width="32px" height="32px" alt="">
+        <div class="select">
+            <img onclick="this.parentElement.classList.toggle('filter-active')" class="search link" src="assets/filter_list.svg" width="32px" height="32px" alt="">
+            <select id="language">
+                <option value="All">All</option>
+            </select>
+        </div>
+        <div class="select">
+            <img onclick="this.parentElement.classList.toggle('filter-active')" class="search link" src="assets/search.svg" width="32px" height="32px" alt="">
             <input placeholder="Search projects by name" id="search" type="text">
-            <div class="custom-select" style="width:200px;">
-                <select id="language">
-                    <option value="null">Select language</option>
-                    <option value="All">All</option>
-                </select>
-            </div>
         </div>
     </div>
     <div id="render" class="body">

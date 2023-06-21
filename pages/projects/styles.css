@@ -1,6 +1,7 @@
 .header {
-    padding: 1em;
-    width: calc(100% - 2em);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .body {
@@ -85,8 +86,6 @@
 .input {
     background: #1f1f1f;
     border-radius: 5px;
-    width: calc(100% - 2em);
-    margin: 0 0.5em;
     color: white;
     text-align: center;
     display: flex;
@@ -112,61 +111,39 @@
     user-select: none;
 }
 
-.custom-select {
-    position: relative;
+.select {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    max-width: 48px;
+    height: 48px;
+    color: white;
     font-family: Arial;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.custom-select select {
-    display: none;
+.select > select {
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    margin-left: 1em;
+    outline: none;
 }
 
-.select-selected {
-    background-color: transparent;
+.select > input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    margin-left: 1em;
+    outline: none;
 }
 
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-}
-
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-}
-
-
-.select-items div,
-.select-selected {
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-}
-
-.select-items {
-    position: absolute;
-    background-color: #000000ad;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    border-radius: 15px;
-    backdrop-filter: blur(8px);
-}
-
-.select-hide {
-    display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+.filter-active {
+    max-width: 300px;
+    border: 1px solid #595959;
+    border-radius: 10px;
+    flex: 1;
 }

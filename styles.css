@@ -19,7 +19,8 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    padding: 1em;
+    height: calc(100vh);
     display: flex;
     justify-content: space-around;
     background: var(--background);
@@ -33,8 +34,7 @@ ul {
 }
 
 .navigation {
-    background: linear-gradient(45deg, #752727, #18205c);
-    margin: 1em 0 1em 1em;
+    background: #1c1c1c96;
     border-radius: 5px;
     width: calc(300px - 4em);
     height: calc(100% - 4em);
@@ -70,10 +70,12 @@ ul {
 }
 
 .router {
-    width: calc(100% - calc(300px - 4em));
+    width: calc(100% - calc(225px - 2em));
+    margin-left: 1em;
     height: 100%;
     overflow-y: scroll;
-    display: inline-table;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .tag {
@@ -102,22 +104,31 @@ a[download] {
 }
 
 section[id*=page] {
-    position: relative;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 0;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all ease-in-out 0s, opacity 1s;
 }
 
 section[id*=page] > section {
     overflow-y: overlay;
     display: inline-table;
+    opacity: 1;
     height: 100vh;
+    box-sizing: border-box;
     width: 100%;
 }
 
 .visible {
     display: block !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
     overflow-x: hidden;
     overflow-y: overlay;
-    height: 100vh;
+    max-height: 100vh !important;
 }
 
 .menu {
@@ -161,16 +172,7 @@ li::before {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-corner { 
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--bg-highlight);
-    border-radius: 5px;
+    width: 0px;
 }
 
 #socials {
@@ -178,9 +180,6 @@ li::before {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    width: 250px;
-    bottom: 2em;
 }
 
 .badge {
