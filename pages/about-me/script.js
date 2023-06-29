@@ -1,6 +1,6 @@
 fetch('https://raw.githubusercontent.com/CastroM13/CastroM13/main/README.md')
 .then(e => e.text())
-.then(e => document.querySelector('#md-1').innerHTML = markdownToHtml(e))
+.then(e => (document.querySelector('#md-1')|| {}).innerHTML = markdownToHtml(e))
 
 function markdownToHtml(markdown) {
     markdown = markdown.replace(/^---$/gm, '<hr>');

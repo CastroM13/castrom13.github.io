@@ -112,6 +112,7 @@
 }
 
 .select {
+    overflow: hidden;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
     max-width: 48px;
     height: 48px;
@@ -119,6 +120,7 @@
     font-family: Arial;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 
 .select > select {
@@ -146,4 +148,17 @@
     border: 1px solid #595959;
     border-radius: 10px;
     flex: 1;
+}
+
+.revert {
+    flex-direction: row;
+}
+
+.clear {
+    font-size: 1.5em;
+    color: grey;
+    margin: 8px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
 }

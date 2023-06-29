@@ -11,28 +11,29 @@ const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`
     const html = await results[0] || await fetch('pages/error/404.html').then(e => e.text())
     const js = await results[1]
     const css = await results[2]
-
-    document.querySelector(`section[id='pages/${page}']`).innerHTML = null;
-    setTimeout(() => 
-    document.head.querySelectorAll(`link[id*='pages/']`).forEach(d => {
-      if (!d.id.includes(page)) {
-        d.remove();
+    if (document.querySelector(`section[id='pages/${page}']`)) {
+      document.querySelector(`section[id='pages/${page}']`).innerHTML = null;
+      setTimeout(() => 
+      document.head.querySelectorAll(`link[id*='pages/']`).forEach(d => {
+        if (!d.id.includes(page)) {
+          d.remove();
+        }
+      }), 1000)
+      if (html) {
+        document.querySelector(`section[id='pages/${page}']`).appendChild(stringToDomElement(html))
       }
-    }), 1000)
-    if (html) {
-      document.querySelector(`section[id='pages/${page}']`).appendChild(stringToDomElement(html))
-    }
-    if(css) {
-      var styles = document.createElement('link');
-      styles.rel = 'stylesheet';
-      styles.type = 'text/css';
-      styles.media = 'screen';
-      styles.id = `pages/${page}/styles.css`;
-      styles.href = `pages/${page}/styles.css`;
-      document.head.appendChild(styles);
-    }
-    if (js) {
-      definitelyNotEval(js)
+      if(css) {
+        var styles = document.createElement('link');
+        styles.rel = 'stylesheet';
+        styles.type = 'text/css';
+        styles.media = 'screen';
+        styles.id = `pages/${page}/styles.css`;
+        styles.href = `pages/${page}/styles.css`;
+        document.head.appendChild(styles);
+      }
+      if (js) {
+        definitelyNotEval(js)
+      }
     }
   })
 

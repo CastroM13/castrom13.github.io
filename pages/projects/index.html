@@ -1,14 +1,15 @@
 <section>
     <div class="header">
+        <div class="select revert">
+            <img onclick="this.parentElement.classList.toggle('filter-active');document.querySelector('#search').focus()" class="search link" src="assets/search.svg" width="32px" height="32px" alt="">
+            <input autocomplete="off" placeholder="Search projects by name" id="search" type="text">
+            <span id="clear-search" class="clear">&times;</span>
+        </div>
         <div class="select">
             <img onclick="this.parentElement.classList.toggle('filter-active')" class="search link" src="assets/filter_list.svg" width="32px" height="32px" alt="">
             <select id="language">
                 <option value="All">All</option>
             </select>
-        </div>
-        <div class="select">
-            <img onclick="this.parentElement.classList.toggle('filter-active')" class="search link" src="assets/search.svg" width="32px" height="32px" alt="">
-            <input placeholder="Search projects by name" id="search" type="text">
         </div>
     </div>
     <div id="render" class="body">

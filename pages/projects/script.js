@@ -1,5 +1,5 @@
 let projects = [];
-
+let language;
 const requestResource = (resource) => {
     if (resource && resource.url) {
         return fetch((resource).url).then(e => e.json()).then(e => e.content)
@@ -60,27 +60,40 @@ const getProjects = () => {
                     document.querySelector("#language").appendChild(stringToDomElement(`<option value="${i}">${i}</option>`))
 
                 });
-                loadSelect();
             });
         });
 }
 
 const handleInput = () => {
-    renderProjects(projects.filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true))
+    renderProjects(projects
+        .filter(t => t.app ? t.app.languages.includes(language) : false)
+        .filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true)
+    );
+}
+
+const clearInput = () => {
+    document.querySelector('#search').value = null;
+    renderProjects(projects
+        .filter(t => t.app ? t.app.languages.includes(language) : false)
+        .filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true)
+    );
 }
 
 const changeLanguage = (event) => {
-    const language = event.target.value;
-    console.log(projects)
+    language = event.target.value;
     if (language === 'All') {
-        renderProjects(projects)
+        renderProjects(projects);
     } else {
-        renderProjects(projects.filter(t => t.app ? t.app.languages.includes(language) : false))
+        renderProjects(projects
+            .filter(t => t.app ? t.app.languages.includes(language) : false)
+            .filter(t => inputElement.value ? t.path.toLowerCase().includes(inputElement.value.toLowerCase()) : true)
+        );
     }
 }
 
 inputElement.addEventListener('input', debounce(handleInput, 500));
-document.querySelector("#language").addEventListener("change", changeLanguage)
+document.querySelector("#language").addEventListener("change", changeLanguage);
+document.querySelector("#clear-search").addEventListener("click", clearInput);
 
 
 const main = () => {
@@ -103,30 +116,31 @@ window.onload = main();
 
 const renderProjects = (projects) => {
     loadCount = [projects.length, 0]
-    document.querySelector('#render').innerHTML = null;
-    projects.forEach(async project => {
-        loadCount[1]++;
-        document.querySelector('#render')?.appendChild(stringToDomElement(`
-<div class="card">
-    <img src="data:image/png;base64, ${await project.thumbnail}" onerror="this.src='assets/thumbnail-fallback.png';this.classList.add('fallback')" class="thumbnail">
-    <div class="card-body">
-        <span onclick="window.open('https://castrom13.github.io/${project.path}', '_blank')">
-            <img class="icon" width="32px" src='data:image/png;base64, ${await project.icon}' onerror="this.src='assets/project-fallback.svg';this.classList.add('fallback')"/>
-            ${project.name}
-            <img onclick="window.open('${project.url}', '_blank')" class="link" width="32px" src='assets/logos/logo-github.svg'/>
-        </span>
-        <!-- <p>Descrição curta do projeto que inclua funções e propósito.</p> -->
-        <div class="badges">
-            <a href="#">
-                <img width="32px'" src="assets/logos/logo-github.svg" />
-            </a>
+    if (document.querySelector('#render')) {
+        document.querySelector('#render').innerHTML = null;
+        projects.forEach(async project => {
+            loadCount[1]++;
+            document.querySelector('#render').appendChild(stringToDomElement(`
+    <div class="card">
+        <img src="data:image/png;base64, ${await project.thumbnail}" onerror="this.src='assets/thumbnail-fallback.png';this.classList.add('fallback')" class="thumbnail">
+        <div class="card-body">
+            <span onclick="window.open('https://castrom13.github.io/${project.path}', '_blank')">
+                <img class="icon" width="32px" src='data:image/png;base64, ${await project.icon}' onerror="this.src='assets/project-fallback.svg';this.classList.add('fallback')"/>
+                ${project.name}
+                <img onclick="window.open('${project.url}', '_blank')" class="link" width="32px" src='assets/logos/logo-github.svg'/>
+            </span>
+            <!-- <p>Descrição curta do projeto que inclua funções e propósito.</p> -->
+            <div class="badges">
+                <a href="#">
+                    <img width="32px'" src="assets/logos/logo-github.svg" />
+                </a>
+            </div>
         </div>
     </div>
-</div>
-`))
-        if (loadCount[0] === loadCount[0]) {
-            setInterval(() => toggleLoading(false), 1000);
-        }
-    })
-
+    `))
+            if (loadCount[0] === loadCount[0]) {
+                setInterval(() => toggleLoading(false), 1000);
+            }
+        })
+    }
 }
