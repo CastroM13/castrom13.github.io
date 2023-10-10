@@ -2,39 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castro - Developer</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navigation">
-        <section class="developer">
-            <img id="picture" width="100px" src="https://github.com/CastroM13.png" onerror="this.src='assets/user-fallback.svg'"/>
-            <h1 id="name">Matheus Castro</h1>
-            <span class="tag">CastroM13</span>
-        </section>
-        <section class="menu">
-            <ul class="menu">
-                <li onclick="showPage(event.target)" data-link="about-me">About me</li>
-                <li onclick="showPage(event.target)" data-link="blog">Blog</li>
-                <li onclick="showPage(event.target)" data-link="projects">Projects</li>
-                <li onclick="showPage(event.target)" data-link="designs">Designs</li>
-                <li><a target="_blank" download href="assets/curriculum.pdf">Curriculum</a></li>
-            </ul>
-        </section>
-        <div id="socials"></div>
+    <div id="sidebar">
+        <img src="https://avatars.githubusercontent.com/castrom13" alt="GitHub Profile Picture" width="150" style="border-radius: 100%">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#projects">Projects</a></li>
     </div>
-    <div class="router">
-        <section id="pages/about-me">
-        </section>
-        <section id="pages/blog">
-        </section>
-        <section id="pages/projects">
-        </section>
-        <section id="pages/designs">
-        </section>
-    </div>
+    <div id="content"></div>
 </body>
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </html>

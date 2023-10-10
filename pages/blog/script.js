@@ -1,5 +1,5 @@
-const renderPost = (event) => {
-  const url = event.target.href;
+renderPost = (event) => {
+  url = event.target.href;
   fetch(url)
     .then(e => e.text())
     .then(e => console.log(e))
@@ -8,7 +8,7 @@ const renderPost = (event) => {
 fetch('https://api.github.com/repos/CastroM13/CastroM13/git/trees/ac51b3e76346df1371206226faa3020c0a740272')
   .then(e => e.json())
   .then(e => e.tree.forEach(post => {
-    const link = document.createElement('p')
+    link = document.createElement('p')
     link.href = 'https://raw.githubusercontent.com/CastroM13/CastroM13/main/blog/' + encodeURI(post.path);
     link.onclick = renderPost;
     link.textContent = post.path.split('.md')[0];
@@ -16,22 +16,22 @@ fetch('https://api.github.com/repos/CastroM13/CastroM13/git/trees/ac51b3e76346df
     document.querySelector('#blog-wrapper').appendChild(link)
   }));
 
-const slider = document.querySelector('.slider');
-const btnLeft = document.querySelector('.left');
-const btnRight = document.querySelector('.right');
-const pager = document.querySelector('#pager');
-let sliderIndex = 0;
+slider = document.querySelector('.slider');
+btnLeft = document.querySelector('.left');
+btnRight = document.querySelector('.right');
+pager = document.querySelector('#pager');
+sliderIndex = 0;
 
-const updatePagerButton = (sliderIndex) => {
-  const active = pager.querySelector('.active');
+updatePagerButton = (sliderIndex) => {
+  active = pager.querySelector('.active');
   active && active.classList.remove('active');
   pager.querySelector('#slide-' + sliderIndex).classList.add('active')
 };
 
-const slide = (times = 0) => {
-  const slidesSize = (slider.querySelectorAll(".slide").length - 1);
-  const higherThanZero = (sliderIndex + times) >= 0;
-  const smallerThanSize = (sliderIndex + times) <= slidesSize;
+slide = (times = 0) => {
+  slidesSize = (slider.querySelectorAll(".slide").length - 1);
+  higherThanZero = (sliderIndex + times) >= 0;
+  smallerThanSize = (sliderIndex + times) <= slidesSize;
   if (higherThanZero && smallerThanSize) {
     sliderIndex = sliderIndex + times;
     btnLeft.classList.remove('invisible');
@@ -49,14 +49,14 @@ const slide = (times = 0) => {
   }
 }
 
-const slideTo = (event) => {
-  const index = event.target.id.split('-')[1];
-  const times = index - sliderIndex;
+slideTo = (event) => {
+  index = event.target.id.split('-')[1];
+  times = index - sliderIndex;
   slide(times)
 }
 
 (slider.querySelectorAll(".slide").length > 1 ? slider.querySelectorAll(".slide") : []).forEach((slide, i) => {
-  const pagerButton = document.createElement('button');
+  pagerButton = document.createElement('button');
   if (i === 0) {
     pagerButton.className = 'active';
   }

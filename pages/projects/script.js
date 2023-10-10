@@ -115,11 +115,9 @@ const getRejectList = () => fetch('pages/projects/reject.json')
 window.onload = main();
 
 const renderProjects = (projects) => {
-    loadCount = [projects.length, 0]
     if (document.querySelector('#render')) {
         document.querySelector('#render').innerHTML = null;
         projects.forEach(async project => {
-            loadCount[1]++;
             document.querySelector('#render').appendChild(stringToDomElement(`
     <div class="card">
         <img src="data:image/png;base64, ${await project.thumbnail}" onerror="this.src='assets/thumbnail-fallback.png';this.classList.add('fallback')" class="thumbnail">
@@ -138,9 +136,7 @@ const renderProjects = (projects) => {
         </div>
     </div>
     `))
-            if (loadCount[0] === loadCount[0]) {
-                setInterval(() => toggleLoading(false), 1000);
-            }
+    toggleLoading(false)
         })
     }
 }
