@@ -71,3 +71,21 @@ copyText = (text) => {
     console.error('Async: Could not copy text: ', err);
   });
 }
+
+function detectColorScheme(){
+  var theme="dark";
+
+  if(localStorage.getItem("theme") == "light"){
+    theme = "light";
+  }
+
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    theme = "dark";
+  }
+  
+  //dark theme preferred, set document with a `data-theme` attribute
+  if (theme=="dark") {
+       document.documentElement.setAttribute("data-theme", "dark");
+  }
+}
+detectColorScheme();

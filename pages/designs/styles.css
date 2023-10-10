@@ -1,0 +1,77 @@
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+	grid-gap: 1em;
+}
+
+.design-wrapper {
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.design-slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+
+.design-wrapper:hover .design-slider .title {
+    opacity: 1;
+}
+
+.design-slider .title {
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(0deg, black, transparent);
+    bottom: 0;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.design {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    user-select: none;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.design-slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.design-slider:hover > #pager {
+    opacity: 1;
+}
+
+#blog-wrapper {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#blog-wrapper > p {
+    cursor: pointer;
+    background: #181818;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    color: #bababa;
+    text-decoration: none;
+}

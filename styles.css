@@ -2,19 +2,21 @@
 
 /* Dark Theme by Default */
 :root {
-    --background: black;
-    --font-main: white;
-    --bg-highlight: rgba(244, 244, 244, 0.132);
-    --invert: 1;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* Light Theme when chosen */
-:root.light {
     --background: white;
     --font-main: black;
     --bg-highlight: rgba(0, 0, 0, 0.132);
     --invert: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: black;
+        --font-main: white;
+        --bg-highlight: rgba(244, 244, 244, 0.132);
+        --invert: 1;
+    }
 }
 
 body {
@@ -34,8 +36,6 @@ ul {
 }
 
 .navigation {
-    background: #1c1c1c96;
-    border-radius: 5px;
     width: calc(300px - 4em);
     height: calc(100% - 4em);
     padding: 1em;
