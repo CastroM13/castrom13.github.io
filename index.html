@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="navigation">
+    <div class="d navigation">
         <section class="developer">
             <img id="picture" width="100px" src="https://github.com/CastroM13.png" onerror="this.src='assets/user-fallback.svg'"/>
             <h1 id="name">Matheus Castro</h1>
@@ -20,7 +20,6 @@
                 <li onclick="showPage(event.target)" data-link="blog">Blog</li>
                 <li onclick="showPage(event.target)" data-link="projects">Projects</li>
                 <li onclick="showPage(event.target)" data-link="designs">Designs</li>
-                <li><a target="_blank" download href="assets/curriculum.pdf">Curriculum</a></li>
             </ul>
         </section>
         <div id="socials"></div>
@@ -34,6 +33,12 @@
         </section>
         <section id="pages/designs">
         </section>
+    </div>
+    <div class="m navbar menu">
+        <img onclick="showPage(event.target)" data-link="about-me" id="picture" width="48px" src="https://github.com/CastroM13.png" onerror="this.src='assets/user-fallback.svg'"/>
+        <li onclick="showPage(event.target)" data-link="blog">Blog</li>
+        <li onclick="showPage(event.target)" data-link="projects">Projects</li>
+        <li onclick="showPage(event.target)" data-link="designs">Designs</li>
     </div>
 </body>
 <script src="./script.js"></script>

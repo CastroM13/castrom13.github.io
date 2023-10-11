@@ -4,6 +4,11 @@
     justify-content: space-between;
 }
 
+.mobile .header {
+    width: calc(100% - 2em);
+    padding: 1em;
+}
+
 .body {
     position: relative;
     margin: 1em;

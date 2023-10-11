@@ -101,6 +101,7 @@
 }
 
 #blog-wrapper {
+    width: calc(100% - 4em);
     margin: 1em;
     display: flex;
     flex-direction: column;

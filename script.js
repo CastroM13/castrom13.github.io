@@ -5,6 +5,20 @@ const definitelyNotEval = eval;
 // eval is evil, so no eval for u
 window['eval'] = null
 
+const isMobileDevice = () => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const mobileKeywords = ["android", "iphone", "ipad", "ipod", "blackberry", "windows phone"];
+  
+  return mobileKeywords.some(keyword => userAgent.indexOf(keyword) !== -1);
+}
+
+if (isMobileDevice()) {
+  document.body.classList.add('mobile');
+} else {
+  document.body.classList.add('desktop');
+}
+
+
 const renderer = async (page) => await Promise.all([`pages/${page}/index.html`,`pages/${page}/script.js`, `pages/${page}/styles.css`].map(r => fetch(r).then(r => r.ok ? r : null)))
   .then(result => result.map(r => r && r.text()))
   .then(async results => {
@@ -82,7 +96,7 @@ function detectColorScheme(){
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     theme = "dark";
   }
-  
+
   //dark theme preferred, set document with a `data-theme` attribute
   if (theme=="dark") {
        document.documentElement.setAttribute("data-theme", "dark");
