@@ -1,0 +1,6 @@
+{
+  "name": "Baldur's Gate 3 Item Viewer",
+  "version": "1.0.0",
+  "description": "Baldur's Gate 3 Item Search, infos data mined by Noway3, images sourced from bg3.wiki.",
+  "languages": ["Javascript", "Wiki"]
+}
