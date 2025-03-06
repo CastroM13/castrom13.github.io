@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--5ETOOLS_CMP-->
+	<!--5ETOOLS_ANALYTICS-->
+	<!--5ETOOLS_ADCODE-->
+	<meta charset="utf-8">
+	<meta name="description"
+		content="A suite of tools for 5th Edition Dungeons &amp; Dragons players and Dungeon Masters.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>5etools</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="icon" type="image/png" sizes="256x256" href="favicon-256x256.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="favicon-144x144.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+	<!-- Chrome Web App Icons -->
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="application-name" content="5etools">
+	<meta name="theme-color" content="#006bc4">
+
+	<!-- Windows Start Menu tiles -->
+	<meta name="msapplication-config" content="browserconfig.xml" />
+	<meta name="msapplication-TileColor" content="#006bc4">
+
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="360x360" href="apple-touch-icon-360x360.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<meta name="apple-mobile-web-app-title" content="5etools">
+
+	<!-- macOS Safari Pinned Tab and Touch Bar -->
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#006bc4">
+
+	<!-- OpenSearch -->
+	<link rel="search" href="open-search.xml" title="Search 5etools" type="application/opensearchdescription+xml">
+
+	<script type="text/javascript" src="sw-injector.js"></script>
+
+	<script type="text/javascript" src="js/styleswitch.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="module" src="js/browsercheck.js"></script>
+</head>
+
+<body>
+
+	<header class="hidden-xs hidden-sm page__header">
+		<div class="container ve-flex-v-baseline">
+			<img src="logo.png" width="400px" style="filter: invert(1);" alt="">
+		</div>
+	</header>
+	
+	<nav class="container page__nav" id="navigation">
+		<ul class="nav nav-pills page__nav-inner" id="navbar"></ul>
+	</nav>
+
+	<div class="home__stripe">
+		<div class="home__split relative">
+			<div
+				class="ve-flex ve-flex-wrap relative home__split-spaced home__split-spaced--gutter home__split-spaced--no-header home__wrp-buttons">
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="races.html">
+					<div class="fal fa-users home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Species</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="classes.html" title="Quickly browse the official classes, and their associated subclasses.
+Unearthed Arcana content can be accessed by cycling the &quot;All Sources&quot; button.">
+					<div class="fal fa-hat-wizard home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Classes</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="feats.html">
+					<div class="fal fa-award home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Feats</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__btn-player" href="optionalfeatures.html"
+					title="A searchable, filterable list of feature choices, including Eldritch Invocations for the Warlock Class, and Maneuvers for the Fighter's Battlemaster subclass.">
+					<div class="fal fa-drafting-compass home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Options<br>&amp; Features</h4>
+				</a>
+
+				<!-- mobile only -->
+				<a class="home__btn-page ve-btn ve-btn-default home__narrow-visible home__btn-player"
+					href="backgrounds.html">
+					<div class="fal fa-portrait home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Backgrounds</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__narrow-visible home__btn-player" href="items.html">
+					<div class="fal fa-helmet-battle home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Items</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__narrow-visible home__btn-player"
+					href="spells.html">
+					<div class="fal fa-book-spells home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Spells</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__narrow-visible home__btn-player"
+					href="statgen.html">
+					<div class="fal fa-tally home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Stat<br>Generator</h4>
+				</a>
+			</div>
+
+			<div class="ve-flex ve-flex-wrap home__wrp-buttons home__narrow-hidden">
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="backgrounds.html">
+					<div class="fal fa-portrait home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Backgrounds</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="items.html">
+					<div class="fal fa-helmet-battle home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Items</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-player" href="spells.html">
+					<div class="fal fa-book-spells home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Spells</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__btn-player" href="statgen.html">
+					<div class="fal fa-tally home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Stat<br>Generator</h4>
+				</a>
+			</div>
+		</div>
+
+		<br class="home__mobile-hidden">
+
+		<div class="home__split">
+			<div class="ve-flex ve-flex-wrap relative home__split-spaced home__split-spaced--gutter home__wrp-buttons">
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-rule" href="adventures.html"
+					title="All the official adventures published by Wizards of the Coast.">
+					<div class="fal fa-dungeon home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Adventures</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-rule" href="books.html"
+					title="All the official sources published by Wizards of the Coast.">
+					<div class="fal fa-books home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Books</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-rule" href="variantrules.html"
+					title="A searchable selection of commonly used rules and tables.">
+					<div class="fal fa-info-square home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Rules<br>Glossary</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__btn-rule" href="conditionsdiseases.html"
+					title="A searchable, filterable list of the conditions found in the Player's Handbook, and various diseases found in the Dungeon Master's Guide and beyond.">
+					<div class="fal fa-skull-crossbones home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Conditions</h4>
+				</a>
+			</div>
+
+			<div class="my-4 home__mobile-visible"></div>
+
+			<div class="ve-flex ve-flex-wrap relative home__wrp-buttons">
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-dm" href="bestiary.html"
+					title="A searchable, filterable list of the more than 1,000 stat blocks in D&amp;D 5e. An encounter builder is included, and creature Challenge Rating can be scaled according to the &quot;Creating Quick Monster Stats&quot; table in the Dungeon Master's Guide.">
+					<div class="fal fa-dragon home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Bestiary</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-dm" href="dmscreen.html"
+					title="A fully-customizable Dungeon Master's screen, featuring an initiative tracker; a unit converter, embedded images, videos, and sites; and the majority of 5etools' content.">
+					<div class="fal fa-map home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">DM Screen</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default mr-3 home__btn-dm" href="lootgen.html"
+					title="A random loot generator for both individual and hoards of treasure.">
+					<div class="fal fa-treasure-chest home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">Loot<br>Generator</h4>
+				</a>
+				<a class="home__btn-page ve-btn ve-btn-default home__btn-dm" href="crcalculator.html"
+					title="A verbose, in-depth Challenge Rating calculator, for determining the CR of homebrew creatures.">
+					<div class="fal fa-abacus home__icn-page"></div>
+					<h4 class="ve-text-center home__lbl-page">CR<br>Calculator</h4>
+				</a>
+			</div>
+		</div>
+
+		<div class="my-4"></div>
+
+	</div>
+	<div class="container" style="display: flex; justify-content: center;margin-top: 20px;">
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); width: 100%">
+			<section>
+				<h2>Commands</h2>
+				<ul>
+					<li>Up and down arrow keys cycle input history.</li>
+					<li>Anything before a colon is treated as a label (e.g., <strong>Fireball: 8d6</strong>).</li>
+					<li>Use <code>/macro list</code> to list saved macros.</li>
+					<li>Use <code>/macro add myName 1d2+3</code> to add or update a macro.</li>
+					<li>Macro names should not contain spaces or hashes.</li>
+					<li>Use <code>/macro remove myName</code> to remove a macro.</li>
+					<li>Use <code>#myName</code> to roll a macro.</li>
+					<li>Use <code>/iterroll roll count [target]</code> to roll multiple times</li>
+					<li>Use <code>/clear</code> to clear the roller.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Basic Rolls</h2>
+				<ul>
+					<li><strong>Keep highest:</strong> 4d6kh3</li>
+					<li><strong>Drop lowest:</strong> 4d6dl1</li>
+					<li><strong>Drop highest:</strong> 3d4dh1</li>
+					<li><strong>Keep lowest:</strong> 3d4kl1</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Rerolls</h2>
+				<ul>
+					<li><strong>Reroll equal:</strong> 2d4r1</li>
+					<li><strong>Reroll less:</strong> 2d4r&lt;2</li>
+					<li><strong>Reroll less or equal:</strong> 2d4r&lt;=2</li>
+					<li><strong>Reroll greater:</strong> 2d4r&gt;2</li>
+					<li><strong>Reroll greater or equal:</strong> 2d4r&gt;=3</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Count Successes</h2>
+				<ul>
+					<li><strong>Equal:</strong> 2d4cs=4</li>
+					<li><strong>Less:</strong> 2d4cs&lt;2</li>
+					<li><strong>Less or equal:</strong> 2d4cs&lt;=2</li>
+					<li><strong>Greater:</strong> 2d4cs&gt;2</li>
+					<li><strong>Greater or equal:</strong> 2d4cs&gt;=3</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Other Mechanics</h2>
+				<ul>
+					<li><strong>Margin of Success:</strong> 2d4ms=4</li>
+					<li><strong>Dice pools:</strong> {2d8, 1d6}</li>
+					<li><strong>Dice pools with modifiers:</strong> {1d20+7, 10}kh1</li>
+					<li><strong>Rounding:</strong> floor(1.5), ceil(1.5), round(1.5)</li>
+					<li><strong>Average:</strong> avg(8d6)</li>
+					<li><strong>Maximize dice:</strong> dmax(8d6)</li>
+					<li><strong>Minimize dice:</strong> dmin(8d6)</li>
+					<li><strong>Other functions:</strong> sign(1d6-3), abs(1d6-3), ...etc.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Explosions</h2>
+				<ul>
+					<li><strong>Explode equal:</strong> 2d4x4</li>
+					<li><strong>Explode less:</strong> 2d4x&lt;2</li>
+					<li><strong>Explode less or equal:</strong> 2d4x&lt;=2</li>
+					<li><strong>Explode greater:</strong> 2d4x&gt;2</li>
+					<li><strong>Explode greater or equal:</strong> 2d4x&gt;=3</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script type="text/javascript" defer src="lib/jquery.js"></script>
+	<script type="text/javascript" defer src="js/parser.js"></script>
+	<script type="text/javascript" defer src="js/utils.js"></script>
+	<script type="text/javascript" defer src="js/utils-ui.js"></script>
+	<script type="text/javascript" defer src="lib/localforage.js"></script>
+	<script type="module" defer src="js/omnidexer.js"></script>
+	<script type="module" src="js/omnisearch.js"></script>
+	<script type="module" src="js/filter.js"></script>
+	<script type="text/javascript" defer src="js/utils-dataloader.js"></script>
+	<script type="module" src="js/utils-brew.js"></script>
+	<script type="module" src="js/utils-config.js"></script>
+	<script type="text/javascript" defer src="js/render.js"></script>
+	<script type="text/javascript" defer src="js/render-dice.js"></script>
+	<script type="module" src="js/shim-esmodules.js"></script>
+	<script type="text/javascript" defer src="js/hist.js"></script>
+	<script type="module" src="js/index.js"></script>
+	<script type="text/javascript" defer src="js/list2.js"></script>
+	<script type="text/javascript" defer src="lib/elasticlunr.js"></script>
+
+</body>
+
+</html>
