@@ -18,8 +18,8 @@ const settingsGroupStyleSwitcher = new ConfigSettingsGroup({
 		)(),
 		new ConfigSettingEnum({
 			configId: "style",
-			name: `<span>Style <span class="ve-small">(see also: <a href="https://2014.5e.tools" rel="noopener noreferrer" target="_blank">2014.5e.tools</a>)</span></span>`,
-			help: `The styling to be applied when rendering specific information (stat blocks, etc.). Does not affect what content is available, only how it is displayed. See also: https://2014.5e.tools.`,
+			name: `<span>Style <span class="ve-small">(see also: <a href="https://2014.5e.whomst" rel="noopener noreferrer" target="_blank">2014.5e.whomst</a>)</span></span>`,
+			help: `The styling to be applied when rendering specific information (stat blocks, etc.). Does not affect what content is available, only how it is displayed. See also: https://2014.5e.whomst.`,
 			isRowLabel: true,
 			isReloadRequired: true,
 			default: SITE_STYLE__ONE,
@@ -55,7 +55,7 @@ const settingsGroupMarkdown = new ConfigSettingsGroup({
 		new ConfigSettingEnum({
 			configId: "tagRenderMode",
 			name: `Tag Handling (<code>@tag</code>)`,
-			help: `The output to produce when rendering a 5etools "@tag".`,
+			help: `The output to produce when rendering a 5E "@tag".`,
 			isRowLabel: true,
 			default: "convertMarkdown",
 			values: [

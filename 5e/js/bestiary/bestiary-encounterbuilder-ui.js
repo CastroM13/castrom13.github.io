@@ -159,7 +159,7 @@ export class EncounterBuilderUiBestiary extends EncounterBuilderUi {
 
 	_showBuilder () {
 		this._cachedTitle = this._cachedTitle || document.title;
-		document.title = "Encounter Builder - 5etools";
+		document.title = "Encounter Builder - 5E";
 		$(document.body).addClass("best__ecgen-active");
 		this._bestiaryPage.doDeselectAll();
 		this._sublistManager.doSublistDeselectAll();

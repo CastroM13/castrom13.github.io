@@ -2505,7 +2505,7 @@
 			"level": 4,
 			"entries": [
 				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"If your DM allows the use of feats, you may instead take a {@5E feat|feats.html}."
 			]
 		},
 		{
@@ -2566,7 +2566,7 @@
 			"level": 8,
 			"entries": [
 				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"If your DM allows the use of feats, you may instead take a {@5E feat|feats.html}."
 			]
 		},
 		{
@@ -2591,7 +2591,7 @@
 			"level": 12,
 			"entries": [
 				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"If your DM allows the use of feats, you may instead take a {@5E feat|feats.html}."
 			]
 		},
 		{
@@ -2616,7 +2616,7 @@
 			"level": 16,
 			"entries": [
 				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"If your DM allows the use of feats, you may instead take a {@5E feat|feats.html}."
 			]
 		},
 		{
@@ -2653,7 +2653,7 @@
 			"level": 19,
 			"entries": [
 				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"If your DM allows the use of feats, you may instead take a {@5E feat|feats.html}."
 			]
 		},
 		{
@@ -2941,7 +2941,7 @@
 			"classSource": "XPHB",
 			"level": 4,
 			"entries": [
-				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify. You gain this feature again at Sorcerer levels 8, 12, and 16."
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5E feat|feats.html} of your choice for which you qualify. You gain this feature again at Sorcerer levels 8, 12, and 16."
 			]
 		},
 		{
@@ -2990,7 +2990,7 @@
 			"classSource": "XPHB",
 			"level": 8,
 			"entries": [
-				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5E feat|feats.html} of your choice for which you qualify."
 			]
 		},
 		{
@@ -3014,7 +3014,7 @@
 			"classSource": "XPHB",
 			"level": 12,
 			"entries": [
-				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5E feat|feats.html} of your choice for which you qualify."
 			]
 		},
 		{
@@ -3036,7 +3036,7 @@
 			"classSource": "XPHB",
 			"level": 16,
 			"entries": [
-				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5etools feat|feats.html} of your choice for which you qualify."
+				"You gain the {@feat Ability Score Improvement|XPHB} feat or another {@5E feat|feats.html} of your choice for which you qualify."
 			]
 		},
 		{
@@ -3071,7 +3071,7 @@
 			"classSource": "XPHB",
 			"level": 19,
 			"entries": [
-				"You gain an {@filter Epic Boon feat|feats|category=EB} or another {@5etools feat|feats.html} of your choice for which you qualify. {@feat Boon of Dimensional Travel|XPHB} is recommended."
+				"You gain an {@filter Epic Boon feat|feats|category=EB} or another {@5E feat|feats.html} of your choice for which you qualify. {@feat Boon of Dimensional Travel|XPHB} is recommended."
 			]
 		},
 		{

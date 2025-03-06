@@ -3772,7 +3772,7 @@ class SourceUiUtil {
 				${$iptAuthors}
 			</div></div>
 			<div class="ui-source__row mb-2"><div class="ve-col-12 ve-flex-v-center">
-				<span class="mr-2 ui-source__name help" title="A comma-separated list of people who converted the homebrew to 5etools' format, e.g. 'John Doe, Joe Bloggs'">Converted By</span>
+				<span class="mr-2 ui-source__name help" title="A comma-separated list of people who converted the homebrew to 5E' format, e.g. 'John Doe, Joe Bloggs'">Converted By</span>
 				${$iptConverters}
 			</div></div>
 			<div class="ve-text-center mb-2">${$btnOk}${$btnCancel}</div>

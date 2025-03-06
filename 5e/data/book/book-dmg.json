@@ -10265,7 +10265,7 @@
 									],
 									"id": "1c3"
 								},
-								"See the {@5etools traps and hazards page|trapshazards.html} for more information."
+								"See the {@5E traps and hazards page|trapshazards.html} for more information."
 							],
 							"id": "1c2"
 						}
@@ -12656,7 +12656,7 @@
 							"name": "Sample Traps",
 							"page": 121,
 							"entries": [
-								"See the {@5etools traps and hazards page|trapshazards.html} for more information."
+								"See the {@5E traps and hazards page|trapshazards.html} for more information."
 							],
 							"id": "217"
 						}
@@ -13131,7 +13131,7 @@
 					"page": 133,
 					"entries": [
 						"The following pages contain tables that you can use to randomly generate treasures carried by monsters, stashed in their lairs, or otherwise hidden away. The placement of treasure is left to your discretion. The key is to make sure the players feel rewarded for playing, and that their characters are rewarded for overcoming dangerous challenges.",
-						"{@note See the {@5etools Loot Generator|lootgen.html} page for an automated version of the tables below.}",
+						"{@note See the {@5E Loot Generator|lootgen.html} page for an automated version of the tables below.}",
 						{
 							"type": "entries",
 							"name": "Treasure Tables",
@@ -15498,7 +15498,7 @@
 							"page": 144,
 							"entries": [
 								"When you use a Treasure Hoard table to randomly determine the contents of a treasure hoard and your roll indicates the presence of one or more magic items, you can determine the specific magic items by rolling on the appropriate table(s) here.",
-								"{@note See the {@5etools Loot Generator|lootgen.html} page for an automated version of the tables below.}",
+								"{@note See the {@5E Loot Generator|lootgen.html} page for an automated version of the tables below.}",
 								{
 									"type": "table",
 									"caption": "Magic Item Table A",
@@ -17226,7 +17226,7 @@
 							"name": "Magic Items A-Z",
 							"page": 150,
 							"entries": [
-								"Magic items are presented in alphabetical order. A magic item's description gives the item's name, its category, its rarity, and its magical properties. The full list of items is available on the {@5etools items|items.html} page."
+								"Magic items are presented in alphabetical order. A magic item's description gives the item's name, its category, its rarity, and its magical properties. The full list of items is available on the {@5E items|items.html} page."
 							],
 							"id": "269"
 						}

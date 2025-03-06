@@ -3079,7 +3079,7 @@ Parser.vehicleTypeToFull = function (vehicleType) {
 
 // SOURCES =============================================================================================================
 
-Parser.SRC_5ETOOLS_TMP = "SRC_5ETOOLS_TMP"; // Temp source, used as a placeholder value
+Parser.SRC_5E_TMP = "SRC_5E_TMP"; // Temp source, used as a placeholder value
 
 Parser.SRC_CoS = "CoS";
 Parser.SRC_DMG = "DMG";

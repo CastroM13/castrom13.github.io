@@ -2000,7 +2000,7 @@
 					"type": "entries",
 					"name": "Feat",
 					"entries": [
-						"You gain one {@5etools feat|feats.html} of your choice for which you qualify."
+						"You gain one {@5E feat|feats.html} of your choice for which you qualify."
 					]
 				},
 				{
@@ -7485,7 +7485,7 @@
 				{
 					"name": "Feat",
 					"entries": [
-						"You gain one {@5etools feat|feats.html} of your choice."
+						"You gain one {@5E feat|feats.html} of your choice."
 					],
 					"type": "entries"
 				},
@@ -18242,7 +18242,7 @@
 				{
 					"name": "Feat",
 					"entries": [
-						"You gain one {@5etools feat|feats.html} of your choice."
+						"You gain one {@5E feat|feats.html} of your choice."
 					],
 					"type": "entries"
 				}

@@ -73,7 +73,7 @@ const workboxRuntimeBuildResult = await injectManifest({
 	*/
 	globPatterns: [
 		"data/adventure/**/*.json", // matches all adventure json
-		"img/**/*", // matches all images
+		"https://5e.tools/img/**/*", // matches all images
 		"icon/*.png", // all icons
 		"*.png", // root images
 		"*.svg", // root svg

@@ -1306,7 +1306,7 @@ class _DataTypeLoaderCustomClassesSubclass extends _DataTypeLoaderCustomRawable 
 				if (fnIsInvalidUnpackedUid(unpackedUid)) return;
 
 				// Skip over temp/nonexistent links
-				if (source === Parser.SRC_5ETOOLS_TMP) return;
+				if (source === Parser.SRC_5E_TMP) return;
 
 				const hash = UrlUtil.URL_TO_HASH_BUILDER[propFeature](unpackedUid);
 

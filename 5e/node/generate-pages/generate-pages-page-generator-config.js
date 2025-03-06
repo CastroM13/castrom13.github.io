@@ -313,7 +313,7 @@ class _PageGeneratorPlutonium extends PageGeneratorGeneric {
 	_page = "plutonium.html";
 
 	_pageTitle = "Plutonium Features";
-	_navbarDescription = "An overview of the 5etools integration for Foundry VTT.";
+	_navbarDescription = "An overview of the 5E integration for Foundry VTT.";
 
 	_stylesheets = [
 		"plutonium",

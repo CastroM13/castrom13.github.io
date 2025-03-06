@@ -1,9 +1,8 @@
 {
-	"name": "5etools",
-	"author": "TheGiddyLimit",
-	"version": "2.7.3",
-	"license": "MIT",
-	"description": "A site dedicated to making playing games with your friends as easy as possible.",
+	"name": "not5E",
+	"author": "whomst",
+	"version": "0.0.0",
+	"description": "please leave",
 	"type": "module",
 	"private": true,
 	"scripts": {
@@ -43,10 +42,6 @@
 		"spellcheck:trust-data": "echo \"This can take a few minutes.\" && echo \"# new words on $(date)\" >> spellcheck/dnd-words.txt && npx cspell --words-only --unique \"./data/**/*.json\" | sort --ignore-case >> spellcheck/dnd-words.txt",
 		"prettier:css": "prettier scss/**/*.scss --log-level warn"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/5etools-mirror-3/5etools-src"
-	},
 	"devDependencies": {
 		"5etools-utils": "^0.13.5",
 		"ajv": "^8.12.0",
@@ -68,10 +63,6 @@
 		"stylelint-config-standard-scss": "^13.0.0",
 		"workbox-cli": "^7.1.0"
 	},
-	"bugs": {
-		"url": "https://github.com/5etools-mirror-3/5etools-src/issues"
-	},
-	"homepage": "https://github.com/5etools-mirror-3/5etools-src#readme",
 	"directories": {
 		"lib": "lib",
 		"test": "test"

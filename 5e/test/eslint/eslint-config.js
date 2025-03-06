@@ -12,7 +12,7 @@ export const CONFIG_IGNORES = {
 		"fonts/*",
 		"homebrew/*",
 		"icon/*",
-		"img/*",
+		"https://5e.tools/img/*",
 		"prerelease/*",
 		"scss/*",
 		"search/*",

@@ -1278,7 +1278,7 @@
 												"type": "internal",
 												"path": "book/XDMG/004-00-005.game-expectations-sheet.webp"
 											},
-											"title": "{@5etoolsImg Download PDF|pdf/XDMG/000-game-expectations-sheet.pdf}",
+											"title": "{@5EImg Download PDF|pdf/XDMG/000-game-expectations-sheet.pdf}",
 											"width": 1700,
 											"height": 2252
 										},
@@ -1288,7 +1288,7 @@
 											"page": 15,
 											"id": "037",
 											"entries": [
-												"The {@5etoolsImg Game Expectations|pdf/XDMG/000-game-expectations-sheet.pdf} tracking sheet is a tool you can use to set expectations at the start of a game and ensure the game is fun for everyone.",
+												"The {@5EImg Game Expectations|pdf/XDMG/000-game-expectations-sheet.pdf} tracking sheet is a tool you can use to set expectations at the start of a game and ensure the game is fun for everyone.",
 												"Before distributing the sheet to players, fill in the two topmost boxes:",
 												{
 													"type": "list",
@@ -1362,7 +1362,7 @@
 											"page": 15,
 											"id": "039",
 											"entries": [
-												"Make sure everyone is comfortable with how the discussion of limits takes place. Players might not want to discuss limits aloud, especially if they're new to roleplaying games or haven't spent a lot of time with other members of the group. One way to alleviate such discomfort is to provide a way for players to share limits anonymously. Everyone can jot down their limits on an anonymous survey, such as the {@5etoolsImg Game Expectations|pdf/XDMG/000-game-expectations-sheet.pdf} tracking sheet in this chapter.",
+												"Make sure everyone is comfortable with how the discussion of limits takes place. Players might not want to discuss limits aloud, especially if they're new to roleplaying games or haven't spent a lot of time with other members of the group. One way to alleviate such discomfort is to provide a way for players to share limits anonymously. Everyone can jot down their limits on an anonymous survey, such as the {@5EImg Game Expectations|pdf/XDMG/000-game-expectations-sheet.pdf} tracking sheet in this chapter.",
 												"Compile limits into a list that can be shared with the group. Limits aren't negotiable, and everyone in the group needs to respect them.",
 												"The start of a campaign is a great time to have this discussion, but further discussion is warranted each time a new player joins the group or when the campaign has a shift in story or tone. Someone might cross a line and need to be reminded of a limit, or someone might not think to include some of their limits in the initial discussion. Players can also discover new limits as the campaign unfolds. Check in with the group every few sessions to make sure everyone's comfortable with how the game is developing, updating the group's limits as needed."
 											]
@@ -3170,7 +3170,7 @@
 											"page": 36,
 											"id": "0a7",
 											"entries": [
-												"You can use the accompanying {@5etoolsImg Travel Planner|pdf/XDMG/010-travel-planner.pdf} sheet to plan the stages of a journey. (Use multiple copies of the Travel Planner for a journey with more than three stages.)",
+												"You can use the accompanying {@5EImg Travel Planner|pdf/XDMG/010-travel-planner.pdf} sheet to plan the stages of a journey. (Use multiple copies of the Travel Planner for a journey with more than three stages.)",
 												"For each stage, note where it starts and ends, the distance covered, and the predominant terrain. Choose or randomly determine the weather on that stage (see \"{@book Weather|XDMG|1|Weather}\" later in this chapter). Plan one or more challenges for each stage, such as an encounter, an obstacle, a search for something hidden, or a chance of getting lost, as described under \"Journey Stage Challenges.\""
 											]
 										},
@@ -3225,7 +3225,7 @@
 														"type": "internal",
 														"path": "book/XDMG/014-01-009.travel-planner-sheet.webp"
 													},
-													"title": "{@5etoolsImg Download PDF|pdf/XDMG/001-travel-planner.pdf}",
+													"title": "{@5EImg Download PDF|pdf/XDMG/001-travel-planner.pdf}",
 													"width": 1700,
 													"height": 2225
 												}
@@ -8274,7 +8274,7 @@
 												"path": "book/XDMG/039-02-019.npc-tracker-sheet.webp"
 											},
 											"credit": "Joy Ang",
-											"title": "{@5etoolsImg Download PDF|pdf/XDMG/002-npc-tracker-sheet.pdf}",
+											"title": "{@5EImg Download PDF|pdf/XDMG/002-npc-tracker-sheet.pdf}",
 											"width": 1700,
 											"height": 2263
 										}
@@ -9203,7 +9203,7 @@
 										"path": "book/XDMG/044-02-024.settlement-tracker-sheet.webp"
 									},
 									"credit": "Joy Ang",
-									"title": "{@5etoolsImg Download PDF|pdf/XDMG/003-settlement-tracker.pdf}",
+									"title": "{@5EImg Download PDF|pdf/XDMG/003-settlement-tracker.pdf}",
 									"width": 1700,
 									"height": 2258
 								}
@@ -12021,7 +12021,7 @@
 										"type": "internal",
 										"path": "book/XDMG/061-04-002.campaign-journal-sheet.webp"
 									},
-									"title": "{@5etoolsImg Download PDF|pdf/XDMG/004-campaign-journal-sheet.pdf}",
+									"title": "{@5EImg Download PDF|pdf/XDMG/004-campaign-journal-sheet.pdf}",
 									"width": 1700,
 									"height": 2229
 								}
@@ -12198,7 +12198,7 @@
 														"type": "internal",
 														"path": "book/XDMG/062-04-003.dms-character-tracker-sheet.webp"
 													},
-													"title": "{@5etoolsImg Download PDF|pdf/XDMG/005-character-tracker.pdf}",
+													"title": "{@5EImg Download PDF|pdf/XDMG/005-character-tracker.pdf}",
 													"width": 1700,
 													"height": 2223
 												}
@@ -12232,7 +12232,7 @@
 												"type": "internal",
 												"path": "book/XDMG/063-04-004.campaign-conflicts-sheet.webp"
 											},
-											"title": "{@5etoolsImg Download PDF|pdf/XDMG/006-campaign-conflict-sheet.pdf}",
+											"title": "{@5EImg Download PDF|pdf/XDMG/006-campaign-conflict-sheet.pdf}",
 											"width": 1700,
 											"height": 2261
 										}
@@ -24586,7 +24586,7 @@
 														"path": "book/XDMG/106-07-003.magic-item-tracker-sheet.webp"
 													},
 													"credit": "Justyna Gil",
-													"title": "{@5etoolsImg Download PDF|pdf/XDMG/007-magic-item-sheet.pdf}",
+													"title": "{@5EImg Download PDF|pdf/XDMG/007-magic-item-sheet.pdf}",
 													"width": 1700,
 													"height": 2225
 												}
@@ -29772,7 +29772,7 @@
 											"page": 350,
 											"id": "78d",
 											"entries": [
-												"Players can use the {@5etoolsImg Bastion Tracker|pdf/XDMG/017-bastion-sheet.pdf} sheet as a record of the facilities and other characteristics of their Bastions. Encourage your players to list their hirelings on this sheet and develop them more fully as NPCs on separate sheets (perhaps using the {@book NPC Tracker|XDMG|2|NPC Tracker} in {@book chapter 3|XDMG|2}). Similarly, the Bastion Tracker provides space to indicate the space of each special facility, but encourage players to draw maps of their Bastions (see \"{@book Bastion Map|XDMG|7|Bastion Map}\" earlier in this chapter)."
+												"Players can use the {@5EImg Bastion Tracker|pdf/XDMG/017-bastion-sheet.pdf} sheet as a record of the facilities and other characteristics of their Bastions. Encourage your players to list their hirelings on this sheet and develop them more fully as NPCs on separate sheets (perhaps using the {@book NPC Tracker|XDMG|2|NPC Tracker} in {@book chapter 3|XDMG|2}). Similarly, the Bastion Tracker provides space to indicate the space of each special facility, but encourage players to draw maps of their Bastions (see \"{@book Bastion Map|XDMG|7|Bastion Map}\" earlier in this chapter)."
 											]
 										}
 									]
@@ -29991,7 +29991,7 @@
 								"type": "internal",
 								"path": "book/XDMG/203-10-010.bastion-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/008-bastion-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/008-bastion-sheet.pdf}",
 							"width": 1700,
 							"height": 2253
 						}
@@ -31480,7 +31480,7 @@
 			"name": "Appendix C: Tracking Sheets",
 			"id": "7f4",
 			"entries": [
-				"You can find all the tracking sheets found throughout the {@book Dungeon Master's Guide|XDMG} below. A {@5etoolsImg combined sheet|pdf/XDMG/combined-tracking-sheets.pdf} is also available.",
+				"You can find all the tracking sheets found throughout the {@book Dungeon Master's Guide|XDMG} below. A {@5EImg combined sheet|pdf/XDMG/combined-tracking-sheets.pdf} is also available.",
 				{
 					"type": "section",
 					"name": "Game Expectations",
@@ -31492,7 +31492,7 @@
 								"type": "internal",
 								"path": "book/XDMG/240-13-001.game-expectations-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/009-game-expectations-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/009-game-expectations-sheet.pdf}",
 							"width": 1700,
 							"height": 2252
 						}
@@ -31509,7 +31509,7 @@
 								"type": "internal",
 								"path": "book/XDMG/241-13-002.travel-planner-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/010-travel-planner.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/010-travel-planner.pdf}",
 							"width": 1700,
 							"height": 2225
 						}
@@ -31526,7 +31526,7 @@
 								"type": "internal",
 								"path": "book/XDMG/242-13-003.npc-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/011-npc-tracker-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/011-npc-tracker-sheet.pdf}",
 							"width": 1700,
 							"height": 2263
 						}
@@ -31543,7 +31543,7 @@
 								"type": "internal",
 								"path": "book/XDMG/243-13-004.settlement-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/012-settlement-tracker.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/012-settlement-tracker.pdf}",
 							"width": 1700,
 							"height": 2258
 						}
@@ -31560,7 +31560,7 @@
 								"type": "internal",
 								"path": "book/XDMG/244-13-005.campaign-journal-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/013-campaign-journal-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/013-campaign-journal-sheet.pdf}",
 							"width": 1700,
 							"height": 2229
 						}
@@ -31577,7 +31577,7 @@
 								"type": "internal",
 								"path": "book/XDMG/245-13-006.dms-character-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/014-character-tracker.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/014-character-tracker.pdf}",
 							"width": 1700,
 							"height": 2223
 						}
@@ -31594,7 +31594,7 @@
 								"type": "internal",
 								"path": "book/XDMG/246-13-007.campaign-conflicts-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/015-campaign-conflict-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/015-campaign-conflict-sheet.pdf}",
 							"width": 1700,
 							"height": 2261
 						}
@@ -31611,7 +31611,7 @@
 								"type": "internal",
 								"path": "book/XDMG/247-13-008.magic-item-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/016-magic-item-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/016-magic-item-sheet.pdf}",
 							"width": 1700,
 							"height": 2225
 						}
@@ -31628,7 +31628,7 @@
 								"type": "internal",
 								"path": "book/XDMG/248-13-009.bastion-tracker-sheet.webp"
 							},
-							"title": "{@5etoolsImg Download PDF|pdf/XDMG/017-bastion-sheet.pdf}",
+							"title": "{@5EImg Download PDF|pdf/XDMG/017-bastion-sheet.pdf}",
 							"width": 1700,
 							"height": 2253
 						}

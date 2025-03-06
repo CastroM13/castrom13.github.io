@@ -5053,7 +5053,7 @@
 													"type": "list",
 													"items": [
 														"A platinum amulet on a thin but sturdy gold chain. This amulet is a holy symbol of Moradin (the dwarven god of creation) and bears his symbol: a hammer and anvil. Any dwarf character recognizes the symbol immediately, while a non-dwarf recognizes it with a successful {@dc 10} Intelligence ({@skill Religion}) check.",
-														"An unlocked steel coffer weighing 5 pounds. This small box is packed with silt, nestled in which is a {@item potion of superior healing}. Give the players the {@item Potion of Superior Healing} {@card potion of superior healing|Magic Item Cards|DIP|card} when they find this magic item or they can reference it in the {@5etools Magic Items Listing|items.html}."
+														"An unlocked steel coffer weighing 5 pounds. This small box is packed with silt, nestled in which is a {@item potion of superior healing}. Give the players the {@item Potion of Superior Healing} {@card potion of superior healing|Magic Item Cards|DIP|card} when they find this magic item or they can reference it in the {@5E Magic Items Listing|items.html}."
 													]
 												}
 											]
@@ -5176,7 +5176,7 @@
 											"page": 15,
 											"id": "070",
 											"entries": [
-												"The chest contains a {@item dread helm|XGE} and a pair of {@item gauntlets of ogre power}. Give the players the {@item Dread Helm|XGE} and {@item Gauntlets of Ogre Power} {@deck magic item cards|DIP|cards} when they find and identify these two magic items or they can reference them in the {@5etools Magic Items Listing|items.html}."
+												"The chest contains a {@item dread helm|XGE} and a pair of {@item gauntlets of ogre power}. Give the players the {@item Dread Helm|XGE} and {@item Gauntlets of Ogre Power} {@deck magic item cards|DIP|cards} when they find and identify these two magic items or they can reference them in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -5764,7 +5764,7 @@
 											"page": 17,
 											"id": "082",
 											"entries": [
-												"Any character who searches the wardrobe and succeeds on a {@dc 15} Wisdom ({@skill Perception}) check finds a secret compartment at the bottom, stuffed inside which is a suit of {@item mithral chain mail}. (If the characters acquire and identify this magic item, give them the {@item Mithral Chain Mail} {@card Mithral Chain Mail|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}.)"
+												"Any character who searches the wardrobe and succeeds on a {@dc 15} Wisdom ({@skill Perception}) check finds a secret compartment at the bottom, stuffed inside which is a suit of {@item mithral chain mail}. (If the characters acquire and identify this magic item, give them the {@item Mithral Chain Mail} {@card Mithral Chain Mail|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}.)"
 											]
 										}
 									]
@@ -5961,7 +5961,7 @@
 											"page": 18,
 											"id": "098",
 											"entries": [
-												"Yargath carries a {@item potion of greater healing}. If the characters acquire this potion, give the players the {@item Potion of Greater Healing} {@card potion of greater healing|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Yargath carries a {@item potion of greater healing}. If the characters acquire this potion, give the players the {@item Potion of Greater Healing} {@card potion of greater healing|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -6899,7 +6899,7 @@
 											"page": 19,
 											"id": "09f",
 											"entries": [
-												"Flenz hides a {@item potion of invulnerability} in his quarters, buried in a random square beneath the floor. If the characters obtain the potion, give the players the {@item Potion of Invulnerability} {@card potion of invulnerability|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Flenz hides a {@item potion of invulnerability} in his quarters, buried in a random square beneath the floor. If the characters obtain the potion, give the players the {@item Potion of Invulnerability} {@card potion of invulnerability|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -6917,7 +6917,7 @@
 											"page": 19,
 											"id": "0a1",
 											"entries": [
-												"Narux hides a {@item +1 shield} in his quarters, buried beneath the floor. If the characters obtain and identify it, give the players the {@item +1 Shield} {@card +1 Shield|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Narux hides a {@item +1 shield} in his quarters, buried beneath the floor. If the characters obtain and identify it, give the players the {@item +1 Shield} {@card +1 Shield|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -8250,7 +8250,7 @@
 											"page": 21,
 											"id": "0b7",
 											"entries": [
-												"The northwest sarcophagus contains the dead bard, who was buried with a {@item Instrument of Illusions|XGE|lute of illusions}. Sealed with the dead wizard in the southeast sarcophagus is a {@item necklace of fireballs}. If the characters acquire and identify these magic items, give them the {@item Instrument of Illusions|XGE|Lute of Illusions} and {@item Necklace of Fireballs} {@deck magic item cards|DIP|cards} or they can reference them in the {@5etools Magic Items Listing|items.html}."
+												"The northwest sarcophagus contains the dead bard, who was buried with a {@item Instrument of Illusions|XGE|lute of illusions}. Sealed with the dead wizard in the southeast sarcophagus is a {@item necklace of fireballs}. If the characters acquire and identify these magic items, give them the {@item Instrument of Illusions|XGE|Lute of Illusions} and {@item Necklace of Fireballs} {@deck magic item cards|DIP|cards} or they can reference them in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -8268,7 +8268,7 @@
 											"page": 21,
 											"id": "0b9",
 											"entries": [
-												"The sword is Lady Alagondar's {@item Dragon Slayer Longsword||dragon slayer}. Give the {@item Dragon Slayer Longsword||Dragon Slayer} {@card dragon slayer|Magic Item Cards|DIP|card} to whoever takes it or they can reference it in the {@5etools Magic Items Listing|items.html}. If the sword is taken, an {@creature invisible stalker} appears and attacks anyone in this area until the sword is put back, or until that guardian is destroyed."
+												"The sword is Lady Alagondar's {@item Dragon Slayer Longsword||dragon slayer}. Give the {@item Dragon Slayer Longsword||Dragon Slayer} {@card dragon slayer|Magic Item Cards|DIP|card} to whoever takes it or they can reference it in the {@5E Magic Items Listing|items.html}. If the sword is taken, an {@creature invisible stalker} appears and attacks anyone in this area until the sword is put back, or until that guardian is destroyed."
 											]
 										}
 									]
@@ -9581,7 +9581,7 @@
 											]
 										},
 										"If they haven't been encountered yet, Dazlyn and Norbus are eating rations behind the easternmost rubble pile while keeping an eye on the temple entrance ({@area area E4|0c9|x}). Each is a shield dwarf {@creature commoner} who speaks Common and Dwarvish, and who has {@sense darkvision} out to a range of 60 feet. Dazlyn is forthright and honest to a fault. Norbus is gruff and excessively cautious. They banter like an old married couple.",
-										"Each dwarf has ten days of {@item Rations (1 day)|PHB|rations}, a {@item waterskin|PHB}, mining tools, and one of two matching {@item sending stones}. The dwarves offer these magic items to anyone willing to kill the {@creature Ochre Jelly||ochre jellies} in {@area area E5|0ca|x}, search the temple for other obvious threats, and make it safe. If the characters obtain these stones, give the players both {@item Sending Stones||Sending Stone} {@card sending stone|Magic Item Cards|DIP|cards} or they can reference them in the {@5etools Magic Items Listing|items.html}. Eager to resume their excavation, the dwarves offer to split what they find with characters who help them.",
+										"Each dwarf has ten days of {@item Rations (1 day)|PHB|rations}, a {@item waterskin|PHB}, mining tools, and one of two matching {@item sending stones}. The dwarves offer these magic items to anyone willing to kill the {@creature Ochre Jelly||ochre jellies} in {@area area E5|0ca|x}, search the temple for other obvious threats, and make it safe. If the characters obtain these stones, give the players both {@item Sending Stones||Sending Stone} {@card sending stone|Magic Item Cards|DIP|cards} or they can reference them in the {@5E Magic Items Listing|items.html}. Eager to resume their excavation, the dwarves offer to split what they find with characters who help them.",
 										{
 											"type": "inset",
 											"name": "Temple Features",
@@ -9791,7 +9791,7 @@
 									"page": 24,
 									"id": "0d9",
 									"entries": [
-										"If the characters are eligible to undertake the {@area Woodland Manse Quest|03b|x}, Falcon offers a pair of {@item boots of elvenkind} as a reward for completing it. Give the players the {@item Boots of Elvenkind} {@card Boots of Elvenkind|Magic Item Cards|DIP|card} once the boots are acquired or they can reference them in the {@5etools Magic Items Listing|items.html}.",
+										"If the characters are eligible to undertake the {@area Woodland Manse Quest|03b|x}, Falcon offers a pair of {@item boots of elvenkind} as a reward for completing it. Give the players the {@item Boots of Elvenkind} {@card Boots of Elvenkind|Magic Item Cards|DIP|card} once the boots are acquired or they can reference them in the {@5E Magic Items Listing|items.html}.",
 										"Falcon politely declines any offer to join the characters on a quest, stating that he must remain at the lodge in case nobles from Neverwinter come looking for his services.",
 										{
 											"type": "inset",
@@ -10637,7 +10637,7 @@
 									"page": 26,
 									"id": "0f9",
 									"entries": [
-										"If the characters rescue Gnerkli and end Korboz's madness, the grateful gnomes give them a {@item clockwork amulet|XGE} and {@item pole of collapsing|XGE} (from {@area area G13|10f|x}). The characters also receive a gift from each king: a {@item wand of pyrotechnics|XGE} from Gnerkli and a {@item hat of wizardry|XGE} from Korboz. Give the players the {@item Clockwork Amulet|XGE}, {@item Hat of Wizardry|XGE}, {@item Pole of Collapsing|XGE}, and {@item Wand of Pyrotechnics|XGE} {@deck magic item cards|DIP|cards} as their characters obtain and identify each item or they can reference them in the {@5etools Magic Items Listing|items.html}."
+										"If the characters rescue Gnerkli and end Korboz's madness, the grateful gnomes give them a {@item clockwork amulet|XGE} and {@item pole of collapsing|XGE} (from {@area area G13|10f|x}). The characters also receive a gift from each king: a {@item wand of pyrotechnics|XGE} from Gnerkli and a {@item hat of wizardry|XGE} from Korboz. Give the players the {@item Clockwork Amulet|XGE}, {@item Hat of Wizardry|XGE}, {@item Pole of Collapsing|XGE}, and {@item Wand of Pyrotechnics|XGE} {@deck magic item cards|DIP|cards} as their characters obtain and identify each item or they can reference them in the {@5E Magic Items Listing|items.html}."
 									]
 								}
 							]
@@ -13495,7 +13495,7 @@
 											"page": 29,
 											"id": "110",
 											"entries": [
-												"Amid the clutter, the characters can find a {@item clockwork amulet|XGE} and a {@item pole of collapsing|XGE}, most easily by scanning the room with a {@spell detect magic} spell. It otherwise takes 1 hour to find each item. Give the players the {@item Clockwork Amulet|XGE} and {@item Pole of Collapsing|XGE} {@deck magic item cards|DIP|cards} if their characters acquire and identify these magic items or they can reference them in the {@5etools Magic Items Listing|items.html}."
+												"Amid the clutter, the characters can find a {@item clockwork amulet|XGE} and a {@item pole of collapsing|XGE}, most easily by scanning the room with a {@spell detect magic} spell. It otherwise takes 1 hour to find each item. Give the players the {@item Clockwork Amulet|XGE} and {@item Pole of Collapsing|XGE} {@deck magic item cards|DIP|cards} if their characters acquire and identify these magic items or they can reference them in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -13523,7 +13523,7 @@
 											"page": 29,
 											"id": "113",
 											"entries": [
-												"A small unlocked chest under the gnomes' bed contains a {@item hat of wizardry|XGE} and a fully charged {@item wand of pyrotechnics|XGE}. Give the players the {@item Hat of Wizardry|XGE} and {@item Wand of Pyrotechnics|XGE} {@deck Magic Item Cards|DIP|cards} if their characters acquire and identify these magic items or they can reference them in the {@5etools Magic Items Listing|items.html}."
+												"A small unlocked chest under the gnomes' bed contains a {@item hat of wizardry|XGE} and a fully charged {@item wand of pyrotechnics|XGE}. Give the players the {@item Hat of Wizardry|XGE} and {@item Wand of Pyrotechnics|XGE} {@deck Magic Item Cards|DIP|cards} if their characters acquire and identify these magic items or they can reference them in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -13651,7 +13651,7 @@
 											"page": 31,
 											"id": "121",
 											"entries": [
-												"If the characters are low on healing magic, they find three {@item Potion of Healing||potions of healing} in the ogre's sack along with the worthless items above. (Give the players three {@item Potion of Healing||Potions of Healing} {@card potion of healing|Magic Item Cards|DIP|cards} or they can reference them in the {@5etools Equipment Items Listing|items.html}.)"
+												"If the characters are low on healing magic, they find three {@item Potion of Healing||potions of healing} in the ogre's sack along with the worthless items above. (Give the players three {@item Potion of Healing||Potions of Healing} {@card potion of healing|Magic Item Cards|DIP|cards} or they can reference them in the {@5E Equipment Items Listing|items.html}.)"
 											]
 										}
 									]
@@ -19630,7 +19630,7 @@
 											"page": 37,
 											"id": "168",
 											"entries": [
-												"Characters who search the cave find two sacks hidden under debris. One sack contains ten fist-sized chunks of gold ore worth 10 gp each. The other holds 82 sp, 450 cp, and a pair of {@item goggles of night}. If the characters obtain and identify the goggles, give the {@item Goggles of Night} {@card Goggles of Night|Magic Item Cards|DIP|card} to the players or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Characters who search the cave find two sacks hidden under debris. One sack contains ten fist-sized chunks of gold ore worth 10 gp each. The other holds 82 sp, 450 cp, and a pair of {@item goggles of night}. If the characters obtain and identify the goggles, give the {@item Goggles of Night} {@card Goggles of Night|Magic Item Cards|DIP|card} to the players or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -20586,7 +20586,7 @@
 											"page": 39,
 											"id": "185",
 											"entries": [
-												"Any character who searches the altar and succeeds on a {@dc 10} Wisdom ({@skill Perception}) check realizes that the altar's base doesn't quite touch the floor. The altar has stone rollers built into it and can be pushed 3 feet to the south, revealing an unlocked wooden coffer tucked inside a 1-foot-square cavity in the floor. This coffer contains 57 gp and a {@item mystery key|XGE}. If the characters acquire and identify the {@item mystery key|XGE}, give the players the {@item Mystery Key|XGE} {@card Mystery Key|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Any character who searches the altar and succeeds on a {@dc 10} Wisdom ({@skill Perception}) check realizes that the altar's base doesn't quite touch the floor. The altar has stone rollers built into it and can be pushed 3 feet to the south, revealing an unlocked wooden coffer tucked inside a 1-foot-square cavity in the floor. This coffer contains 57 gp and a {@item mystery key|XGE}. If the characters acquire and identify the {@item mystery key|XGE}, give the players the {@item Mystery Key|XGE} {@card Mystery Key|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -21909,7 +21909,7 @@
 											"page": 41,
 											"id": "196",
 											"entries": [
-												"Characters who search through the harpies' nest find a {@item potion of water breathing}. If the characters acquire this potion, give them the {@item Potion of Water Breathing} {@card potion of Water Breathing|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"Characters who search through the harpies' nest find a {@item potion of water breathing}. If the characters acquire this potion, give them the {@item Potion of Water Breathing} {@card potion of Water Breathing|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -21991,7 +21991,7 @@
 										"The crews aboard these five vessels perished when the beacon's evil light compelled them to crash into the rocky outcropping. Fish have picked clean their skeletal remains, which lie scattered throughout the doomed vessels. Three sharks patrol the wreckage (see the \"Exploring the Wrecks\" sidebar).",
 										"The Shipwrecks table below gives the name of each ship and the treasure that can be found within it. A character can spend an action searching the inside of a shipwreck. As part of that action, the character makes a {@dc 15} Wisdom ({@skill Perception}) check, finding the ship's treasure on a success. Once a ship's treasure is found, nothing else of value can be retrieved from that wreck.",
 										"If the item found is a locked chest, a character can use an action to search the wreck for the key to the chest, finding it with a successful {@dc 20} Wisdom ({@skill Perception}) check. Conversely, a character can pick the chest's sturdy lock with a successful {@dc 15} Dexterity check using thieves' tools.",
-										"When a magic item is found and identified, give the players the corresponding {@deck magic item cards|DIP|magic item card} or they can reference it in the {@5etools Magic Items Listing|items.html}. In the case of the {@item +1 weapon} in area T10, choose from among the weapons available ({@item +1 battleaxe}, {@item +1 longbow}, {@item +1 mace}, or {@item +1 shortsword}). Only one {@item +1 weapon} can be found, so choose a weapon with which at least one party member has proficiency.",
+										"When a magic item is found and identified, give the players the corresponding {@deck magic item cards|DIP|magic item card} or they can reference it in the {@5E Magic Items Listing|items.html}. In the case of the {@item +1 weapon} in area T10, choose from among the weapons available ({@item +1 battleaxe}, {@item +1 longbow}, {@item +1 mace}, or {@item +1 shortsword}). Only one {@item +1 weapon} can be found, so choose a weapon with which at least one party member has proficiency.",
 										{
 											"type": "table",
 											"caption": "Shipwrecks",
@@ -22370,7 +22370,7 @@
 											"page": 43,
 											"id": "1a7",
 											"entries": [
-												"Adabra sells {@item Potion of Healing||potions of healing} for 50 gp. Give a {@item Potion of Healing} {@card potion of healing|Magic Item Cards|DIP|card} to any player whose character acquires one of these potions or they can reference it in the {@5etools Magic Items Listing|items.html}. If you run out of cards, Adabra has no potions left to sell. ({@note There are six cards included with the physical product})."
+												"Adabra sells {@item Potion of Healing||potions of healing} for 50 gp. Give a {@item Potion of Healing} {@card potion of healing|Magic Item Cards|DIP|card} to any player whose character acquires one of these potions or they can reference it in the {@5E Magic Items Listing|items.html}. If you run out of cards, Adabra has no potions left to sell. ({@note There are six cards included with the physical product})."
 											]
 										}
 									]
@@ -24550,7 +24550,7 @@
 											"page": 47,
 											"id": "1cd",
 											"entries": [
-												"The books found here are old texts written in Elvish that describe long-lost elven kingdoms and civilizations. They are too damaged to be worth anything. Additionally, one desk has a small book tucked under one of its back legs to level it off. The book is titled {@i Elvish Idioms}, and its pages have been cut out to conceal a tiny leather packet containing {@item dust of disappearance}. If the characters find the packet and identify the dust, give the players the {@item Dust of Disappearance} {@card Dust of Disappearance|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"The books found here are old texts written in Elvish that describe long-lost elven kingdoms and civilizations. They are too damaged to be worth anything. Additionally, one desk has a small book tucked under one of its back legs to level it off. The book is titled {@i Elvish Idioms}, and its pages have been cut out to conceal a tiny leather packet containing {@item dust of disappearance}. If the characters find the packet and identify the dust, give the players the {@item Dust of Disappearance} {@card Dust of Disappearance|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -24568,7 +24568,7 @@
 											"page": 47,
 											"id": "1cf",
 											"entries": [
-												"A {@spell detect magic} spell reveals an aura of conjuration magic emanating from the fireplace mantel. Any character who searches it and succeeds on a {@dc 10} Wisdom ({@skill Perception}) check discovers that the mantelpiece is actually a lid concealing a long, hidden compartment. The wizard who built the manse hid her {@item staff of birdcalls|XGE} here. If the characters obtain and identify the staff, give the players the {@item Staff of Birdcalls|XGE} {@card Staff of Birdcalls|Magic Item Cards|DIP|card} or they can reference it in the {@5etools Magic Items Listing|items.html}."
+												"A {@spell detect magic} spell reveals an aura of conjuration magic emanating from the fireplace mantel. Any character who searches it and succeeds on a {@dc 10} Wisdom ({@skill Perception}) check discovers that the mantelpiece is actually a lid concealing a long, hidden compartment. The wizard who built the manse hid her {@item staff of birdcalls|XGE} here. If the characters obtain and identify the staff, give the players the {@item Staff of Birdcalls|XGE} {@card Staff of Birdcalls|Magic Item Cards|DIP|card} or they can reference it in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]
@@ -24594,7 +24594,7 @@
 											"page": 47,
 											"id": "1d2",
 											"entries": [
-												"The garment hanging on the hook is a {@item cloak of billowing|XGE}, and the chest contains an {@item immovable rod} wrapped in a black cloth. If the characters acquire and identify these magic items, give the players the {@item Cloak of Billowing|XGE} and {@item Immovable Rod} {@deck Magic Item Cards|DIP|cards} or they can reference them in the {@5etools Magic Items Listing|items.html}."
+												"The garment hanging on the hook is a {@item cloak of billowing|XGE}, and the chest contains an {@item immovable rod} wrapped in a black cloth. If the characters acquire and identify these magic items, give the players the {@item Cloak of Billowing|XGE} and {@item Immovable Rod} {@deck Magic Item Cards|DIP|cards} or they can reference them in the {@5E Magic Items Listing|items.html}."
 											]
 										}
 									]

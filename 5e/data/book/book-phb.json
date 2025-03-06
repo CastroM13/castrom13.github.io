@@ -1744,7 +1744,7 @@
 					"entries": [
 						"Every story has a beginning. Your character's background reveals where you came from, how you became an adventurer, and your place in the world. Your fighter might have been a courageous knight or a grizzled soldier. Your wizard could have been a sage or an artisan. Your rogue might have gotten by as a guild thief or commanded audiences as a jester.",
 						"Choosing a background provides you with important story cues about your character's identity. The most important question to ask about your background is what changed? Why did you stop doing whatever your background describes and start adventuring? Where did you get the money to purchase your starting gear, or, if you come from a wealthy background, why don't you have more money? How did you learn the skills of your class? What sets you apart from ordinary people who share your background?",
-						"The {@5etools sample backgrounds|backgrounds.html} in this chapter provide both concrete benefits (features, proficiencies, and languages) and roleplaying suggestions.",
+						"The {@5E sample backgrounds|backgrounds.html} in this chapter provide both concrete benefits (features, proficiencies, and languages) and roleplaying suggestions.",
 						{
 							"type": "image",
 							"href": {
@@ -6352,7 +6352,7 @@
 						"A feat represents a talent or an area of expertise that gives a character special capabilities. It embodies training, experience, and abilities beyond what a class provides. See chapter 6 of the Player's Handbook for more information.",
 						"At certain levels, your class gives you the Ability Score Improvement feature. Using the optional feats rule, you can forgo taking that feature to take a feat of your choice instead. You can take each feat only once, unless the feat's description says otherwise.",
 						"You must meet any prerequisite specified in a feat to take that feat. If you ever lose a feat's prerequisite, you can't use that feat until you regain the prerequisite. For example, the Grappler feat requires you to have a Strength of 13 or higher. If your Strength is reduced below 13 somehow\u2014perhaps by a withering curse\u2014you can't benefit from the Grappler feat until your Strength is restored.",
-						"See the {@5etools Feats section|feats.html} for more information."
+						"See the {@5E Feats section|feats.html} for more information."
 					],
 					"id": "102"
 				}

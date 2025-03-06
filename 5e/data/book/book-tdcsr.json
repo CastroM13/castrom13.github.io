@@ -10216,7 +10216,7 @@
 							"name": "End with a Reward",
 							"page": 193,
 							"entries": [
-								"The end of an adventure is where the characters gain their reward and return to safety. In the Ending section of your journal, write down ideas for treasure or other rewards that you want to give the characters. You can make use of the new treasures featured in this book, as well as the {@5etools varied rewards described in the fifth edition rules|lootgen.html}.",
+								"The end of an adventure is where the characters gain their reward and return to safety. In the Ending section of your journal, write down ideas for treasure or other rewards that you want to give the characters. You can make use of the new treasures featured in this book, as well as the {@5E varied rewards described in the fifth edition rules|lootgen.html}.",
 								"Remember that treasure doesn't have to be gold or magic items, and it doesn't have to be found in a dungeon. When the characters return to town carrying the head of the monster they've slain, their quest-giver might grant them an audience with the {@book Tal'Dorei Council|TDCSR|2|Tal'Dorei Council}, give them special use of the {@book Traverse Junction|TDCSR|3|4. Traverse Junction} or some other magical marvel of the {@book Alabaster Lyceum|TDCSR|3|5. Alabaster Lyceum}, or bestow any number of other immaterial rewards."
 							],
 							"id": "2a3"

@@ -448,7 +448,7 @@ Renderer.dice = {
 		const $roll = $ele.closest(`[data-rollbox-last-rolled-by-name]`);
 		if ($roll.length) return $roll.attr("data-rollbox-last-rolled-by-name");
 
-		const name = document.title.replace("- 5etools", "").trim();
+		const name = document.title.replace("- 5E", "").trim();
 		return name === "DM Screen" ? "Dungeon Master" : name;
 	},
 

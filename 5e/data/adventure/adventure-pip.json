@@ -67,10 +67,10 @@
 									"type": "list",
 									"columns": 2,
 									"items": [
-										"{@5etoolsImg Evandon Haart|pdf/PiP/Evandon_Haart.pdf}",
-										"{@5etoolsImg Gallantine Birchenbough|pdf/PiP/Gallantine_Birchenbough.pdf}",
-										"{@5etoolsImg Noorah Eldenfield|pdf/PiP/Noorah_Eldenfield.pdf}",
-										"{@5etoolsImg Shalefire Stoutheart|pdf/PiP/Shalefire_Stoutheart.pdf}"
+										"{@5EImg Evandon Haart|pdf/PiP/Evandon_Haart.pdf}",
+										"{@5EImg Gallantine Birchenbough|pdf/PiP/Gallantine_Birchenbough.pdf}",
+										"{@5EImg Noorah Eldenfield|pdf/PiP/Noorah_Eldenfield.pdf}",
+										"{@5EImg Shalefire Stoutheart|pdf/PiP/Shalefire_Stoutheart.pdf}"
 									]
 								}
 							],

@@ -38639,7 +38639,7 @@
 			"entries": [
 				"Use this chart to keep track of the secrets characters learn during this adventure. Since it contains spoilers, keep this sheet hidden from the players!",
 				"When the characters learn a valuable secret, check the \"Secret Learned\" box in the appropriate row. If the characters use the {@area Power of Secrets|028|x} rules (see the {@adventure introduction|VEoR|0}) to spend a secret they've learned, or if they reveal a secret they've learned to a nonplayer character, mark a corresponding \"Secret Revealed\" box. The party's total \"Secrets Kept\"\u2014equal to the number of Secrets Learned minus Secrets Revealed\u2014can impact the characters' fight against Vecna in {@area chapter 11|513|x}.",
-				"{@note {@5etoolsImg Downloadable PDF|pdf/VEoR/secrets-tracker.pdf}}",
+				"{@note {@5EImg Downloadable PDF|pdf/VEoR/secrets-tracker.pdf}}",
 				{
 					"type": "table",
 					"colLabels": [

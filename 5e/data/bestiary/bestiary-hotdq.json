@@ -1656,7 +1656,7 @@
 					"trait": {
 						"mode": "prependArr",
 						"items": {
-							"name": "5etools Note",
+							"name": "5E Note",
 							"entries": [
 								"Leosin Erlanthar is presented in {@adventure Hoard of the Dragon Queen|HotDQ} as a half-elf monk. The {@creature martial arts adept|vgm} stat block from {@book Volo's Guide to Monsters|VGM} has been provided here for ease of use."
 							]
@@ -1734,7 +1734,7 @@
 					"trait": {
 						"mode": "prependArr",
 						"items": {
-							"name": "5etools Note",
+							"name": "5E Note",
 							"entries": [
 								"Ontharr Frume is presented in {@adventure Hoard of the Dragon Queen|HotDQ} and The {@adventure Rise of Tiamat|RoT} as a lawful good, human paladin of Torm. The {@creature war priest|vgm} stat block from {@book Volo's Guide to Monsters|VGM} has been provided here for ease of use."
 							]

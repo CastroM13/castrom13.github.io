@@ -55,7 +55,7 @@ class Omnidexer {
 		 *   id: 123, // index ID
 		 *   [t: "spell"], // tag
 		 *   [uu: "fireball|phb"], // UID
-		 *   [m: "img/spell/Fireball.webp"], // Image
+		 *   [m: "https://5e.tools/img/spell/Fireball.webp"], // Image
 		 *   [xF: {...}], // Foundry extras
 		 * }
 		 */

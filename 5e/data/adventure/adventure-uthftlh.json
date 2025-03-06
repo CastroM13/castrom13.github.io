@@ -1937,31 +1937,31 @@
 					],
 					"rows": [
 						[
-							"{@5etoolsImg Bobby|pdf/UtHftLH/bobby-character-sheet.pdf}",
+							"{@5EImg Bobby|pdf/UtHftLH/bobby-character-sheet.pdf}",
 							"Barbarian"
 						],
 						[
-							"{@5etoolsImg Diana|pdf/UtHftLH/diana-character-sheet.pdf}",
+							"{@5EImg Diana|pdf/UtHftLH/diana-character-sheet.pdf}",
 							"Monk"
 						],
 						[
-							"{@5etoolsImg Eric|pdf/UtHftLH/eric-character-sheet.pdf}",
+							"{@5EImg Eric|pdf/UtHftLH/eric-character-sheet.pdf}",
 							"Fighter"
 						],
 						[
-							"{@5etoolsImg Hank|pdf/UtHftLH/hank-character-sheet.pdf}",
+							"{@5EImg Hank|pdf/UtHftLH/hank-character-sheet.pdf}",
 							"Ranger"
 						],
 						[
-							"{@5etoolsImg Niko|pdf/UtHftLH/niko-character-sheet.pdf}",
+							"{@5EImg Niko|pdf/UtHftLH/niko-character-sheet.pdf}",
 							"Cleric"
 						],
 						[
-							"{@5etoolsImg Presto|pdf/UtHftLH/presto-character-sheet.pdf}",
+							"{@5EImg Presto|pdf/UtHftLH/presto-character-sheet.pdf}",
 							"Wizard"
 						],
 						[
-							"{@5etoolsImg Sheila|pdf/UtHftLH/sheila-character-sheet.pdf}",
+							"{@5EImg Sheila|pdf/UtHftLH/sheila-character-sheet.pdf}",
 							"Rogue"
 						]
 					]

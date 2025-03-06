@@ -834,7 +834,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/alante.webp"
 								},
-								"title": "{@5etoolsImg Alante, Cleric of the Five Sacraments|pdf/XMtS/alante.pdf}",
+								"title": "{@5EImg Alante, Cleric of the Five Sacraments|pdf/XMtS/alante.pdf}",
 								"width": 507,
 								"height": 582
 							},
@@ -844,7 +844,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/artinoq.webp"
 								},
-								"title": "{@5etoolsImg Artinoq, Atzocan Archer|pdf/XMtS/artinoq.pdf}",
+								"title": "{@5EImg Artinoq, Atzocan Archer|pdf/XMtS/artinoq.pdf}",
 								"width": 507,
 								"height": 582
 							}
@@ -876,7 +876,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/rouxil.webp"
 								},
-								"title": "{@5etoolsImg Rouxil, Emperor's Vanguard|pdf/XMtS/rouxil.pdf}",
+								"title": "{@5EImg Rouxil, Emperor's Vanguard|pdf/XMtS/rouxil.pdf}",
 								"width": 507,
 								"height": 582
 							}
@@ -898,7 +898,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/velisha.webp"
 								},
-								"title": "{@5etoolsImg Velisha, Shaper of Highbranch|pdf/XMtS/velisha.pdf}",
+								"title": "{@5EImg Velisha, Shaper of Highbranch|pdf/XMtS/velisha.pdf}",
 								"width": 507,
 								"height": 582
 							},
@@ -908,7 +908,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/ellie.webp"
 								},
-								"title": "{@5etoolsImg Ellie Redcap, Fathom Fleet Firebrand|pdf/XMtS/ellie.pdf}",
+								"title": "{@5EImg Ellie Redcap, Fathom Fleet Firebrand|pdf/XMtS/ellie.pdf}",
 								"width": 507,
 								"height": 582
 							}
@@ -932,7 +932,7 @@
 									"type": "internal",
 									"path": "adventure/XMtS/turk.webp"
 								},
-								"title": "{@5etoolsImg Turk Two Coins, Ruthless Knave|pdf/XMtS/turk.pdf}",
+								"title": "{@5EImg Turk Two Coins, Ruthless Knave|pdf/XMtS/turk.pdf}",
 								"width": 507,
 								"height": 582
 							},

@@ -710,7 +710,7 @@ class BlocklistUi {
 	}
 
 	async _pDoSendToFoundry () {
-		await ExtensionUtil.pDoSend({type: "5etools.blocklist.excludes", data: this._excludes});
+		await ExtensionUtil.pDoSend({type: "5E.blocklist.excludes", data: this._excludes});
 	}
 
 	_export () {

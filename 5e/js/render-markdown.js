@@ -752,7 +752,7 @@ class RendererMarkdown {
 				textStack[0] += Renderer.stripTags(`{${tag} ${text}}`); break;
 
 			case "@link":
-			case "@5etools":
+			case "@5E":
 				this.__super._renderString_renderTag(textStack, meta, options, tag, text); break;
 
 			// OTHER HOVERABLES ////////////////////////////////////////////////////////////////////////////////

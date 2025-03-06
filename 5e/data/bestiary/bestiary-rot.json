@@ -533,7 +533,7 @@
 						"mode": "prependArr",
 						"items": [
 							{
-								"name": "5etools Note",
+								"name": "5E Note",
 								"entries": [
 									"While Galvan is not presented in an encounter in {@adventure The Rise of Tiamat|RoT}, the {@creature dragonsoul|RoT} stat block has been provided here for ease of use, with optional alterations for the {@item Blue Dragon Mask|RoTOS}."
 								]
@@ -893,7 +893,7 @@
 					"trait": {
 						"mode": "prependArr",
 						"items": {
-							"name": "5etools Note",
+							"name": "5E Note",
 							"entries": [
 								"Iskander is presented in {@adventure The Rise of Tiamat|RoT} as a neutral evil male human wizard. The {@creature mage} stat block has been provided here for ease of use."
 							]
@@ -938,7 +938,7 @@
 					"trait": {
 						"mode": "prependArr",
 						"items": {
-							"name": "5etools Note",
+							"name": "5E Note",
 							"entries": [
 								"Maccath the Crimson is presented in {@adventure The Rise of Tiamat|RoT} as a female tiefling sorcerer and member of the Arcane Brotherhood. The {@creature mage} stat block, modified with tiefling racial traits, has been provided here for ease of use."
 							]
@@ -1880,7 +1880,7 @@
 					"trait": {
 						"mode": "prependArr",
 						"items": {
-							"name": "5etools Note",
+							"name": "5E Note",
 							"entries": [
 								"Varram is presented in {@adventure The Rise of Tiamat|RoT} as a male dwarf. The {@creature dragonsoul|RoT} stat block, modified with dwarf racial traits, has been provided here for ease of use."
 							]

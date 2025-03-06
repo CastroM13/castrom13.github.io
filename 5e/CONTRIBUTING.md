@@ -6,13 +6,13 @@ Homebrew contributions (conversions, original content) should be made against th
 
 ## Typo Fixes/Etc.
 
-Small fixes and tweaks, especially typos, should be reported via the "typos etc." channel in our [Discord](https://discord.gg/5etools). If you do not use Discord, opening an issue on GitHub is acceptable.
+Small fixes and tweaks, especially typos, should be reported via the "typos etc." channel in our [Discord](https://discord.gg/5E). If you do not use Discord, opening an issue on GitHub is acceptable.
 
 ## Feature Requests and New Features
 
-All feature requests should be done via the `/featurerequest` bot command in our [Discord](https://discord.gg/5etools).
+All feature requests should be done via the `/featurerequest` bot command in our [Discord](https://discord.gg/5E).
 
-Should you wish to directly contribute code towards a new feature, preferably get in touch via [Discord](https://discord.gg/5etools) first. If the feature is deemed acceptable, and significant/distinct enough that it makes sense for a third party to undertake the work, then a pull request can be opened on GitHub.
+Should you wish to directly contribute code towards a new feature, preferably get in touch via [Discord](https://discord.gg/5E) first. If the feature is deemed acceptable, and significant/distinct enough that it makes sense for a third party to undertake the work, then a pull request can be opened on GitHub.
 
 In general, the following should be noted:
 
@@ -21,7 +21,7 @@ In general, the following should be noted:
 
 ## Bug Reports
 
-Bugs should be reported via the `/bugreport` bot command in our [Discord](https://discord.gg/5etools).
+Bugs should be reported via the `/bugreport` bot command in our [Discord](https://discord.gg/5E).
 
 ---
 

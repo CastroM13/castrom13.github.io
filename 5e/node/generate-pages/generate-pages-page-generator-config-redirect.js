@@ -1,7 +1,7 @@
 import {PageGeneratorRedirectBase} from "./generate-pages-page-generator.js";
 
-class _PageGenerator5etools extends PageGeneratorRedirectBase {
-	_page = "5etools.html";
+class _PageGenerator5E extends PageGeneratorRedirectBase {
+	_page = "5E.html";
 
 	_pageDescription = "A suite of browser-based tools for 5th Edition Dungeons & Dragons players and Dungeon Masters.";
 
@@ -10,5 +10,5 @@ class _PageGenerator5etools extends PageGeneratorRedirectBase {
 }
 
 export const PAGE_GENERATORS_REDIRECT = [
-	new _PageGenerator5etools(),
+	new _PageGenerator5E(),
 ];

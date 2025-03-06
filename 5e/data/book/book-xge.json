@@ -400,7 +400,7 @@
 					"name": "This is Your Life",
 					"page": 61,
 					"entries": [
-						"{@note Note that an automated version of this exists on the {@5etools This Is Your Life|lifegen.html} page.}",
+						"{@note Note that an automated version of this exists on the {@5E This Is Your Life|lifegen.html} page.}",
 						"The character creation rules in the player's handbook provide all the information you need to define your character in preparation for a life of adventuring. What they don't do is account for all the circumstances that shaped your character during the years between your birth and the start of your career as a member of a class.",
 						"What did your character accomplish or experience before deciding to become an adventurer? What were the circumstances of your birth? How large is your family, and what sorts of relationships do you have with your relatives? Which people were the greatest influences on you during your formative years, for better or worse?",
 						"To answer these questions and more, you can use the tables and the advice in this section to compose a well-developed backstory for your character-an autobiography of sorts-that you can use to inform how you roleplay the character. Your DM can draw from this material as the campaign proceeds, creating situations and scenarios that build off your previous life experiences.",
@@ -4631,7 +4631,7 @@
 							],
 							"id": "05c"
 						},
-						"See the {@5etools Encounter Generator|encountergen.html} for a complete list of all the tables available."
+						"See the {@5E Encounter Generator|encountergen.html} for a complete list of all the tables available."
 					],
 					"id": "05b"
 				},
@@ -7564,7 +7564,7 @@
 							"name": "Magic Item Tables",
 							"page": 140,
 							"entries": [
-								"{@note The items in the {@5etools Items|items.html} page are classified as major or minor according to tables originally found in this section.}",
+								"{@note The items in the {@5E Items|items.html} page are classified as major or minor according to tables originally found in this section.}",
 								{
 									"type": "inset",
 									"name": "Recharging without a Dawn",
@@ -7740,7 +7740,7 @@
 				"Some players and DMs have a knack for coming up with  character names on the fly, while others find that task  more of a challenge. The tables in this appendix are  designed to make life easier for both kinds of people,  whether you're naming a player character, a nonplayer  character, a monster, or even a place.",
 				"Each table contains names that are associated with  a nonhuman character race in the player's handbook or a real-world ethnic or language group, with a focus  on groups from antiquity and the Middle Ages. You can select from the possibilities here, or use dice to determine a name.",
 				"Even though names are associated with races in this  appendix, a character might not have a name from their  own race. For instance, a half-orc might have grown up  among dwarves and have a dwarven name. Or, as DM,  you might decide that dragonborn in your campaign  have a culture reminiscent of ancient Rome and therefore use Roman names, rather than the dragonborn names suggested here.",
-				"See the {@5etools names|names.html} page for the full collection of name tables.",
+				"See the {@5E names|names.html} page for the full collection of name tables.",
 				{
 					"type": "image",
 					"href": {

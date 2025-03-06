@@ -2,7 +2,7 @@
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 globalThis.IS_DEPLOYED = undefined;
-globalThis.VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"2.7.3"/* 5ETOOLS_VERSION__CLOSE */;
+globalThis.VERSION_NUMBER = /* 5E_VERSION__OPEN */"2.7.3"/* 5E_VERSION__CLOSE */;
 globalThis.DEPLOYED_IMG_ROOT = undefined;
 // for the roll20 script to set
 globalThis.IS_VTT = false;
@@ -52,7 +52,7 @@ globalThis.VeCt = {
 
 	SYM_UTIL_TIMEOUT: Symbol("timeout"),
 
-	LOC_HOSTNAME_CANCER: "5e.tools",
+	LOC_HOSTNAME_CANCER: "5e.whomst",
 
 	URL_BREW: `https://github.com/TheGiddyLimit/homebrew`,
 	URL_ROOT_BREW: `https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/`, // N.b. must end with a slash
@@ -3196,7 +3196,7 @@ globalThis.UrlUtil = {
 	},
 
 	/**
-	 * All internal URL construction should pass through here, to ensure `static.5etools.com` is used when required.
+	 * All internal URL construction should pass through here, to ensure `static.5E.com` is used when required.
 	 *
 	 * @param href the link
 	 * @param isBustCache If a cache-busting parameter should always be added.
@@ -3745,7 +3745,7 @@ if (!IS_DEPLOYED && !IS_VTT && typeof window !== "undefined") {
 		if (EventUtil.noModifierKeys(e) && typeof d20 === "undefined") {
 			if (e.key === "#") {
 				const spl = window.location.href.split("/");
-				window.prompt("Copy to clipboard: Ctrl+C, Enter", `https://5e.tools/${spl[spl.length - 1]}`);
+				window.prompt("Copy to clipboard: Ctrl+C, Enter", `https://5e.whomst/${spl[spl.length - 1]}`);
 			}
 		}
 	});
@@ -8161,7 +8161,7 @@ class BookModeViewBase {
 		if (this._isActive) return;
 		this._isActive = true;
 
-		document.title = `${this._pageTitle} - 5etools`;
+		document.title = `${this._pageTitle} - 5E`;
 		document.body.style.overflow = "hidden";
 		document.body.classList.add("bkmv-active");
 
@@ -8657,12 +8657,12 @@ if (!IS_VTT && typeof window !== "undefined") {
 		window.addEventListener("load", () => {
 			let isPadded = false;
 			[
-				"div-gpt-ad-5etools35927", // main banner
-				"div-gpt-ad-5etools35930", // side banner
-				"div-gpt-ad-5etools35928", // sidebar top
-				"div-gpt-ad-5etools35929", // sidebar bottom
-				"div-gpt-ad-5etools36159", // bottom floater
-				"div-gpt-ad-5etools36834", // mobile middle
+				"div-gpt-ad-5E35927", // main banner
+				"div-gpt-ad-5E35930", // side banner
+				"div-gpt-ad-5E35928", // sidebar top
+				"div-gpt-ad-5E35929", // sidebar bottom
+				"div-gpt-ad-5E36159", // bottom floater
+				"div-gpt-ad-5E36834", // mobile middle
 			].forEach(id => {
 				const iv = setInterval(() => {
 					const $wrp = $(`#${id}`);

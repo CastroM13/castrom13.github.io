@@ -1,8 +1,8 @@
-# 5e.tools
+# 5e.whomst
 
-Visit the [main site](https://5e.tools/index.html) or go to the unofficial GitHub [mirror](index.html).
+Visit the [main site](https://5e.whomst/index.html) or go to the unofficial GitHub [mirror](index.html).
 
-[Join the 5etools Discord here!](https://discord.gg/5etools)
+[Join the 5E Discord here!](https://discord.gg/5E)
 
 ## Help and Support
 

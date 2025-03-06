@@ -5714,7 +5714,7 @@
 				"A feat represents a talent or an area of expertise that gives a character special capabilities. It embodies training, experience, and abilities beyond what a class provides.",
 				"At certain levels, your class gives you the Ability Score Improvement feature. Using the optional feats rule, you can forgo taking that feature to take a feat of your choice instead. You can take each feat only once, unless the feat's description says otherwise.",
 				"You must meet any prerequisite specified in a feat to take that feat. If you ever lose a feat's prerequisite, you can't use that feat until you regain the prerequisite. For example, the Grappler feat requires you to have a Strength of 13 or higher. If your Strength is reduced below 13 somehow\u2014perhaps by a withering curse\u2014you can't benefit from the Grappler feat until your Strength is restored.",
-				"See the {@5etools Feats section|feats.html} for more information."
+				"See the {@5E Feats section|feats.html} for more information."
 			]
 		},
 		{
@@ -5907,7 +5907,7 @@
 			"freeRules2024": true,
 			"ruleType": "C",
 			"entries": [
-				"A {@5etools hazard|trapshazards.html} is an environmental danger."
+				"A {@5E hazard|trapshazards.html} is an environmental danger."
 			]
 		},
 		{
@@ -11563,7 +11563,7 @@
 					"type": "section",
 					"name": "Sample Ships",
 					"entries": [
-						"See the {@5etools vehicles page|vehicles.html} for stat blocks, deck plans, and other details for some of the most common ships.",
+						"See the {@5E vehicles page|vehicles.html} for stat blocks, deck plans, and other details for some of the most common ships.",
 						{
 							"type": "list",
 							"columns": 2,
