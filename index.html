@@ -3,9 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@castrom13/dev</title>
+    <title>Matheus de Castro Marcondes | Developer Portfolio</title>
+    <meta name="description" content="Software Developer and Technology Researcher passionate about innovation and problem-solving">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>sry, too lazy to update this</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>&lt;castrom13/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Matheus de Castro Marcondes</h1>
+                    <p class="hero-title">Technology Researcher & Software Developer</p>
+                    <p class="hero-description">
+                        Passionate about innovation, problem-solving, and leveraging technology to drive impactful solutions. 
+                        Currently pursuing a Computer Science Master's Degree at UNESP.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="/assets/curriculum.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar" style="background-image: url('https://avatars.githubusercontent.com/castrom13');"></div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Software Developer and Technology Researcher based in Tupã, São Paulo, Brazil. 
+                        With a strong background in computer science and years of experience in technology research, 
+                        I specialize in developing innovative solutions that bridge the gap between research and practical applications.
+                    </p>
+                    <p>
+                        Currently working at CIAg (Center for Artificial Intelligence in Agriculture) and pursuing my 
+                        Master's degree in Computer Science with a focus on Artificial Intelligence at UNESP.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Jest</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">GCP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data & AI</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/bg3-item-viewer/background.png" alt="BG3 Item Viewer" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>BG3 Item Viewer</h3>
+                        <p>Interactive item database for Baldur's Gate 3 with advanced filtering, search capabilities, and detailed item information display.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/bg3-item-viewer/" class="project-link">Live Demo</a>
+                            <!-- <a href="#" class="project-link">GitHub</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/stardew-tracker/thumbnail.png" alt="Stardew Valley Tracker" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Stardew Valley Relationships Tracker</h3>
+                        <p>Progress tracking application for Stardew Valley players to minmax relationships with villagers.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Progressive Web App</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/stardew-tracker/" class="project-link">Live Demo</a>
+                            <!-- <a href="#" class="project-link">GitHub</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span>🍳</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Stardew Valley Cooking Tracker</h3>
+                        <p>Specialized cooking recipe tracker for Stardew Valley players to monitor their culinary progress and discover new recipes with detailed ingredient lists and cooking requirements.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Recipe Management</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/stardew-tracker/cooking/" class="project-link">Live Demo</a>
+                            <!-- <a href="#" class="project-link">GitHub</a> -->
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Technology Researcher</h3>
+                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
+                            <span class="timeline-date">May 2025 - Present</span>
+                        </div>
+                        <p>Leading research initiatives in agricultural technology and artificial intelligence applications.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Junior Technology Researcher</h3>
+                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
+                            <span class="timeline-date">Jul 2023 - May 2025</span>
+                        </div>
+                        <p>Developed innovative solutions for agricultural technology challenges and contributed to AI research projects.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Assistant</h3>
+                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
+                            <span class="timeline-date">Jun 2022 - Jul 2023</span>
+                        </div>
+                        <p>Assisted in research projects focusing on data analysis and agricultural technology applications.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Intern</h3>
+                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
+                            <span class="timeline-date">Jul 2021 - Jun 2022</span>
+                        </div>
+                        <p>Gained hands-on experience in technology research and development within agricultural contexts.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Developer</h3>
+                            <span class="timeline-company">Newcon Software S/A | Tupã e Região, Brasil</span>
+                            <span class="timeline-date">Feb 2019 - Feb 2020</span>
+                        </div>
+                        <p>Developed and maintained software solutions using various technologies and programming languages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new opportunities, innovative projects, or just having a conversation about technology and research.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:contact@castrom13.dev">contact@castrom13.dev</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+5514996890406</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Tupã, São Paulo, Brazil</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <a href="https://www.linkedin.com/in/castrom13" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Built with ☕ using pure HTML, CSS, and JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
