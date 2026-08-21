@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>BFF · IRL</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<canvas id="graph"></canvas>
+
+<header class="panel brand">
+  <h1>contador de irl do <span>BFF</span></h1>
+  <p class="stats"><b id="statPeople">0</b> pessoas&nbsp;&nbsp;·&nbsp;&nbsp;<b id="statLinks">0</b> IRL</p>
+</header>
+
+<div class="panel legend">
+  <div class="legend-row"><span class="swatch avatar"></span> pessoa</div>
+  <div class="legend-row"><span class="swatch line"></span> se conheceram irl</div>
+</div>
+
+<button class="round-btn" id="resetView" title="Fit graph" aria-label="Fit graph">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="12" cy="12" r="3.2"/>
+    <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+  </svg>
+</button>
+
+<div id="tooltip"><strong></strong><span></span></div>
+
+<div id="loader">
+  <div class="spinner"></div>
+  <p>loading the squad…</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

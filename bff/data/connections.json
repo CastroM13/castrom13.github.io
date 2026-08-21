@@ -1,0 +1,12 @@
+{
+  "connections": [
+    { "from": "clara",   "to": "maruseu" },
+    { "from": "clara",   "to": "miojo"   },
+    { "from": "clara",   "to": "rk"      },
+    { "from": "clara",   "to": "boico"   },
+    { "from": "clara",   "to": "thago"   },
+    { "from": "castro",  "to": "isa"     },
+    { "from": "rk",      "to": "crowley" },
+    { "from": "maruseu", "to": "thago"   }
+  ]
+}

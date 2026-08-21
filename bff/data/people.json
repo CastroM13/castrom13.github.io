@@ -1,0 +1,22 @@
+{
+  "people": [
+    { "id": "castro",  "name": "Castro",  "photo": "data/castro.png" },
+    { "id": "clara",   "name": "Clara",   "photo": "data/clara.png" },
+    { "id": "mel",     "name": "Mel",     "photo": "data/mel.png" },
+    { "id": "miojo",   "name": "Miojo",   "photo": "data/miojo.png" },
+    { "id": "clarice", "name": "Clarice", "photo": "data/clarisse.png" },
+    { "id": "isa",     "name": "Isa",     "photo": "data/isa.png" },
+    { "id": "rk",      "name": "RK",      "photo": "data/rk.png" },
+    { "id": "job",     "name": "Job",     "photo": "data/job.png" },
+    { "id": "sarah",   "name": "Sarah",   "photo": "" },
+    { "id": "boico",   "name": "Boico",   "photo": "data/boico.png" },
+    { "id": "crowley", "name": "Crowley", "photo": "data/crowley.png" },
+    { "id": "bruno",   "name": "Bruno",   "photo": "data/bruno.jpg" },
+    { "id": "ian",     "name": "Ian",     "photo": "data/ian.jpg" },
+    { "id": "gabriel", "name": "Gabriel", "photo": "data/marx.png" },
+    { "id": "thago",   "name": "Thago",   "photo": "data/thago.png" },
+    { "id": "madson",  "name": "Madson",  "photo": "data/mad.png" },
+    { "id": "heric",   "name": "Heric",   "photo": "data/heric.png" },
+    { "id": "maruseu", "name": "Maruseu", "photo": "data/maruseu.png" }
+  ]
+}
