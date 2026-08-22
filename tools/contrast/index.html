@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <title>WCAG Contrast Workbench — Community Lab</title>
+  <meta name="description" content="Check text and interface color contrast against WCAG 2.2 thresholds and find a nearby passing foreground.">
+  <link rel="canonical" href="https://castrom13.dev/tools/contrast/">
+  <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/contrast/">
+  <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/contraste/">
+  <link rel="alternate" hreflang="x-default" href="https://castrom13.dev/tools/contrast/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="WCAG Contrast Workbench — Community Lab">
+  <meta property="og:description" content="Check text and interface color contrast against WCAG 2.2 thresholds and find a nearby passing foreground.">
+  <meta property="og:url" content="https://castrom13.dev/tools/contrast/">
+  <meta property="og:image" content="https://castrom13.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedLanguage = localStorage.getItem('castrom13-language');
+      const speaksPortuguese = navigator.languages?.some((language) => /^pt(?:-|$)/i.test(language));
+      if (savedLanguage === 'pt-BR' || (!savedLanguage && speaksPortuguese)) location.replace('/pt-br/ferramentas/contraste/');
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" type="module"></script>
+  <script src="/assets/contrast.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Matheus Castro, home"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Open navigation" data-close-label="Close navigation"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-navigation" id="site-navigation" aria-label="Primary" data-navigation><a href="/#work">Work</a><a href="/#capabilities">Capabilities</a><a href="/tools/" aria-current="page">Lab</a><a href="/blog/">Notes</a><a href="/#about">About</a></nav>
+    <div class="header-actions">
+      <a class="language-link" href="/pt-br/ferramentas/contraste/" lang="pt-BR" hreflang="pt-BR" aria-label="Ver em português" data-language="pt-BR">PT</a>
+      <button class="icon-button" type="button" aria-label="Use light theme" data-theme-toggle data-light-label="Use light theme" data-dark-label="Use dark theme"><span aria-hidden="true" data-theme-icon>◐</span></button>
+    </div>
+  </header>
+
+  <main id="main" class="section-shell tool-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/tools/">Community Lab</a><span aria-hidden="true">/</span><span aria-current="page">Contrast Workbench</span></nav>
+    <header class="tool-heading" data-reveal>
+      <p class="section-kicker">Tool / 03 · WCAG 2.2</p>
+      <h1>Contrast Workbench</h1>
+      <p>Test an opaque foreground and background using the WCAG 2 relative-luminance formula. Results use the unrounded ratio.</p>
+      <div class="privacy-line"><span aria-hidden="true"></span> Runs locally · Shareable colors are never uploaded</div>
+    </header>
+
+    <noscript><p class="noscript-message">This checker requires JavaScript to calculate contrast locally in your browser.</p></noscript>
+
+    <section class="tool-app contrast-app" aria-labelledby="contrast-title" data-contrast-app data-language="en">
+      <div class="contrast-preview" data-preview>
+        <p class="preview-label">Live preview</p>
+        <h2 id="contrast-title">Readable is a system property.</h2>
+        <p>Contrast is one part of accessibility. Type size, weight, spacing, context, and user settings still matter.</p>
+        <button type="button">Example control</button>
+      </div>
+
+      <form class="tool-controls contrast-controls" data-contrast-form>
+        <div class="color-field">
+          <label for="foreground-text">Foreground</label>
+          <div><input type="color" id="foreground-picker" value="#f1f2eb" aria-label="Choose foreground color" data-foreground-picker><input id="foreground-text" value="#F1F2EB" inputmode="text" spellcheck="false" aria-describedby="foreground-help" data-foreground-text></div>
+          <p class="field-help" id="foreground-help">Opaque hex: #RGB or #RRGGBB</p>
+        </div>
+        <div class="color-field">
+          <label for="background-text">Background</label>
+          <div><input type="color" id="background-picker" value="#0a0b0d" aria-label="Choose background color" data-background-picker><input id="background-text" value="#0A0B0D" inputmode="text" spellcheck="false" aria-describedby="background-help" data-background-text></div>
+          <p class="field-help" id="background-help">Opaque hex: #RGB or #RRGGBB</p>
+        </div>
+
+        <div class="contrast-actions">
+          <button class="button button-secondary" type="button" data-swap-colors>Swap colors</button>
+          <button class="button button-secondary" type="button" data-find-aa>Find a nearby AA foreground</button>
+          <button class="button button-primary" type="button" data-copy-css>Copy CSS</button>
+        </div>
+
+        <p class="tool-error" role="alert" hidden data-color-error></p>
+        <p class="tool-status-message" role="status" aria-live="polite" aria-atomic="true" data-status></p>
+      </form>
+
+      <div class="contrast-results" aria-label="Contrast results">
+        <div class="ratio-result"><span>Contrast ratio</span><strong data-ratio>—</strong></div>
+        <div class="threshold-grid">
+          <div><span>Normal text · AA</span><strong data-normal-aa>—</strong><small>4.5:1</small></div>
+          <div><span>Large text · AA</span><strong data-large-aa>—</strong><small>3:1</small></div>
+          <div><span>Normal text · AAA</span><strong data-normal-aaa>—</strong><small>7:1</small></div>
+          <div><span>Large text · AAA</span><strong data-large-aaa>—</strong><small>4.5:1</small></div>
+          <div><span>UI components</span><strong data-ui>—</strong><small>3:1</small></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="tool-explainer" aria-labelledby="contrast-notes"><h2 id="contrast-notes">How to read the result</h2><p>Under WCAG 2.2, large text is at least 24 CSS px, or about 18.66 CSS px when bold. Interface components and meaningful graphical objects generally need 3:1 against adjacent colors.</p><p>A passing pair does not make an interface accessible by itself. Check focus visibility, states, typography, zoom, motion, semantics, and actual assistive-technology use as well.</p></aside>
+  </main>
+
+  <footer class="site-footer"><p>Matheus Castro · Community Lab</p><nav aria-label="Footer"><a href="/tools/">Every tool</a><a href="/">Portfolio</a><a href="mailto:contact@castrom13.dev">Email</a></nav></footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <title>Gerador de senhas e frases-senha — Laboratório comunitário</title>
+  <meta name="description" content="Gere senhas e frases-senha localmente com Web Crypto. Sem conta, upload, analytics ou armazenamento.">
+  <link rel="canonical" href="https://castrom13.dev/pt-br/ferramentas/senhas/">
+  <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/password/">
+  <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/senhas/">
+  <link rel="alternate" hreflang="x-default" href="https://castrom13.dev/tools/password/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Gerador de senhas e frases-senha — Laboratório comunitário">
+  <meta property="og:description" content="Gere senhas e frases-senha localmente com Web Crypto. Sem conta, upload, analytics ou armazenamento.">
+  <meta property="og:url" content="https://castrom13.dev/pt-br/ferramentas/senhas/">
+  <meta property="og:image" content="https://castrom13.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
+  <script>document.documentElement.classList.add('js'); try { if (localStorage.getItem('castrom13-language') === 'en') location.replace('/tools/password/'); } catch (_) {}</script>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" type="module"></script>
+  <script src="/assets/password.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="wordmark" href="/pt-br/" aria-label="Matheus Castro, início"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Abrir navegação" data-close-label="Fechar navegação"><span class="sr-only">Abrir navegação</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-navigation" id="site-navigation" aria-label="Principal" data-navigation><a href="/pt-br/#work">Trabalho</a><a href="/pt-br/#capabilities">Competências</a><a href="/pt-br/ferramentas/" aria-current="page">Lab</a><a href="/pt-br/blog/">Notas</a><a href="/pt-br/#about">Sobre</a></nav>
+    <div class="header-actions">
+      <a class="language-link" href="/tools/password/" lang="en" hreflang="en" aria-label="View in English" data-language="en">EN</a>
+      <button class="icon-button" type="button" aria-label="Usar tema claro" data-theme-toggle data-light-label="Usar tema claro" data-dark-label="Usar tema escuro"><span aria-hidden="true" data-theme-icon>◐</span></button>
+    </div>
+  </header>
+
+  <main id="main" class="section-shell tool-page">
+    <nav class="breadcrumbs" aria-label="Caminho"><a href="/pt-br/ferramentas/">Laboratório comunitário</a><span aria-hidden="true">/</span><span aria-current="page">Senhas e frases-senha</span></nav>
+    <header class="tool-heading" data-reveal>
+      <p class="section-kicker">Ferramenta / 02 · Web Crypto</p>
+      <h1>Senhas e frases-senha</h1>
+      <p>Gere uma credencial neste dispositivo. O resultado nunca é enviado, registrado, colocado na URL ou armazenado por este site.</p>
+      <div class="privacy-line"><span aria-hidden="true"></span> Processado somente neste dispositivo</div>
+    </header>
+
+    <noscript><p class="noscript-message">Este gerador precisa de JavaScript porque o valor é criado localmente no navegador.</p></noscript>
+
+    <section class="tool-app password-app" aria-labelledby="generator-title" data-password-app data-language="pt-BR">
+      <div class="tool-result-panel">
+        <div class="result-heading"><h2 id="generator-title">Valor gerado</h2><span data-mode-badge>Senha</span></div>
+        <label for="generated-value">Senha ou frase-senha gerada</label>
+        <div class="secret-output-row">
+          <input id="generated-value" type="password" readonly autocomplete="off" spellcheck="false" aria-describedby="generated-help strength-description" data-generated-value>
+          <button class="button button-secondary compact-button" type="button" aria-label="Mostrar valor gerado" aria-pressed="false" data-toggle-visibility>Mostrar</button>
+          <button class="button button-primary compact-button" type="button" aria-label="Copiar valor gerado" data-copy-value>Copiar</button>
+        </div>
+        <p id="generated-help" class="field-help">O valor permanece oculto até você escolher mostrá-lo.</p>
+
+        <div class="strength-summary" id="strength-description">
+          <div><span>Espaço de busca estimado</span><strong data-entropy>—</strong></div>
+          <div><span>Orientação</span><strong data-strength-label>—</strong></div>
+        </div>
+        <p class="fine-print">A estimativa descreve o espaço de busca do gerador. Ela não considera como um serviço armazena senhas nem um dispositivo comprometido.</p>
+        <p class="tool-status-message" role="status" aria-live="polite" aria-atomic="true" data-status></p>
+      </div>
+
+      <form class="tool-controls" data-generator-form>
+        <fieldset class="segmented-fieldset">
+          <legend>Formato</legend>
+          <label><input type="radio" name="generator-mode" value="password" checked> <span>Senha</span></label>
+          <label><input type="radio" name="generator-mode" value="passphrase"> <span>Frase-senha</span></label>
+        </fieldset>
+
+        <div data-password-settings>
+          <label class="field-label" for="password-length">Comprimento</label>
+          <input class="number-input" id="password-length" name="password-length" type="number" min="12" max="128" value="24" inputmode="numeric">
+
+          <fieldset class="option-fieldset">
+            <legend>Conjuntos de caracteres</legend>
+            <label><input type="checkbox" name="lowercase" checked> Letras minúsculas</label>
+            <label><input type="checkbox" name="uppercase" checked> Letras maiúsculas</label>
+            <label><input type="checkbox" name="numbers" checked> Números</label>
+            <label><input type="checkbox" name="symbols" checked> Símbolos</label>
+            <label><input type="checkbox" name="ambiguous"> Incluir caracteres ambíguos como 0, O, l e 1</label>
+          </fieldset>
+        </div>
+
+        <div hidden data-passphrase-settings>
+          <label class="field-label" for="word-count">Quantidade de palavras</label>
+          <input class="number-input" id="word-count" name="word-count" type="number" min="6" max="14" value="10" inputmode="numeric">
+
+          <label class="field-label" for="word-separator">Separador</label>
+          <select id="word-separator" name="word-separator">
+            <option value="-">Hífen</option><option value=" ">Espaço</option><option value=".">Ponto</option><option value="_">Sublinhado</option>
+          </select>
+          <label class="check-row"><input type="checkbox" name="capitalize-words"> Iniciar todas as palavras com maiúscula</label>
+          <p class="field-help">Usa uma lista integrada em português sem acentos. Com 128 palavras possíveis, cada palavra gerada contribui com 7 bits para o espaço de busca estimado.</p>
+        </div>
+
+        <button class="button button-primary generate-button" type="submit">Gerar novo valor</button>
+      </form>
+    </section>
+
+    <aside class="tool-explainer" aria-labelledby="generator-notes"><h2 id="generator-notes">Sobre este gerador</h2><p>As escolhas aleatórias usam <code>crypto.getRandomValues()</code> com amostragem por rejeição para evitar viés de módulo. Pelo menos um caractere de cada categoria selecionada é incluído antes de o resultado ser embaralhado com segurança.</p><p>Não reutilize uma senha gerada. Armazene-a em um gerenciador de senhas confiável e ative autenticação multifator quando disponível.</p></aside>
+  </main>
+
+  <footer class="site-footer"><p>Matheus Castro · Laboratório comunitário</p><nav aria-label="Rodapé"><a href="/pt-br/ferramentas/">Todas as ferramentas</a><a href="/pt-br/">Portfólio</a><a href="mailto:contact@castrom13.dev">E-mail</a></nav></footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <title>Password &amp; Passphrase Generator — Community Lab</title>
+  <meta name="description" content="Generate passwords and passphrases locally with Web Crypto. No account, upload, analytics, or storage.">
+  <link rel="canonical" href="https://castrom13.dev/tools/password/">
+  <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/password/">
+  <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/senhas/">
+  <link rel="alternate" hreflang="x-default" href="https://castrom13.dev/tools/password/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Password &amp; Passphrase Generator — Community Lab">
+  <meta property="og:description" content="Generate passwords and passphrases locally with Web Crypto. No account, upload, analytics, or storage.">
+  <meta property="og:url" content="https://castrom13.dev/tools/password/">
+  <meta property="og:image" content="https://castrom13.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedLanguage = localStorage.getItem('castrom13-language');
+      const speaksPortuguese = navigator.languages?.some((language) => /^pt(?:-|$)/i.test(language));
+      if (savedLanguage === 'pt-BR' || (!savedLanguage && speaksPortuguese)) location.replace('/pt-br/ferramentas/senhas/');
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" type="module"></script>
+  <script src="/assets/password.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Matheus Castro, home"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Open navigation" data-close-label="Close navigation"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="site-navigation" id="site-navigation" aria-label="Primary" data-navigation><a href="/#work">Work</a><a href="/#capabilities">Capabilities</a><a href="/tools/" aria-current="page">Lab</a><a href="/blog/">Notes</a><a href="/#about">About</a></nav>
+    <div class="header-actions">
+      <a class="language-link" href="/pt-br/ferramentas/senhas/" lang="pt-BR" hreflang="pt-BR" aria-label="Ver em português" data-language="pt-BR">PT</a>
+      <button class="icon-button" type="button" aria-label="Use light theme" data-theme-toggle data-light-label="Use light theme" data-dark-label="Use dark theme"><span aria-hidden="true" data-theme-icon>◐</span></button>
+    </div>
+  </header>
+
+  <main id="main" class="section-shell tool-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/tools/">Community Lab</a><span aria-hidden="true">/</span><span aria-current="page">Password &amp; Passphrase</span></nav>
+    <header class="tool-heading" data-reveal>
+      <p class="section-kicker">Tool / 02 · Web Crypto</p>
+      <h1>Password &amp; Passphrase</h1>
+      <p>Generate a credential on this device. The result is never sent, logged, placed in the URL, or stored by this site.</p>
+      <div class="privacy-line"><span aria-hidden="true"></span> Processed only on this device</div>
+    </header>
+
+    <noscript><p class="noscript-message">This generator requires JavaScript because the value is created locally in your browser.</p></noscript>
+
+    <section class="tool-app password-app" aria-labelledby="generator-title" data-password-app data-language="en">
+      <div class="tool-result-panel">
+        <div class="result-heading"><h2 id="generator-title">Generated value</h2><span data-mode-badge>Password</span></div>
+        <label for="generated-value">Generated password or passphrase</label>
+        <div class="secret-output-row">
+          <input id="generated-value" type="password" readonly autocomplete="off" spellcheck="false" aria-describedby="generated-help strength-description" data-generated-value>
+          <button class="button button-secondary compact-button" type="button" aria-label="Show generated value" aria-pressed="false" data-toggle-visibility>Show</button>
+          <button class="button button-primary compact-button" type="button" aria-label="Copy generated value" data-copy-value>Copy</button>
+        </div>
+        <p id="generated-help" class="field-help">The value remains concealed until you choose to show it.</p>
+
+        <div class="strength-summary" id="strength-description">
+          <div><span>Estimated search space</span><strong data-entropy>—</strong></div>
+          <div><span>Guidance</span><strong data-strength-label>—</strong></div>
+        </div>
+        <p class="fine-print">This estimate describes the generator’s search space. It cannot account for how a service stores passwords or for a compromised device.</p>
+        <p class="tool-status-message" role="status" aria-live="polite" aria-atomic="true" data-status></p>
+      </div>
+
+      <form class="tool-controls" data-generator-form>
+        <fieldset class="segmented-fieldset">
+          <legend>Format</legend>
+          <label><input type="radio" name="generator-mode" value="password" checked> <span>Password</span></label>
+          <label><input type="radio" name="generator-mode" value="passphrase"> <span>Passphrase</span></label>
+        </fieldset>
+
+        <div data-password-settings>
+          <label class="field-label" for="password-length">Length</label>
+          <input class="number-input" id="password-length" name="password-length" type="number" min="12" max="128" value="24" inputmode="numeric">
+
+          <fieldset class="option-fieldset">
+            <legend>Character sets</legend>
+            <label><input type="checkbox" name="lowercase" checked> Lowercase letters</label>
+            <label><input type="checkbox" name="uppercase" checked> Uppercase letters</label>
+            <label><input type="checkbox" name="numbers" checked> Numbers</label>
+            <label><input type="checkbox" name="symbols" checked> Symbols</label>
+            <label><input type="checkbox" name="ambiguous"> Include ambiguous characters such as 0, O, l, and 1</label>
+          </fieldset>
+        </div>
+
+        <div hidden data-passphrase-settings>
+          <label class="field-label" for="word-count">Number of words</label>
+          <input class="number-input" id="word-count" name="word-count" type="number" min="6" max="14" value="10" inputmode="numeric">
+
+          <label class="field-label" for="word-separator">Separator</label>
+          <select id="word-separator" name="word-separator">
+            <option value="-">Hyphen</option><option value=" ">Space</option><option value=".">Period</option><option value="_">Underscore</option>
+          </select>
+          <label class="check-row"><input type="checkbox" name="capitalize-words"> Capitalize every word</label>
+          <p class="field-help">Uses a built-in English list. With 128 possible words, each generated word contributes 7 bits to the estimated search space.</p>
+        </div>
+
+        <button class="button button-primary generate-button" type="submit">Generate a new value</button>
+      </form>
+    </section>
+
+    <aside class="tool-explainer" aria-labelledby="generator-notes"><h2 id="generator-notes">About this generator</h2><p>Random choices use <code>crypto.getRandomValues()</code> with rejection sampling to avoid modulo bias. At least one character from every selected category is included before the result is securely shuffled.</p><p>Do not reuse a generated password. Store it in a reputable password manager and enable multi-factor authentication where available.</p></aside>
+  </main>
+
+  <footer class="site-footer"><p>Matheus Castro · Community Lab</p><nav aria-label="Footer"><a href="/tools/">Every tool</a><a href="/">Portfolio</a><a href="mailto:contact@castrom13.dev">Email</a></nav></footer>
+</body>
+</html>

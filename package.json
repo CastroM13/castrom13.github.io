@@ -1,0 +1,12 @@
+{
+  "name": "castrom13-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-blog.mjs",
+    "check": "node scripts/check-site.mjs && node --check assets/site.js && node --check assets/password.js && node --check assets/contrast.js && node --check qrcode/a11y.js && node --check qrcode/sw.js"
+  },
+  "devDependencies": {
+    "markdown-it": "15.0.0"
+  }
+}

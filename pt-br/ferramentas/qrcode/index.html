@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/qrcode/icon.svg">
+    <link rel="apple-touch-icon" href="/qrcode/apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111827">
+    <meta name="description" content="Crie e baixe um QR code personalizável localmente no navegador.">
+    <link rel="canonical" href="https://castrom13.dev/pt-br/ferramentas/qrcode/">
+    <link rel="alternate" hreflang="en" href="https://castrom13.dev/qrcode/">
+    <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/qrcode/">
+    <link rel="alternate" hreflang="x-default" href="https://castrom13.dev/qrcode/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Criador de QR Code — Laboratório comunitário">
+    <meta property="og:description" content="Crie e baixe um QR code personalizável localmente no navegador.">
+    <meta property="og:url" content="https://castrom13.dev/pt-br/ferramentas/qrcode/">
+    <meta property="og:image" content="https://castrom13.dev/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
+    <title>Criador de QR Code</title>
+    <script>try { if (localStorage.getItem('castrom13-language') === 'en') location.replace('/qrcode/'); } catch (_) {}</script>
+    <script type="module" crossorigin src="/qrcode/assets/index-BbnixyU-.js"></script>
+    <link rel="stylesheet" crossorigin href="/qrcode/assets/index-DDBVeH2d.css">
+    <style>
+      .qr-skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 1000; padding: .75rem 1rem; color: #111827; background: #d3ff72; font-weight: 700; transform: translateY(-180%); }
+      .qr-skip-link:focus { transform: none; outline: 3px solid currentColor; outline-offset: 3px; }
+      .qr-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+      .qr-language-nav { position: fixed; top: 1rem; right: 1rem; z-index: 20; }
+      .qr-language-nav a { display: grid; min-width: 2.75rem; min-height: 2.75rem; place-items: center; color: #e5e7eb; border: 1px solid #4b5563; border-radius: 999px; background: #111827; font: 700 .75rem/1 ui-monospace, monospace; text-decoration: none; }
+      .qr-language-nav a:focus-visible { outline: 3px solid #d3ff72; outline-offset: 3px; }
+      .logo-upload:focus-within { border-color: var(--accent-color); box-shadow: 0 0 0 3px var(--focus-ring); color: var(--text-primary); }
+      @media (max-width: 480px) { #main { padding-top: 4rem; } .logo-upload::after { content: "Enviar logotipo"; } }
+    </style>
+  </head>
+  <body>
+    <a class="qr-skip-link" href="#main">Pular para o criador de QR code</a>
+    <nav class="qr-language-nav" aria-label="Idioma"><a href="/qrcode/" lang="en" hreflang="en" aria-label="View in English" data-qr-language="en">EN</a></nav>
+    <main id="main">
+      <h1 class="qr-visually-hidden">Criador de QR Code</h1>
+      <div id="root"></div>
+    </main>
+    <noscript>Este criador de QR code precisa de JavaScript e roda inteiramente no seu navegador.</noscript>
+    <script type="module" src="/qrcode/a11y.js"></script>
+  </body>
+</html>

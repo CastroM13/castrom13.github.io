@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://castrom13.dev/sitemap.xml

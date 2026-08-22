@@ -1,329 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus de Castro Marcondes | Developer Portfolio</title>
-    <meta name="description"
-        content="Software Developer and Technology Researcher passionate about innovation and problem-solving">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <title>Matheus Castro — Product-minded software engineer</title>
+  <meta name="description" content="Brazilian software engineer building operational products, on-device computer vision, and the infrastructure behind them.">
+  <link rel="canonical" href="https://castrom13.dev/">
+  <link rel="alternate" hreflang="en" href="https://castrom13.dev/">
+  <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://castrom13.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matheus Castro — Software that works beyond the demo">
+  <meta property="og:description" content="Product software, on-device computer vision, and production infrastructure.">
+  <meta property="og:url" content="https://castrom13.dev/">
+  <meta property="og:image" content="https://castrom13.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Matheus Castro","url":"https://castrom13.dev/","jobTitle":"Technology Researcher and Software Engineer","sameAs":["https://www.linkedin.com/in/castrom13/","https://github.com/castrom13"],"knowsLanguage":["en","pt-BR"]}</script>
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedLanguage = localStorage.getItem('castrom13-language');
+      const speaksPortuguese = navigator.languages?.some((language) => /^pt(?:-|$)/i.test(language));
+      if (savedLanguage === 'pt-BR' || (!savedLanguage && speaksPortuguese)) location.replace('/pt-br/');
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" type="module"></script>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>&lt;castrom13/&gt;</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <button class="theme-toggle" id="theme-toggle">
-                        <span class="sun-icon">☀️</span>
-                        <span class="moon-icon">🌙</span>
-                    </button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-site-header>
+    <a class="wordmark" href="/" aria-label="Matheus Castro, home">
+      <span aria-hidden="true">MC</span>
+      <span class="wordmark-name">Matheus Castro</span>
+    </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Open navigation" data-close-label="Close navigation">
+      <span class="sr-only">Open navigation</span>
+      <span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-navigation" id="site-navigation" aria-label="Primary" data-navigation>
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="/tools/">Lab</a>
+      <a href="/blog/">Notes</a>
+      <a href="#about">About</a>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-name">Matheus de Castro Marcondes</h1>
-                    <p class="hero-title">Technology Researcher & Software Developer</p>
-                    <p class="hero-description">
-                        Passionate about innovation, problem-solving, and leveraging technology to drive impactful
-                        solutions.
-                        Currently pursuing a Computer Science Master's Degree at UNESP.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="/assets/curriculum.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-avatar"
-                        style="background-image: url('https://avatars.githubusercontent.com/castrom13');"></div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-            </div>
+    <div class="header-actions">
+      <a class="language-link" href="/pt-br/" lang="pt-BR" hreflang="pt-BR" aria-label="Ver em português" data-language="pt-BR">PT</a>
+      <button class="icon-button" type="button" aria-label="Use light theme" data-theme-toggle data-light-label="Use light theme" data-dark-label="Use dark theme">
+        <span aria-hidden="true" data-theme-icon>◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span>Brazil · UTC−3</span><span>English / Portuguese</span></p>
+        <h1 id="hero-title">Software that works <span>beyond the demo.</span></h1>
+        <p class="hero-intro">I’m Matheus Castro, a product-minded software engineer with six years of experience across operational applications, applied computer vision, and production infrastructure.</p>
+        <p class="hero-detail">I turn ambiguous requirements into systems teams can ship, operate, and improve.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="#work">See selected work <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="mailto:contact@castrom13.dev">Discuss a project</a>
         </div>
+      </div>
+
+      <figure class="portrait-placeholder" data-reveal aria-labelledby="portrait-caption">
+        <div class="portrait-signal" aria-hidden="true">
+          <span class="signal-orbit"></span>
+          <span class="signal-core">MC</span>
+          <span class="signal-scan"></span>
+        </div>
+        <figcaption id="portrait-caption">
+          <span>Portrait pending</span>
+          <span>01 / human layer</span>
+        </figcaption>
+      </figure>
+
+      <div class="hero-index" aria-hidden="true">01</div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Software Developer and Technology Researcher based in Tupã, São Paulo, Brazil.
-                        With a strong background in computer science and years of experience in technology research,
-                        I specialize in developing innovative solutions that bridge the gap between research and
-                        practical applications.
-                    </p>
-                    <p>
-                        Currently working at CIAg (Center for Artificial Intelligence in Agriculture) and pursuing my
-                        Master's degree in Computer Science with a focus on Artificial Intelligence at UNESP.
-                    </p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Angular</span>
-                            <span class="skill-tag">Jest</span>
-                            <span class="skill-tag">Figma</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Backend</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Spring Boot</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">CI/CD</span>
-                            <span class="skill-tag">GCP</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Data & AI</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">Data Analysis</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="proof-band" aria-label="Selected evidence">
+      <div class="proof-item" data-reveal><strong>~30%</strong><span>lower total AWS spend</span></div>
+      <div class="proof-item" data-reveal><strong>~30 FPS</strong><span>measured on-device pipeline</span></div>
+      <div class="proof-item" data-reveal><strong>8 hosts</strong><span>on-prem operational scope</span></div>
+      <div class="proof-item" data-reveal><strong>6 people</strong><span>engineering guild leadership</span></div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
+    <section class="section-shell selected-work" id="work" aria-labelledby="work-title">
+      <header class="section-heading" data-reveal>
+        <p class="section-kicker">Selected work / 01</p>
+        <h2 id="work-title">Evidence over adjectives.</h2>
+        <p>Confidential work, explained through the decisions and outcomes that can be shared.</p>
+      </header>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/qrcode-thumbnail.png" alt="QR Code Creator" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>QR Code Creator</h3>
-                        <p>QR Code with advanced customization options.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="/qrcode/" class="project-link">Live Demo</a>
-                            <!-- <a href="#" class="project-link">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/stardew-tracker/thumbnail.png" alt="Stardew Valley Tracker" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Stardew Valley Relationships Tracker</h3>
-                        <p>Progress tracking application for Stardew Valley players to minmax relationships with
-                            villagers.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Progressive Web App</span>
-                            <span class="tech-tag">Local Storage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="/stardew-tracker/" class="project-link">Live Demo</a>
-                            <!-- <a href="#" class="project-link">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/stardew-tracker/cooking/thumbnail.png" alt="Stardew Valley Tracker" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <h3>Stardew Valley Cooking Tracker</h3>
-                        <p>Specialized cooking recipe tracker for Stardew Valley players to monitor their culinary
-                            progress and discover new recipes with detailed ingredient lists and cooking requirements.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Recipe Management</span>
-                            <span class="tech-tag">Local Storage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="/stardew-tracker/cooking/" class="project-link">Live Demo</a>
-                            <!-- <a href="#" class="project-link">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <article class="work-feature" data-reveal>
+        <div class="work-visual work-visual-vision" aria-hidden="true">
+          <div class="vision-frame"><span></span><span></span><span></span><span></span></div>
+          <p>LOCAL INFERENCE · FRAME 1842</p>
         </div>
+        <div class="work-copy">
+          <p class="case-meta"><span>Applied computer vision</span><span>Production · NDA</span></p>
+          <h3>Visual counting that stays on the phone.</h3>
+          <p>For a confidential industrial workflow, I trained and deployed a vision model for counting small components in large batches. The complete camera pipeline ran locally through ONNX at approximately 30 FPS in the measured setup and reached production use across multiple phones.</p>
+          <ul class="case-facts" aria-label="Project facts">
+            <li>On-device ONNX inference</li>
+            <li>No external inference service</li>
+            <li>Small operator group</li>
+          </ul>
         </div>
+      </article>
+
+      <article class="work-feature work-feature-reverse" data-reveal>
+        <div class="work-visual work-visual-infra" aria-hidden="true">
+          <div class="infra-map">
+            <span class="infra-node infra-core">CORE</span>
+            <span class="infra-node infra-gpu">GPU</span>
+            <span class="infra-node infra-cloud">AWS</span>
+            <span class="infra-node infra-ci">CI</span>
+            <span class="infra-path path-a"></span>
+            <span class="infra-path path-b"></span>
+            <span class="infra-path path-c"></span>
+          </div>
+          <p>OPERATE · REDUCE · RECOVER</p>
+        </div>
+        <div class="work-copy">
+          <p class="case-meta"><span>Platform engineering</span><span>CIAg · Current</span></p>
+          <h3>A smaller, recoverable platform.</h3>
+          <p>At CIAg, a private Brazilian science and technology institute, I operate an eight-host on-prem environment spanning core services, Proxmox VMs, GPU compute, networking, GitLab, and deployment tooling. I also turn project architectures into Terraform and CI/CD workflows that development teams can operate.</p>
+          <div class="case-outcome">
+            <strong>~30%</strong>
+            <p>lower total AWS spend, measured in Cost Explorer, after consolidating smaller EC2 workloads into Dockerized services.</p>
+          </div>
+          <details class="incident-note">
+            <summary>Recovery note: when the backup did not restore</summary>
+            <p>An S3-hosted GitLab backup failed because its archive structure was incompatible after an update. Over a weekend, I repaired the archive, restored the repositories with only nonessential pipeline logs lost, and turned the process into reproducible, real-world-tested recovery scripts.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="work-feature work-feature-compact" data-reveal>
+        <div class="work-copy">
+          <p class="case-meta"><span>Product software</span><span>Confidential systems</span></p>
+          <h3>Useful specificity, even under NDA.</h3>
+          <p>My commercial work includes extending a legacy logistics workflow, building an application module for a connected agricultural product, and materially contributing to production Kotlin/Spring and NestJS systems. Client identities stay private; the technical scope can still be described clearly.</p>
+        </div>
+        <ul class="system-ledger" aria-label="Selected production systems">
+          <li><span>Logistics workflow</span><strong>Java 8 · MySQL · AngularJS</strong></li>
+          <li><span>Mobile backend</span><strong>Kotlin · Spring · ~100 users</strong></li>
+          <li><span>Corporate CMS</span><strong>NestJS · organization of ~600</strong></li>
+          <li><span>Connected agriculture</span><strong>Application module · product launch</strong></li>
+        </ul>
+      </article>
     </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Technology Researcher</h3>
-                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
-                            <span class="timeline-date">May 2025 - Present</span>
-                        </div>
-                        <p>Leading research initiatives in agricultural technology and artificial intelligence
-                            applications.</p>
-                    </div>
-                </div>
+    <section class="section-shell capabilities" id="capabilities" aria-labelledby="capabilities-title">
+      <header class="section-heading" data-reveal>
+        <p class="section-kicker">Capabilities / 02</p>
+        <h2 id="capabilities-title">Three layers of the same product.</h2>
+        <p>I’m most useful where a project crosses product decisions, implementation, and the environment that must run it.</p>
+      </header>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Junior Technology Researcher</h3>
-                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
-                            <span class="timeline-date">Jul 2023 - May 2025</span>
-                        </div>
-                        <p>Developed innovative solutions for agricultural technology challenges and contributed to AI
-                            research projects.</p>
-                    </div>
-                </div>
+      <div class="capability-grid">
+        <article data-reveal>
+          <span class="capability-index">01</span>
+          <h3>Product software</h3>
+          <p>New workflows, backend services, and internal tools for established operations. Comfortable with legacy constraints, stakeholder alignment, and incremental delivery.</p>
+          <p class="capability-stack">Kotlin · Spring · TypeScript · NestJS · Java · MySQL</p>
+        </article>
+        <article data-reveal>
+          <span class="capability-index">02</span>
+          <h3>Applied computer vision</h3>
+          <p>Model experimentation, training, evaluation, and integration—with particular attention to offline inference and whether machine learning is necessary in the first place.</p>
+          <p class="capability-stack">Python · YOLO · ONNX · Anomaly detection</p>
+        </article>
+        <article data-reveal>
+          <span class="capability-index">03</span>
+          <h3>Delivery infrastructure</h3>
+          <p>Reproducible cloud and on-prem environments, delivery pipelines, practical quality gates, and handoffs that leave teams able to deploy independently.</p>
+          <p class="capability-stack">AWS · Terraform · GitLab CI/CD · Docker · Proxmox</p>
+        </article>
+      </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Research Assistant</h3>
-                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
-                            <span class="timeline-date">Jun 2022 - Jul 2023</span>
-                        </div>
-                        <p>Assisted in research projects focusing on data analysis and agricultural technology
-                            applications.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Intern</h3>
-                            <span class="timeline-company">CIAg | Pompeia, São Paulo, Brasil</span>
-                            <span class="timeline-date">Jul 2021 - Jun 2022</span>
-                        </div>
-                        <p>Gained hands-on experience in technology research and development within agricultural
-                            contexts.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Software Developer</h3>
-                            <span class="timeline-company">Newcon Software S/A | Tupã e Região, Brasil</span>
-                            <span class="timeline-date">Feb 2019 - Feb 2020</span>
-                        </div>
-                        <p>Developed and maintained software solutions using various technologies and programming
-                            languages.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="cloud-detail" data-reveal>
+        <p>AWS services used in production</p>
+        <ul>
+          <li>EC2 / ECS / Lambda / ECR</li>
+          <li>VPC / bastions / load balancing / Route 53</li>
+          <li>RDS / S3 / SQS / SNS / SES</li>
+          <li>IAM / CloudWatch</li>
+        </ul>
+        <p class="fine-print">I have also evaluated GCP and OCI for cost and fit; my production depth is in AWS.</p>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in discussing new opportunities, innovative projects, or just having a
-                        conversation about technology and research.</p>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <a href="mailto:contact@castrom13.dev">contact@castrom13.dev</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <span>+5514996890406</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span>Tupã, São Paulo, Brazil</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">💼</span>
-                            <a href="https://www.linkedin.com/in/castrom13" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="leadership-section" id="about" aria-labelledby="leadership-title">
+      <div class="section-shell leadership-grid">
+        <div data-reveal>
+          <p class="section-kicker">Leadership / 03</p>
+          <h2 id="leadership-title">Keep the human channel direct.</h2>
         </div>
+        <div class="leadership-copy" data-reveal>
+          <p class="large-copy">I proposed and now coordinate a six-person engineering guild at CIAg, with day-to-day responsibility for technical effectiveness, workload continuity, individual support, and leave coordination.</p>
+          <p>The goal is simple: preserve a direct, trusted channel as the organization grows, so technical and interpersonal constraints can be handled before they become delivery problems.</p>
+          <div class="experience-path" aria-label="Experience progression">
+            <p><span>2019–2020</span><strong>Software Developer · Newcon</strong></p>
+            <p><span>2021–now</span><strong>CIAg · Intern → Research Assistant → Junior Researcher → Technology Researcher</strong></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>Built with ☕ using pure HTML, CSS, and JavaScript</p>
-            </div>
+    <section class="section-shell research-section" aria-labelledby="research-title">
+      <div class="research-card" data-reveal>
+        <p class="section-kicker">Research / 04</p>
+        <div>
+          <h2 id="research-title">Master’s research in progress.</h2>
+          <p>I’m pursuing a Master’s in Computer Science at UNESP. The current work investigates multimodal agents and accessible interaction; I’ll publish the project’s scope, methods, and findings after its formal qualification.</p>
         </div>
-    </footer>
+        <p class="research-status"><span aria-hidden="true"></span> Qualification pending</p>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section-shell lab-section" aria-labelledby="lab-title">
+      <header class="section-heading" data-reveal>
+        <p class="section-kicker">Community lab / 05</p>
+        <h2 id="lab-title">Useful tools. No unnecessary account.</h2>
+        <p>Fast, accessible utilities that process data locally whenever possible.</p>
+      </header>
+
+      <div class="lab-grid">
+        <a class="lab-card" href="/qrcode/" data-reveal>
+          <span class="tool-status">Available</span>
+          <h3>QR Code Studio</h3>
+          <p>Create and customize QR codes directly in the browser.</p>
+          <span class="text-link">Open tool <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="lab-card" href="/tools/password/" data-reveal>
+          <span class="tool-status">Local only</span>
+          <h3>Password &amp; Passphrase</h3>
+          <p>Generate strong credentials with Web Crypto. Nothing is sent or stored.</p>
+          <span class="text-link">Open tool <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="lab-card" href="/tools/contrast/" data-reveal>
+          <span class="tool-status">WCAG 2.2</span>
+          <h3>Contrast Workbench</h3>
+          <p>Test text and interface colors, then find a nearby passing shade.</p>
+          <span class="text-link">Open tool <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+
+      <a class="section-link" href="/tools/">Explore every tool <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="personal-section">
+      <div class="section-shell personal-grid">
+        <div data-reveal>
+          <p class="section-kicker">Personal work / 06</p>
+          <h2>Craft can be playful.</h2>
+          <p>The Stardew Valley projects are small, personal tools made before generative AI entered my workflow. They are here because polish and affection count too.</p>
+        </div>
+        <div class="personal-links" data-reveal>
+          <a href="/stardew-tracker/"><span>Relationship tracker</span><span aria-hidden="true">↗</span></a>
+          <a href="/stardew-tracker/cooking/"><span>Cooking tracker</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell notes-section" aria-labelledby="notes-title">
+      <div data-reveal>
+        <p class="section-kicker">Notes / 07</p>
+        <h2 id="notes-title">Field notes from systems that have to work.</h2>
+      </div>
+      <div data-reveal>
+        <p>Short writing about product decisions, applied AI, infrastructure, accessibility, and the uncomfortable details between them.</p>
+        <a class="text-link" href="/blog/">Read the notes <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="section-shell" data-reveal>
+        <p class="section-kicker">Contact / 08</p>
+        <h2 id="contact-title">Start with the constraint.</h2>
+        <p>Tell me what needs to work, who depends on it, and which constraints are real. I’m open to focused asynchronous projects and long-term embedded opportunities with international teams.</p>
+        <a class="contact-email" href="mailto:contact@castrom13.dev">contact@castrom13.dev <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Matheus Castro · Brazil, UTC−3</p>
+    <nav aria-label="Footer">
+      <a href="https://www.linkedin.com/in/castrom13/">LinkedIn</a>
+      <a href="https://github.com/castrom13">GitHub</a>
+      <a href="/assets/curriculum.pdf">Résumé</a>
+      <a href="mailto:contact@castrom13.dev">Email</a>
+    </nav>
+  </footer>
 </body>
-
 </html>
