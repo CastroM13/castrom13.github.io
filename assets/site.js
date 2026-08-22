@@ -11,6 +11,10 @@ function systemTheme() {
 
 function applyTheme(theme) {
   root.dataset.theme = theme;
+  const themeAsset = theme === 'dark' ? '/assets/favicon.svg' : '/assets/favicon-alt.svg';
+  document.querySelectorAll('[data-theme-asset]').forEach((asset) => {
+    asset.setAttribute(asset.tagName === 'LINK' ? 'href' : 'src', themeAsset);
+  });
   if (themeToggle) {
     const label = theme === 'dark' ? themeToggle.dataset.lightLabel : themeToggle.dataset.darkLabel;
     themeToggle.setAttribute('aria-label', label || (theme === 'dark' ? 'Use light theme' : 'Use dark theme'));

@@ -29,6 +29,7 @@ function head({ language, title, description, canonicalPath, alternatePath, scri
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0b0d">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/favicon.svg" data-theme-asset>
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${siteUrl}${canonicalPath}">
@@ -52,7 +53,7 @@ function header(language, alternatePath) {
   const pt = language === 'pt';
   return `<a class="skip-link" href="#main">${pt ? 'Pular para o conteúdo' : 'Skip to content'}</a>
   <header class="site-header">
-    <a class="wordmark" href="${pt ? '/pt-br/' : '/'}" aria-label="Matheus Castro, ${pt ? 'início' : 'home'}"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
+    <a class="wordmark" href="${pt ? '/pt-br/' : '/'}" aria-label="Matheus Castro, ${pt ? 'início' : 'home'}"><span class="wordmark-icon" aria-hidden="true"><img src="/assets/favicon.svg" alt="" width="100" height="100" data-theme-asset></span><span class="wordmark-name">Matheus Castro</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="${pt ? 'Abrir navegação' : 'Open navigation'}" data-close-label="${pt ? 'Fechar navegação' : 'Close navigation'}"><span class="sr-only">${pt ? 'Abrir navegação' : 'Open navigation'}</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <nav class="site-navigation" id="site-navigation" aria-label="${pt ? 'Principal' : 'Primary'}" data-navigation><a href="${pt ? '/pt-br/#work' : '/#work'}">${pt ? 'Trabalho' : 'Work'}</a><a href="${pt ? '/pt-br/#capabilities' : '/#capabilities'}">${pt ? 'Competências' : 'Capabilities'}</a><a href="${pt ? '/pt-br/ferramentas/' : '/tools/'}" aria-current="page">Lab</a><a href="${pt ? '/pt-br/blog/' : '/blog/'}">${pt ? 'Notas' : 'Notes'}</a><a href="${pt ? '/pt-br/#about' : '/#about'}">${pt ? 'Sobre' : 'About'}</a></nav>
     <div class="header-actions">

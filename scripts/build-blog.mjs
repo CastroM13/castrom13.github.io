@@ -109,7 +109,7 @@ function pageHeader(lang, active, alternatePath, alternateAvailable = true) {
 
   return `<a class="skip-link" href="#main">${portuguese ? 'Pular para o conteúdo' : 'Skip to content'}</a>
   <header class="site-header">
-    <a class="wordmark" href="${home}" aria-label="${labels.home}"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
+    <a class="wordmark" href="${home}" aria-label="${labels.home}"><span class="wordmark-icon" aria-hidden="true"><img src="/assets/favicon.svg" alt="" width="100" height="100" data-theme-asset></span><span class="wordmark-name">Matheus Castro</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="${labels.open}" data-close-label="${labels.close}"><span class="sr-only">${labels.open}</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <nav class="site-navigation" id="site-navigation" aria-label="${labels.nav}" data-navigation>
       <a href="${home}#work">${labels.work}</a><a href="${home}#capabilities">${labels.capabilities}</a><a href="${lab}">${labels.lab}</a><a href="${blog}"${active === 'blog' ? ' aria-current="page"' : ''}>${labels.notes}</a><a href="${home}#about">${labels.about}</a>
@@ -145,6 +145,7 @@ function head({ lang, title, description, canonical, alternateEn, alternatePt, t
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0b0d">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/favicon.svg" data-theme-asset>
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonical}">
