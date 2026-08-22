@@ -1,0 +1,15 @@
+{
+  "images": [
+    { "id": 1, "file_name": "train/fixture-a.jpg", "width": 100, "height": 100 },
+    { "id": 2, "file_name": "val/fixture-b.jpg", "width": 100, "height": 100 }
+  ],
+  "categories": [
+    { "id": 3, "name": "part" },
+    { "id": 9, "name": "defect" }
+  ],
+  "annotations": [
+    { "id": 1, "image_id": 1, "category_id": 3, "bbox": [10, 10, 20, 20], "area": 400, "iscrowd": 0 },
+    { "id": 2, "image_id": 2, "category_id": 9, "bbox": [95, 95, 20, 20], "area": 400, "iscrowd": 0 },
+    { "id": 3, "image_id": 999, "category_id": 3, "bbox": [0, 0, 10, 10], "area": 100, "iscrowd": 0 }
+  ]
+}

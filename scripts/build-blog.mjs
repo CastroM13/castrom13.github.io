@@ -2,6 +2,7 @@ import { readFile, readdir, mkdir, writeFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import MarkdownIt from 'markdown-it';
+import { toolRoutes } from './tool-data.mjs';
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const postsDirectory = path.join(projectRoot, 'content', 'posts');
@@ -294,8 +295,8 @@ for (const post of posts) {
   await write(path.join(postPath(post).slice(1), 'index.html'), postPage(post, translation));
 }
 
-const staticPaths = ['/', '/pt-br/', '/tools/', '/tools/password/', '/tools/contrast/', '/pt-br/ferramentas/', '/pt-br/ferramentas/senhas/', '/pt-br/ferramentas/contraste/', '/pt-br/ferramentas/qrcode/', '/blog/', '/pt-br/blog/', '/qrcode/'];
-const sitemapPaths = [...staticPaths, ...posts.map(postPath)];
+const staticPaths = ['/', '/pt-br/', '/tools/', '/pt-br/ferramentas/', '/blog/', '/pt-br/blog/', ...toolRoutes];
+const sitemapPaths = [...new Set([...staticPaths, ...posts.map(postPath)])];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapPaths.map((entry) => `<url><loc>${siteUrl}${entry}</loc></url>`).join('')}</urlset>`;
 await write('sitemap.xml', sitemap);
 await write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`);

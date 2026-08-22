@@ -3,10 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-blog.mjs",
-    "check": "node scripts/check-site.mjs && node --check assets/site.js && node --check assets/password.js && node --check assets/contrast.js && node --check qrcode/a11y.js && node --check qrcode/sw.js"
+    "build": "node scripts/copy-vendor.mjs && node scripts/build-tools.mjs && node scripts/build-blog.mjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-js.mjs && node scripts/test-tools.mjs"
   },
   "devDependencies": {
-    "markdown-it": "15.0.0"
+    "@huggingface/transformers": "3.8.1",
+    "esbuild": "0.28.2",
+    "markdown-it": "15.0.0",
+    "onnxruntime-web": "1.27.0",
+    "pdf-lib": "1.17.1"
+  },
+  "overrides": {
+    "@huggingface/transformers": {
+      "sharp": "0.35.3"
+    }
   }
 }

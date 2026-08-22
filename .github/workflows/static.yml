@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Build Markdown notes
+      - name: Build and verify site
         run: |
           npm ci --ignore-scripts
           npm run build
@@ -52,6 +52,7 @@ jobs:
             --exclude 'node_modules' \
             --exclude 'content' \
             --exclude 'scripts' \
+            --exclude 'tests' \
             --exclude 'package.json' \
             --exclude 'package-lock.json' \
             ./ _site/

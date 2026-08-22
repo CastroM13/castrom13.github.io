@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0b0d">
   <title>Laboratório comunitário — Matheus Castro</title>
-  <meta name="description" content="Utilitários rápidos, acessíveis e local-first que funcionam sem contas ou uploads desnecessários.">
+  <meta name="description" content="13 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
   <link rel="canonical" href="https://castrom13.dev/pt-br/ferramentas/">
   <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/">
@@ -13,12 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Laboratório comunitário — Matheus Castro">
-  <meta property="og:description" content="Utilitários rápidos, acessíveis e local-first que funcionam sem contas ou uploads desnecessários.">
+  <meta property="og:description" content="13 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
   <meta property="og:url" content="https://castrom13.dev/pt-br/ferramentas/">
   <meta property="og:image" content="https://castrom13.dev/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
-  <script>document.documentElement.classList.add('js'); try { if (localStorage.getItem('castrom13-language') === 'en') location.replace('/tools/'); } catch (_) {}</script>
+  <script>document.documentElement.classList.add('js'); try { if (localStorage.getItem('castrom13-language') === 'en') location.replace("/tools/"); } catch (_) {}</script>
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/site.js" type="module"></script>
 </head>
@@ -27,51 +27,83 @@
   <header class="site-header">
     <a class="wordmark" href="/pt-br/" aria-label="Matheus Castro, início"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Abrir navegação" data-close-label="Fechar navegação"><span class="sr-only">Abrir navegação</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-    <nav class="site-navigation" id="site-navigation" aria-label="Principal" data-navigation>
-      <a href="/pt-br/#work">Trabalho</a><a href="/pt-br/#capabilities">Competências</a><a href="/pt-br/ferramentas/" aria-current="page">Lab</a><a href="/pt-br/blog/">Notas</a><a href="/pt-br/#about">Sobre</a>
-    </nav>
+    <nav class="site-navigation" id="site-navigation" aria-label="Principal" data-navigation><a href="/pt-br/#work">Trabalho</a><a href="/pt-br/#capabilities">Competências</a><a href="/pt-br/ferramentas/" aria-current="page">Lab</a><a href="/pt-br/blog/">Notas</a><a href="/pt-br/#about">Sobre</a></nav>
     <div class="header-actions">
       <a class="language-link" href="/tools/" lang="en" hreflang="en" aria-label="View in English" data-language="en">EN</a>
       <button class="icon-button" type="button" aria-label="Usar tema claro" data-theme-toggle data-light-label="Usar tema claro" data-dark-label="Usar tema escuro"><span aria-hidden="true" data-theme-icon>◐</span></button>
     </div>
   </header>
-
   <main id="main">
     <header class="section-shell page-hero" data-reveal>
-      <p class="section-kicker">Laboratório comunitário / local-first</p>
-      <h1>Pequenas ferramentas que respeitam seu tempo e seus dados.</h1>
-      <p>Tarefas como gerar uma senha ou verificar contraste não deveriam exigir conta, assinatura ou upload. Estas ferramentas rodam no navegador e são construídas para teclado, toque e tecnologias assistivas.</p>
-      <div class="privacy-line"><span aria-hidden="true"></span> Sem contas · Sem analytics · Processamento local sempre que possível</div>
+      <p class="section-kicker">Laboratório comunitário / processamento local</p>
+      <h1>Ferramentas pequenas. Problemas reais. Dados respeitados.</h1>
+      <p>Tarefas técnicas úteis não deveriam exigir conta, assinatura ou upload. Estas ferramentas rodam no navegador e são construídas para teclado, toque e tecnologias assistivas.</p>
+      <div class="privacy-line"><span aria-hidden="true"></span>Sem contas · Sem rastreamento · Processamento local explicado em cada ferramenta</div>
     </header>
-
     <section class="section-shell tool-directory" aria-labelledby="available-tools">
       <h2 id="available-tools" class="sr-only">Ferramentas disponíveis</h2>
-      <div class="tool-directory-grid">
-        <a class="directory-card" href="/pt-br/ferramentas/qrcode/" data-reveal>
+      <div class="tool-directory-grid"><a class="directory-card" href="/pt-br/ferramentas/qrcode/" data-reveal>
           <span class="directory-index">01</span><span class="tool-status">Disponível</span>
           <h3>Estúdio de QR Code</h3><p>Gere e personalize QR codes diretamente no navegador.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-        <a class="directory-card" href="/pt-br/ferramentas/senhas/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/senhas/" data-reveal>
           <span class="directory-index">02</span><span class="tool-status">Somente local</span>
           <h3>Senhas e frases-senha</h3><p>Gere credenciais com Web Crypto e uma estimativa clara do espaço de busca.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-        <a class="directory-card" href="/pt-br/ferramentas/contraste/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/contraste/" data-reveal>
           <span class="directory-index">03</span><span class="tool-status">WCAG 2.2</span>
-          <h3>Bancada de contraste</h3><p>Teste contraste de texto e interface, visualize o par e encontre uma cor de primeiro plano próxima que atenda ao critério.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+          <h3>Bancada de contraste</h3><p>Teste contraste, visualize o par e encontre uma cor próxima que atenda ao critério.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-      </div>
+<a class="directory-card" href="/pt-br/ferramentas/tokendesk/" data-reveal>
+          <span class="directory-index">04</span><span class="tool-status">Web Crypto</span>
+          <h3>TokenDesk</h3><p>Decodifique JWTs, inspecione claims temporais, sinalize algoritmos de risco e, opcionalmente, verifique uma assinatura com uma JWK — sem enviar o token.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/limpeza-de-midia/" data-reveal>
+          <span class="directory-index">05</span><span class="tool-status">Processamento local</span>
+          <h3>Removedor de metadados de imagens</h3><p>Inspecione metadados reconhecidos de JPEG, PNG e WebP, gere uma nova codificação via canvas, redimensione e converta imagens sem enviar os originais.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/harsafe/" data-reveal>
+          <span class="directory-index">06</span><span class="tool-status">Exportação sanitizada</span>
+          <h3>HARsafe</h3><p>Resuma um HAR, informe as categorias de ocultação aplicadas, remova dados de cabeçalhos, cookies, parâmetros de consulta e corpos e exporte uma captura mais segura.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/logglass/" data-reveal>
+          <span class="directory-index">07</span><span class="tool-status">Fluxo local</span>
+          <h3>LogGlass</h3><p>Processe logs de texto ou JSONL em um Web Worker dedicado, filtre sem carregar o arquivo inteiro na memória, resuma por nível e exporte uma seleção com ocultação por melhor esforço.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/edgebench/" data-reveal>
+          <span class="directory-index">08</span><span class="tool-status">ONNX · WebGPU</span>
+          <h3>EdgeBench</h3><p>Execute um modelo ONNX local com tensores gerados ou JSON usando WebGPU ou WASM e, após aquecimento explícito, veja p50, p95, vazão sequencial e um limite inferior de memória.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/clinica-de-datasets/" data-reveal>
+          <span class="directory-index">09</span><span class="tool-status">YOLO · COCO</span>
+          <h3>Clínica de datasets</h3><p>Audite pastas YOLO ou JSON COCO para encontrar rótulos ausentes, caixas inválidas, distribuição de classes, duplicatas idênticas em bytes e vazamento dessas duplicatas entre partições nomeadas.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/statescope/" data-reveal>
+          <span class="directory-index">10</span><span class="tool-status">Terraform</span>
+          <h3>StateScope</h3><p>Inventarie recursos, provedores, módulos, dependências e itens com possível impacto em custos em um state local e exporte um relatório normalizado com pseudônimos opcionais para os identificadores.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/secretsweep/" data-reveal>
+          <span class="directory-index">11</span><span class="tool-status">Sem persistência</span>
+          <h3>SecretSweep</h3><p>Procure padrões de credenciais e valores de alta entropia em texto ou arquivos locais e exporte um relatório de correção sem valores brutos.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/pdf-bench/" data-reveal>
+          <span class="directory-index">12</span><span class="tool-status">PDF local</span>
+          <h3>PDF Bench</h3><p>Una, divida, reordene, gire e remova metadados comuns de PDFs sem enviá-los.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/transcritor-privado/" data-reveal>
+          <span class="directory-index">13</span><span class="tool-status">IA no dispositivo</span>
+          <h3>Transcritor privado</h3><p>Transcreva áudio local com um modelo Whisper pequeno no navegador, gere marcações de tempo e exporte TXT, VTT ou SRT.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a></div>
     </section>
-
     <section class="section-shell lab-principles" aria-labelledby="principles-title">
       <h2 id="principles-title">As regras do laboratório.</h2>
       <ol>
-        <li><strong>Local por padrão.</strong><span>Seu conteúdo permanece no dispositivo, a menos que a ferramenta diga claramente o contrário.</span></li>
-        <li><strong>Acessível desde o início.</strong><span>Teclado, foco visível, movimento reduzido e estados claros são requisitos de produto.</span></li>
-        <li><strong>Útil antes de impressionante.</strong><span>Cada experimento precisa resolver um problema comum sem acrescentar burocracia desnecessária.</span></li>
+        <li><strong>Local por padrão.</strong><span>Seu conteúdo permanece no dispositivo. Downloads externos necessários são informados antes de começar.</span></li>
+        <li><strong>Acessível desde o início.</strong><span>Teclado, foco visível, movimento reduzido, estados claros e layouts resilientes são requisitos.</span></li>
+        <li><strong>Limites explícitos.</strong><span>Cada ferramenta explica o que consegue verificar, o que não consegue e o que você deve revisar.</span></li>
       </ol>
     </section>
   </main>
-
-  <footer class="site-footer"><p>Matheus Castro · Laboratório comunitário</p><nav aria-label="Rodapé"><a href="/pt-br/">Portfólio</a><a href="/pt-br/blog/">Notas</a><a href="mailto:contact@castrom13.dev">E-mail</a></nav></footer>
+  <footer class="site-footer"><p>Matheus Castro · Laboratório comunitário</p><nav aria-label="Rodapé"><a href="/pt-br/ferramentas/">Todas as ferramentas</a><a href="/pt-br/">Portfólio</a><a href="mailto:contact@castrom13.dev">E-mail</a></nav></footer>
 </body>
 </html>

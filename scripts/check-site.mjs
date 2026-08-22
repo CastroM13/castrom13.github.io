@@ -4,15 +4,27 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
-  'index.html', 'pt-br/index.html', 'tools/index.html', 'tools/password/index.html', 'tools/contrast/index.html',
-  'pt-br/ferramentas/index.html', 'pt-br/ferramentas/senhas/index.html', 'pt-br/ferramentas/contraste/index.html',
-  'qrcode/index.html', 'pt-br/ferramentas/qrcode/index.html', 'blog/index.html', 'pt-br/blog/index.html', '404.html'
+  'index.html', 'pt-br/index.html', 'qrcode/index.html', 'pt-br/ferramentas/qrcode/index.html',
+  'blog/index.html', 'pt-br/blog/index.html', '404.html'
 ];
+
+async function collectIndexes(directory, relative = directory) {
+  const entries = await readdir(path.join(root, relative), { withFileTypes: true });
+  for (const entry of entries) {
+    const child = path.join(relative, entry.name);
+    if (entry.isDirectory()) await collectIndexes(directory, child);
+    else if (entry.name === 'index.html') pages.push(child);
+  }
+}
+
+await collectIndexes('tools');
+await collectIndexes('pt-br/ferramentas');
 
 for (const blogRoot of ['blog', 'pt-br/blog']) {
   const entries = await readdir(path.join(root, blogRoot), { withFileTypes: true });
   for (const entry of entries) if (entry.isDirectory()) pages.push(path.join(blogRoot, entry.name, 'index.html'));
 }
+const uniquePages = [...new Set(pages)];
 const errors = [];
 
 function count(source, pattern) {
@@ -29,7 +41,7 @@ async function targetExists(reference, sourcePage) {
   try { await access(candidate); return true; } catch (_) { return false; }
 }
 
-for (const page of pages) {
+for (const page of uniquePages) {
   const filePath = path.join(root, page);
   let html;
   try { html = await readFile(filePath, 'utf8'); }
@@ -66,5 +78,5 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exitCode = 1;
 } else {
-  console.log(`Checked ${pages.length} primary pages: structural HTML, metadata, anchors, links, and image alternatives passed.`);
+  console.log(`Checked ${uniquePages.length} primary pages: structural HTML, metadata, anchors, links, and image alternatives passed.`);
 }

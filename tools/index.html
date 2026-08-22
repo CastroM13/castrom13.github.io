@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0b0d">
   <title>Community Lab — Matheus Castro</title>
-  <meta name="description" content="Fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
+  <meta name="description" content="13 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
   <link rel="canonical" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/">
@@ -13,19 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Community Lab — Matheus Castro">
-  <meta property="og:description" content="Fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
+  <meta property="og:description" content="13 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
   <meta property="og:url" content="https://castrom13.dev/tools/">
   <meta property="og:image" content="https://castrom13.dev/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://castrom13.dev/assets/og.png">
-  <script>
-    document.documentElement.classList.add('js');
-    try {
-      const savedLanguage = localStorage.getItem('castrom13-language');
-      const speaksPortuguese = navigator.languages?.some((language) => /^pt(?:-|$)/i.test(language));
-      if (savedLanguage === 'pt-BR' || (!savedLanguage && speaksPortuguese)) location.replace('/pt-br/ferramentas/');
-    } catch (_) {}
-  </script>
+  <script>document.documentElement.classList.add('js'); try { const savedLanguage = localStorage.getItem('castrom13-language'); const speaksPortuguese = navigator.languages?.some((language) => /^pt(?:-|$)/i.test(language)); if (savedLanguage === 'pt-BR' || (!savedLanguage && speaksPortuguese)) location.replace("/pt-br/ferramentas/"); } catch (_) {}</script>
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/site.js" type="module"></script>
 </head>
@@ -34,51 +27,83 @@
   <header class="site-header">
     <a class="wordmark" href="/" aria-label="Matheus Castro, home"><span aria-hidden="true">MC</span><span class="wordmark-name">Matheus Castro</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle data-open-label="Open navigation" data-close-label="Close navigation"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-    <nav class="site-navigation" id="site-navigation" aria-label="Primary" data-navigation>
-      <a href="/#work">Work</a><a href="/#capabilities">Capabilities</a><a href="/tools/" aria-current="page">Lab</a><a href="/blog/">Notes</a><a href="/#about">About</a>
-    </nav>
+    <nav class="site-navigation" id="site-navigation" aria-label="Primary" data-navigation><a href="/#work">Work</a><a href="/#capabilities">Capabilities</a><a href="/tools/" aria-current="page">Lab</a><a href="/blog/">Notes</a><a href="/#about">About</a></nav>
     <div class="header-actions">
       <a class="language-link" href="/pt-br/ferramentas/" lang="pt-BR" hreflang="pt-BR" aria-label="Ver em português" data-language="pt-BR">PT</a>
       <button class="icon-button" type="button" aria-label="Use light theme" data-theme-toggle data-light-label="Use light theme" data-dark-label="Use dark theme"><span aria-hidden="true" data-theme-icon>◐</span></button>
     </div>
   </header>
-
   <main id="main">
     <header class="section-shell page-hero" data-reveal>
       <p class="section-kicker">Community lab / local-first</p>
-      <h1>Small tools that respect your time and data.</h1>
-      <p>Tasks like generating a password or checking color contrast should not require an account, subscription, or upload. These tools run in your browser and are built for keyboard, touch, and assistive technology.</p>
-      <div class="privacy-line"><span aria-hidden="true"></span> No accounts · No analytics · Local processing where possible</div>
+      <h1>Small tools. Real problems. Data respected.</h1>
+      <p>Useful technical tasks should not require an account, subscription, or upload. These tools run in the browser and are built for keyboard, touch, and assistive technology.</p>
+      <div class="privacy-line"><span aria-hidden="true"></span>No accounts · No analytics · Local processing disclosed per tool</div>
     </header>
-
     <section class="section-shell tool-directory" aria-labelledby="available-tools">
       <h2 id="available-tools" class="sr-only">Available tools</h2>
-      <div class="tool-directory-grid">
-        <a class="directory-card" href="/qrcode/" data-reveal>
+      <div class="tool-directory-grid"><a class="directory-card" href="/qrcode/" data-reveal>
           <span class="directory-index">01</span><span class="tool-status">Available</span>
-          <h3>QR Code Studio</h3><p>Generate and customize QR codes in the browser.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+          <h3>QR Code Studio</h3><p>Generate and customize QR codes directly in the browser.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-        <a class="directory-card" href="/tools/password/" data-reveal>
+<a class="directory-card" href="/tools/password/" data-reveal>
           <span class="directory-index">02</span><span class="tool-status">Local only</span>
           <h3>Password &amp; Passphrase</h3><p>Generate credentials with Web Crypto and a clear estimate of the search space.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-        <a class="directory-card" href="/tools/contrast/" data-reveal>
+<a class="directory-card" href="/tools/contrast/" data-reveal>
           <span class="directory-index">03</span><span class="tool-status">WCAG 2.2</span>
           <h3>Contrast Workbench</h3><p>Test text and UI contrast, preview the pair, and find a nearby passing foreground.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-      </div>
+<a class="directory-card" href="/tools/tokendesk/" data-reveal>
+          <span class="directory-index">04</span><span class="tool-status">Web Crypto</span>
+          <h3>TokenDesk</h3><p>Decode JWTs, inspect time claims, flag risky algorithms, and optionally verify a signature with a JWK—without sending the token anywhere.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/media-cleaner/" data-reveal>
+          <span class="directory-index">05</span><span class="tool-status">Local processing</span>
+          <h3>Image Metadata Cleaner</h3><p>Inspect recognized JPEG, PNG, and WebP metadata, create a fresh canvas re-encode, resize images, and convert formats without uploading the originals.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/harsafe/" data-reveal>
+          <span class="directory-index">06</span><span class="tool-status">Sanitized export</span>
+          <h3>HARsafe</h3><p>Summarize a HAR, report applied redaction categories, redact headers, cookies, query values, and bodies, then export a safer trace.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/logglass/" data-reveal>
+          <span class="directory-index">07</span><span class="tool-status">Local stream</span>
+          <h3>LogGlass</h3><p>Stream text or JSONL logs in a dedicated worker, filter without reading the whole file into memory, summarize levels, and export a selection with best-effort redaction.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/edgebench/" data-reveal>
+          <span class="directory-index">08</span><span class="tool-status">ONNX · WebGPU</span>
+          <h3>EdgeBench</h3><p>Run a local ONNX model with generated or JSON tensor inputs using WebGPU or WASM, then report p50, p95, sequential throughput, and a memory lower bound after explicit warm-up.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/dataset-clinic/" data-reveal>
+          <span class="directory-index">09</span><span class="tool-status">YOLO · COCO</span>
+          <h3>Dataset Clinic</h3><p>Audit local YOLO folders or COCO JSON for missing labels, invalid boxes, class distribution, byte-identical duplicates, and exact-duplicate leakage between named splits.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/statescope/" data-reveal>
+          <span class="directory-index">10</span><span class="tool-status">Terraform</span>
+          <h3>StateScope</h3><p>Inventory resources, providers, modules, dependencies, and cost-relevant infrastructure in a local Terraform state, then export a normalized report with optional identifier pseudonyms.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/secretsweep/" data-reveal>
+          <span class="directory-index">11</span><span class="tool-status">No persistence</span>
+          <h3>SecretSweep</h3><p>Scan pasted text or selected files for credential patterns and high-entropy values, then export a redacted remediation report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/pdf-bench/" data-reveal>
+          <span class="directory-index">12</span><span class="tool-status">Local PDF</span>
+          <h3>PDF Bench</h3><p>Merge, split, reorder, rotate, and remove common document metadata from PDFs without uploading them.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/private-transcriber/" data-reveal>
+          <span class="directory-index">13</span><span class="tool-status">On-device AI</span>
+          <h3>Private Transcriber</h3><p>Transcribe local audio with a small Whisper model in the browser, include timestamps, and export TXT, VTT, or SRT.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a></div>
     </section>
-
     <section class="section-shell lab-principles" aria-labelledby="principles-title">
       <h2 id="principles-title">The rules of the lab.</h2>
       <ol>
-        <li><strong>Local by default.</strong><span>Your content stays on your device unless a tool clearly says otherwise.</span></li>
-        <li><strong>Accessible from the start.</strong><span>Keyboard support, visible focus, reduced motion, and clear states are product requirements.</span></li>
-        <li><strong>Useful before impressive.</strong><span>Every experiment must solve an ordinary problem without unnecessary friction.</span></li>
+        <li><strong>Local by default.</strong><span>Your content stays on the device. Required external downloads are disclosed before work begins.</span></li>
+        <li><strong>Accessible from the start.</strong><span>Keyboard support, visible focus, reduced motion, clear states, and resilient layouts are requirements.</span></li>
+        <li><strong>Explicit limits.</strong><span>Every tool explains what it can verify, what it cannot, and what you should review.</span></li>
       </ol>
     </section>
   </main>
-
-  <footer class="site-footer"><p>Matheus Castro · Community Lab</p><nav aria-label="Footer"><a href="/">Portfolio</a><a href="/blog/">Notes</a><a href="mailto:contact@castrom13.dev">Email</a></nav></footer>
+  <footer class="site-footer"><p>Matheus Castro · Community Lab</p><nav aria-label="Footer"><a href="/tools/">Every tool</a><a href="/">Portfolio</a><a href="mailto:contact@castrom13.dev">Email</a></nav></footer>
 </body>
 </html>
