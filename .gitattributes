@@ -1,1 +1,3 @@
 *.onnx binary
+*.wasm binary
+vendor/** -diff -whitespace
