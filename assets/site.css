@@ -140,15 +140,16 @@ a { color: inherit; }
 .wordmark-icon {
   display: grid;
   width: 2.2rem;
-  aspect-ratio: 1;
+  height: 2.2rem;
+  flex: 0 0 2.2rem;
   place-items: center;
   overflow: hidden;
-  border: 1px solid var(--line-strong);
 }
 
 .wordmark-icon img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .site-navigation {
@@ -745,7 +746,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 68rem) {
   .site-header { grid-template-columns: 1fr auto; }
-  .js .menu-toggle { display: inline-flex; justify-self: end; flex-direction: column; gap: 0.35rem; }
+  .js .menu-toggle { display: grid; justify-self: end; grid-template-rows: repeat(2, 1px); align-content: center; justify-items: center; gap: 0.35rem; padding: 0; }
   .menu-toggle > span:not(.sr-only) { width: 1.1rem; height: 1px; background: currentColor; }
   .header-actions { margin-left: 0.65rem; }
   .site-navigation { grid-column: 1 / -1; flex-wrap: wrap; padding-block: 0.35rem 0.85rem; }
