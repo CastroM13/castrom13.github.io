@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Local libarchive smoke test</title>
+<body data-result="running">running</body>
+<script type="module">
+  import { extractLibarchiveEntry, inspectLibarchive } from '/assets/tools/suite/media-documents.js';
+  import { fixtureBytes, libarchiveFixtures } from './libarchive-fixtures.mjs';
+
+  const body = document.body;
+  try {
+    const reports = [];
+    for (const fixture of libarchiveFixtures) {
+      const bytes = fixtureBytes(fixture);
+      const inspected = await inspectLibarchive(bytes, { maximumFiles: 4, maximumEntry: 1024, maximumExpanded: 4096 });
+      const entry = inspected.entries.find((candidate) => candidate.name === fixture.entryName);
+      if (!entry || entry.directory || entry.size !== new TextEncoder().encode(fixture.text).length) throw new Error(`${fixture.format} inspection mismatch`);
+      const extracted = await extractLibarchiveEntry(bytes, entry.runtimeIndex, { maximumFiles: 4, maximumEntry: 1024, maximumExpanded: 4096 });
+      const text = new TextDecoder().decode(extracted.data);
+      if (text !== fixture.text) throw new Error(`${fixture.format} extraction mismatch: ${JSON.stringify(text)}`);
+      reports.push(`${fixture.format}=${extracted.data.length}`);
+    }
+    body.dataset.result = 'pass';
+    body.textContent = `PASS ${reports.join(' ')}`;
+  } catch (error) {
+    body.dataset.result = 'fail';
+    body.textContent = `FAIL ${error?.stack || error?.message || error}`;
+  }
+</script>

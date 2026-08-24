@@ -1,0 +1,3 @@
+The portfolio contains bilingual tools with accessible workbench controls.
+Every requested tool has English and Portuguese routes and a disclosed processing limit.
+Mesh, media, document, database, and AI workflows are tested locally.

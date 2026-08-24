@@ -1,0 +1,1 @@
+import{t as e}from"./dist-BR_R7xPQ.js";var t=e(),n=!1,r=!0,i=async e=>{new t.SharedObject({is_all_done:()=>n,is_cmd_run_end:()=>r,set_end_of_exec:e=>{}},e.waiter_id),n=!0,await a(e)},a=async e=>{new t.SharedObjectRef(e.terminal_id).proxy()};export{i as parser_setup};

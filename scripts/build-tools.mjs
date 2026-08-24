@@ -91,7 +91,7 @@ function toolPage(tool, language) {
   return `<!doctype html>
 <html lang="${lang}" data-theme="dark">
 <head>
-  ${head({ language, title: `${title} — ${pt ? 'Laboratório comunitário' : 'Community Lab'}`, description: tool.description[language], canonicalPath, alternatePath, script: `/assets/tools/${tool.key}.js` })}
+  ${head({ language, title: `${title} — ${pt ? 'Laboratório comunitário' : 'Community Lab'}`, description: tool.description[language], canonicalPath, alternatePath, script: tool.script || `/assets/tools/${tool.key}.js` })}
   <script type="application/ld+json">${schema(tool, language, canonicalPath)}</script>
 </head>
 <body>
@@ -121,7 +121,7 @@ function toolPage(tool, language) {
 
 function directoryCard(tool, language) {
   const label = language === 'pt' ? 'Abrir' : 'Open';
-  return `<a class="directory-card" href="${tool.paths[language]}" data-reveal>
+  return `<a class="directory-card" href="${tool.paths[language]}" data-tool-card data-category="${escapeHtml(tool.schemaCategory || 'UtilitiesApplication')}" data-reveal>
           <span class="directory-index">${tool.index}</span><span class="tool-status">${escapeHtml(tool.status[language])}</span>
           <h3>${escapeHtml(tool.title[language])}</h3><p>${escapeHtml(tool.description[language])}</p><span class="text-link">${label} <span aria-hidden="true">↗</span></span>
         </a>`;
@@ -151,6 +151,12 @@ function directoryPage(language) {
     </header>
     <section class="section-shell tool-directory" aria-labelledby="available-tools">
       <h2 id="available-tools" class="sr-only">${pt ? 'Ferramentas disponíveis' : 'Available tools'}</h2>
+      <form class="tool-directory-filter" role="search" data-tool-filter>
+        <label><span class="field-label">${pt ? 'Pesquisar ferramentas' : 'Search tools'}</span><input class="text-input" type="search" autocomplete="off" placeholder="${pt ? 'Nome, descrição ou tecnologia' : 'Name, description, or technology'}" data-tool-search></label>
+        <label><span class="field-label">${pt ? 'Categoria' : 'Category'}</span><select data-tool-category><option value="">${pt ? 'Todas as categorias' : 'Every category'}</option><option value="UtilitiesApplication">${pt ? 'Utilidades' : 'Utilities'}</option><option value="DeveloperApplication">${pt ? 'Desenvolvimento e dados' : 'Developer and data'}</option><option value="MultimediaApplication">${pt ? 'Mídia e IA' : 'Media and AI'}</option><option value="DesignApplication">${pt ? 'Design e engenharia' : 'Design and engineering'}</option><option value="SecurityApplication">${pt ? 'Segurança' : 'Security'}</option></select></label>
+        <button class="text-button" type="reset">${pt ? 'Limpar filtros' : 'Clear filters'}</button>
+        <p class="tool-filter-count" role="status" aria-live="polite" data-tool-count data-template="${pt ? '{count} ferramenta(s) exibida(s)' : '{count} tool(s) shown'}">${pt ? `${allTools.length} ferramentas exibidas` : `${allTools.length} tools shown`}</p>
+      </form>
       <div class="tool-directory-grid">${allTools.map((tool) => directoryCard(tool, language)).join('\n')}</div>
     </section>
     <section class="section-shell lab-principles" aria-labelledby="principles-title">

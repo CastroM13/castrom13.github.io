@@ -4,18 +4,43 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/copy-vendor.mjs && node scripts/build-tools.mjs && node scripts/build-blog.mjs",
-    "check": "node scripts/check-site.mjs && node scripts/check-js.mjs && node scripts/test-tools.mjs"
+    "check": "node scripts/check-rustc-runtime.mjs && node scripts/check-capability-evidence.mjs && node scripts/check-tool-manifest.mjs && node scripts/check-site.mjs && node scripts/check-js.mjs && node scripts/test-tools.mjs && node --test tests/suite-*.test.mjs",
+    "check:browser": "node scripts/check-tools-browser.mjs"
   },
   "devDependencies": {
     "@huggingface/transformers": "3.8.1",
     "esbuild": "0.28.2",
     "markdown-it": "15.0.0",
     "onnxruntime-web": "1.27.0",
-    "pdf-lib": "1.17.1"
+    "pdf-lib": "1.17.1",
+    "playwright-core": "1.62.1"
   },
   "overrides": {
     "@huggingface/transformers": {
       "sharp": "0.35.3"
     }
+  },
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.33.1-dev57.0",
+    "@ffmpeg/core": "0.12.10",
+    "@ffmpeg/ffmpeg": "0.12.15",
+    "@ffmpeg/util": "0.12.2",
+    "@gameguild/emception-browser": "4.4.0",
+    "@jsquash/avif": "2.1.1",
+    "@wllama/wllama": "3.6.0",
+    "7z-wasm": "1.2.0",
+    "buffer": "6.0.3",
+    "emception": "4.4.0",
+    "exifr": "7.1.3",
+    "fflate": "0.8.3",
+    "gifenc": "1.0.3",
+    "isomorphic-git": "1.41.9",
+    "libarchive-wasm": "1.2.0",
+    "libraw-wasm": "1.6.0",
+    "pyodide": "0.29.3",
+    "sql.js": "1.14.2",
+    "tesseract.js": "7.0.0",
+    "three": "0.185.1",
+    "utif": "3.1.0"
   }
 }

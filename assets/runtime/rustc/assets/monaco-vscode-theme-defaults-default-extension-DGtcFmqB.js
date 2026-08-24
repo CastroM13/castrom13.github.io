@@ -1,0 +1,1 @@
+import{t as e}from"./monaco-vscode-theme-defaults-default-extension-B8DILGUT.js";export{e as whenReady};

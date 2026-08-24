@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0a0b0d">
   <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/favicon.svg" data-theme-asset>
   <title>Community Lab — Matheus Castro</title>
-  <meta name="description" content="13 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
+  <meta name="description" content="63 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
   <link rel="canonical" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Community Lab — Matheus Castro">
-  <meta property="og:description" content="13 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
+  <meta property="og:description" content="63 fast, accessible, local-first utilities that work without accounts or unnecessary uploads.">
   <meta property="og:url" content="https://castrom13.dev/tools/">
   <meta property="og:image" content="https://castrom13.dev/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -43,57 +43,263 @@
     </header>
     <section class="section-shell tool-directory" aria-labelledby="available-tools">
       <h2 id="available-tools" class="sr-only">Available tools</h2>
-      <div class="tool-directory-grid"><a class="directory-card" href="/qrcode/" data-reveal>
+      <form class="tool-directory-filter" role="search" data-tool-filter>
+        <label><span class="field-label">Search tools</span><input class="text-input" type="search" autocomplete="off" placeholder="Name, description, or technology" data-tool-search></label>
+        <label><span class="field-label">Category</span><select data-tool-category><option value="">Every category</option><option value="UtilitiesApplication">Utilities</option><option value="DeveloperApplication">Developer and data</option><option value="MultimediaApplication">Media and AI</option><option value="DesignApplication">Design and engineering</option><option value="SecurityApplication">Security</option></select></label>
+        <button class="text-button" type="reset">Clear filters</button>
+        <p class="tool-filter-count" role="status" aria-live="polite" data-tool-count data-template="{count} tool(s) shown">63 tools shown</p>
+      </form>
+      <div class="tool-directory-grid"><a class="directory-card" href="/qrcode/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">01</span><span class="tool-status">Available</span>
           <h3>QR Code Studio</h3><p>Generate and customize QR codes directly in the browser.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/password/" data-reveal>
+<a class="directory-card" href="/tools/password/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">02</span><span class="tool-status">Local only</span>
           <h3>Password &amp; Passphrase</h3><p>Generate credentials with Web Crypto and a clear estimate of the search space.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/contrast/" data-reveal>
+<a class="directory-card" href="/tools/contrast/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">03</span><span class="tool-status">WCAG 2.2</span>
           <h3>Contrast Workbench</h3><p>Test text and UI contrast, preview the pair, and find a nearby passing foreground.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/tokendesk/" data-reveal>
+<a class="directory-card" href="/tools/tokendesk/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">04</span><span class="tool-status">Web Crypto</span>
           <h3>TokenDesk</h3><p>Decode JWTs, inspect time claims, flag risky algorithms, and optionally verify a signature with a JWK—without sending the token anywhere.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/media-cleaner/" data-reveal>
+<a class="directory-card" href="/tools/media-cleaner/" data-tool-card data-category="MultimediaApplication" data-reveal>
           <span class="directory-index">05</span><span class="tool-status">Local processing</span>
           <h3>Image Metadata Cleaner</h3><p>Inspect recognized JPEG, PNG, and WebP metadata, create a fresh canvas re-encode, resize images, and convert formats without uploading the originals.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/harsafe/" data-reveal>
+<a class="directory-card" href="/tools/harsafe/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">06</span><span class="tool-status">Sanitized export</span>
           <h3>HARsafe</h3><p>Summarize a HAR, report applied redaction categories, redact headers, cookies, query values, and bodies, then export a safer trace.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/logglass/" data-reveal>
+<a class="directory-card" href="/tools/logglass/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">07</span><span class="tool-status">Local stream</span>
           <h3>LogGlass</h3><p>Stream text or JSONL logs in a dedicated worker, filter without reading the whole file into memory, summarize levels, and export a selection with best-effort redaction.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/edgebench/" data-reveal>
+<a class="directory-card" href="/tools/edgebench/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">08</span><span class="tool-status">ONNX · WebGPU</span>
           <h3>EdgeBench</h3><p>Run a local ONNX model with generated or JSON tensor inputs using WebGPU or WASM, then report p50, p95, sequential throughput, and a memory lower bound after explicit warm-up.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/dataset-clinic/" data-reveal>
+<a class="directory-card" href="/tools/dataset-clinic/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">09</span><span class="tool-status">YOLO · COCO</span>
           <h3>Dataset Clinic</h3><p>Audit local YOLO folders or COCO JSON for missing labels, invalid boxes, class distribution, byte-identical duplicates, and exact-duplicate leakage between named splits.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/statescope/" data-reveal>
+<a class="directory-card" href="/tools/statescope/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">10</span><span class="tool-status">Terraform</span>
           <h3>StateScope</h3><p>Inventory resources, providers, modules, dependencies, and cost-relevant infrastructure in a local Terraform state, then export a normalized report with optional identifier pseudonyms.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/secretsweep/" data-reveal>
+<a class="directory-card" href="/tools/secretsweep/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">11</span><span class="tool-status">No persistence</span>
           <h3>SecretSweep</h3><p>Scan pasted text or selected files for credential patterns and high-entropy values, then export a redacted remediation report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/pdf-bench/" data-reveal>
+<a class="directory-card" href="/tools/pdf-bench/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">12</span><span class="tool-status">Local PDF</span>
           <h3>PDF Bench</h3><p>Merge, split, reorder, rotate, and remove common document metadata from PDFs without uploading them.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/tools/private-transcriber/" data-reveal>
+<a class="directory-card" href="/tools/private-transcriber/" data-tool-card data-category="MultimediaApplication" data-reveal>
           <span class="directory-index">13</span><span class="tool-status">On-device AI</span>
           <h3>Private Transcriber</h3><p>Transcribe local audio with a small Whisper model in the browser, include timestamps, and export TXT, VTT, or SRT.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/universal-image-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">14</span><span class="tool-status">Canvas · TIFF · BMP</span>
+          <h3>Universal Image Converter</h3><p>Convert supported PNG, JPEG, WebP, AVIF, TIFF, and BMP images locally, resize them, and tune lossy quality.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/image-compressor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">15</span><span class="tool-status">Batch · Local</span>
+          <h3>Image Compressor</h3><p>Compress image batches, strip recognized metadata through re-encoding, and compare size and quality before download.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/raw-photo-processor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">16</span><span class="tool-status">LibRaw WASM</span>
+          <h3>RAW Photo Processor</h3><p>Develop supported CR2, NEF, ARW, DNG, and other RAW sensor files locally with exposure, camera/auto/custom white balance, and half/full-resolution controls.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/svg-studio/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">17</span><span class="tool-status">XML · Local</span>
+          <h3>SVG Optimizer &amp; Editor</h3><p>Edit SVG source, remove safe redundancies, inspect paths, apply view transformations, preview, and export locally.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/image-metadata-workbench/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">18</span><span class="tool-status">EXIF · XMP</span>
+          <h3>Image Metadata Workbench</h3><p>Inspect image metadata, write real EXIF ImageDescription, IPTC Caption-Abstract, or XMP dc:description fields in JPEG, remove recognized JPEG/PNG blocks, and export a local copy.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/ocr-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">19</span><span class="tool-status">On-device OCR</span>
+          <h3>OCR Studio</h3><p>Recognize text in local images, preserve word boxes, select a language, and export text or a searchable PDF when the OCR runtime is available.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/document-scanner/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">20</span><span class="tool-status">Canvas vision</span>
+          <h3>Document Scanner</h3><p>Correct document framing, rotate or deskew, tune threshold and contrast, and export a cleaned local scan.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/panorama-stitcher/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">21</span><span class="tool-status">Local alignment</span>
+          <h3>Panorama Stitcher</h3><p>Order photographs, estimate horizontal overlap, fine-tune alignment, blend seams, and export a panorama locally.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/hdr-merger/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">22</span><span class="tool-status">Tone mapping</span>
+          <h3>HDR Image Merger</h3><p>Combine aligned exposure stacks, reject clipped samples, tune tone mapping, and export a display-ready image.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/pixel-texture-editor/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">23</span><span class="tool-status">Canvas layers</span>
+          <h3>Pixel / Texture Editor</h3><p>Paint on local images with layers, opacity and blend controls, masks, undo, and practical texture filters, then export a flattened copy.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/offline-video-player/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">24</span><span class="tool-status">Native + FFmpeg</span>
+          <h3>Offline Video Player</h3><p>Play local media through a zero-copy native path or a disclosed FFmpeg compatibility transcode, add VTT/SRT subtitles, choose an audio stream, inspect metadata, and capture frames.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/video-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">25</span><span class="tool-status">FFmpeg WASM</span>
+          <h3>Video Converter</h3><p>Transcode local video to VP9/Opus WebM or H.264/AAC MP4 with resolution, bitrate, and frame-rate controls entirely in this tab.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/video-compressor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">26</span><span class="tool-status">FFmpeg compression</span>
+          <h3>Video Compressor</h3><p>Estimate size, choose bounded resolution/bitrate/frame-rate presets, and compress local video to VP9/Opus WebM or H.264/AAC MP4 with FFmpeg WASM.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/video-editor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">27</span><span class="tool-status">Timeline · Local</span>
+          <h3>Video Editor</h3><p>Trim a local clip, add timed text in the browser path, apply bounded fade-in/out transitions, choose framing and audio, preview, and export WebM or FFmpeg MP4/WebM.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/animation-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">28</span><span class="tool-status">Frames + FFmpeg</span>
+          <h3>GIF / WebP / APNG Studio</h3><p>Build GIF, animated WebP, or APNG from reordered and independently timed frames; render frames to WebM or a sprite sheet; or convert a clipped video into an animation.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/subtitle-editor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">29</span><span class="tool-status">SRT · VTT · ASS</span>
+          <h3>Subtitle Editor</h3><p>Parse SRT, VTT, and ASS subtitles, edit cues, shift or scale timing, validate overlaps, preview, and export.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/audio-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">30</span><span class="tool-status">PCM + FFmpeg</span>
+          <h3>Audio Converter</h3><p>Decode local audio, trim, resample, remix channels, and export genuine WAV, FLAC, MP3, Opus, or AAC/M4A output.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/daw-lite/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">31</span><span class="tool-status">PCM multitrack</span>
+          <h3>DAW-lite</h3><p>Arrange local audio tracks, set trims, gain and pan, apply fades and filters, preview the mix, and export a stereo WAV.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/audio-restoration/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">32</span><span class="tool-status">Local DSP</span>
+          <h3>Audio Restoration Tool</h3><p>Analyze local audio, attenuate stationary noise, apply high-pass and low-pass filters, normalize peaks, detect silence, and export WAV.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/music-analyzer/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">33</span><span class="tool-status">Audio analysis</span>
+          <h3>Music Analyzer</h3><p>Estimate BPM and musical key, measure loudness, detect onsets, inspect a spectrogram, and export an analysis report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/pdf-toolbox/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">34</span><span class="tool-status">Local PDF</span>
+          <h3>PDF Toolbox</h3><p>Merge PDFs, select and reorder pages, rotate, split, remove common metadata, and save a structurally compact copy locally.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/pdf-editor/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">35</span><span class="tool-status">Annotations · Forms</span>
+          <h3>PDF Editor</h3><p>Add text and drawn signatures, fill existing form fields, rotate or remove pages, and export an edited local PDF.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/office-viewer/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">36</span><span class="tool-status">OOXML · Local</span>
+          <h3>Office Document Viewer</h3><p>Open OOXML DOCX, XLSX, and PPTX packages, inspect structure, and render readable text, tables, and slide outlines without upload.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/epub-studio/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">37</span><span class="tool-status">EPUB · ZIP/XML</span>
+          <h3>EPUB Studio</h3><p>Open EPUB packages, read chapters, edit metadata and table of contents, validate required structure, and export a new EPUB.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/publishing-studio/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">38</span><span class="tool-status">Markdown · Math</span>
+          <h3>Markdown / LaTeX Publishing Studio</h3><p>Author Markdown or lightweight LaTeX, preview sanitized HTML locally, and export self-contained HTML, a generated PDF, or a styled browser-print PDF.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/archive-manager/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">39</span><span class="tool-status">ZIP · 7z · TAR.XZ</span>
+          <h3>Archive Manager</h3><p>Inspect and safely extract ZIP, TAR, GZIP, 7z, and XZ/LZMA-compressed TAR plus other libarchive-supported families, and create genuine ZIP, TAR, TAR.GZ, 7z, or TAR.XZ archives.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/file-inspector/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">40</span><span class="tool-status">Bytes · Local</span>
+          <h3>Universal File Inspector</h3><p>Inspect any local file through a capped hex view, magic-byte MIME detection, entropy map, extracted strings, hashes, and known binary structures.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/file-deduplicator/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">41</span><span class="tool-status">SHA-256 · pHash</span>
+          <h3>Local File Deduplicator</h3><p>Scan selected folders, group byte-identical files by SHA-256, find visually similar images with a perceptual hash, and export a review report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/encryption-vault/" data-tool-card data-category="SecurityApplication" data-reveal>
+          <span class="directory-index">42</span><span class="tool-status">AES-GCM · PBKDF2</span>
+          <h3>Local Encryption Vault</h3><p>Encrypt one file or a ZIP-bundled selection/folder into a versioned authenticated container, then decrypt and verify it without exposing plaintext.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/sqlite-workbench/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">43</span><span class="tool-status">SQLite · Local</span>
+          <h3>SQLite Workbench</h3><p>Open a SQLite database, validate its header and pages, inspect schema records, run supported local queries, edit rows when the runtime permits, and export a copy.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/duckdb-studio/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">44</span><span class="tool-status">Local SQL</span>
+          <h3>DuckDB Data Studio</h3><p>Load local CSV, newline JSON, JSON, and supported Parquet data, inspect columns, run analytical queries, and export result tables.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/data-converter/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">45</span><span class="tool-status">Tabular · Local</span>
+          <h3>Parquet / CSV / JSON Converter</h3><p>Convert supported local tabular files, select and filter columns, join two datasets, aggregate groups, and export CSV or JSON.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/bi-dashboard/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">46</span><span class="tool-status">Charts · Pivots</span>
+          <h3>Local BI Dashboard</h3><p>Drop in a local dataset, infer fields, apply a bounded SQL subset and filters, build pivots and accessible charts, and export a self-contained report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/data-notebook/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">47</span><span class="tool-status">Notebook · Local</span>
+          <h3>Jupyter-like Data Notebook</h3><p>Create ordered Markdown and code cells, run the safe built-in data language immediately, and use local Python when a Pyodide runtime is available.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/regex-workbench/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">48</span><span class="tool-status">Timed regex worker</span>
+          <h3>Regex / Data Extraction Workbench</h3><p>Test JavaScript regular expressions against pasted text or bounded local files, inspect exact offsets and captures, and export retained matches.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/git-client/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">49</span><span class="tool-status">Git · Offline</span>
+          <h3>Git Client</h3><p>Open a selected local Git working tree, inspect status, refs and history, compare bounded UTF-8 files, and stage all changes into a real commit in a private virtual copy.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/binary-diff/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">50</span><span class="tool-status">Byte patch</span>
+          <h3>Binary Diff Tool</h3><p>Compare two binaries, group changed ranges, map entropy, inspect known headers, create a compact verified patch, and apply it locally.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/code-playground/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">51</span><span class="tool-status">Sandboxed worker</span>
+          <h3>Code Playground / Compiler</h3><p>Run isolated JavaScript and web sandboxes, validate JSON and WebAssembly modules, compile C/C++ with Clang, and compile/run Rust against a local WASI sysroot.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/packet-analyzer/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">52</span><span class="tool-status">PCAP · Offline</span>
+          <h3>Network Packet Analyzer</h3><p>Open PCAP or PCAPNG captures, inspect Ethernet, IPv4, IPv6, TCP, UDP, ICMP and basic DNS fields, filter packets, and export a summary.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/local-search/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">53</span><span class="tool-status">Inverted index</span>
+          <h3>Local Search Engine</h3><p>Index selected text, Markdown, JSON, CSV, HTML, and subtitle files, search phrases and terms, rank results, preview context, and export the index.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/model-viewer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">54</span><span class="tool-status">Mesh · Local</span>
+          <h3>3D Model Viewer</h3><p>Open common mesh files, orbit a local 3D preview, inspect bounds and topology, measure points, toggle sections and wireframes, and export a report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/model-converter/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">55</span><span class="tool-status">Mesh conversion</span>
+          <h3>3D Model Converter</h3><p>Parse supported meshes, repair basic indices and normals, scale or center geometry, reduce duplicate vertices, and export STL, OBJ, PLY, or embedded glTF.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/cad-lite/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">56</span><span class="tool-status">Parametric mesh</span>
+          <h3>CAD-lite</h3><p>Create dimensioned rectangles, circles and polygons, apply practical constraints, extrude profiles, combine simple solids, and export STL.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/mesh-editor/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">57</span><span class="tool-status">Mesh editing</span>
+          <h3>Blender-lite Mesh Editor</h3><p>Load a mesh, select and transform vertices, edges, or faces, recalculate normals, apply mirror and subdivision-style modifiers, edit basic UVs, and export.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/slicer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">58</span><span class="tool-status">STL · G-code</span>
+          <h3>3D Printing Slicer</h3><p>Slice a validated STL into layers, configure nozzle, layer height, temperatures, walls and grid infill, preview paths, and export reviewable G-code.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/gerber-viewer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">59</span><span class="tool-status">Gerber · Excellon</span>
+          <h3>PCB / Gerber Viewer</h3><p>Load Gerber and Excellon fabrication files, assign copper, mask, silk and drill layers, render them locally, measure features, and export a report.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/llm-playground/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">60</span><span class="tool-status">GGUF · Local AI</span>
+          <h3>Local LLM Playground</h3><p>Inspect GGUF metadata, estimate device memory, configure prompts and sampling, and run compatible local inference when a disclosed model runtime is available.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/speech-to-text/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">61</span><span class="tool-status">On-device Whisper</span>
+          <h3>Local Speech-to-Text</h3><p>Decode local audio or video, run on-device Whisper transcription with timestamps, review segments, and export TXT, VTT, SRT, or JSON.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/vision-lab/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">62</span><span class="tool-status">ONNX · WebGPU</span>
+          <h3>Local Computer Vision Lab</h3><p>Load an ONNX vision model, configure image preprocessing and output adapters, run classification, detection or segmentation locally, and export results.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/tools/ai-media-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">63</span><span class="tool-status">Private AI workspace</span>
+          <h3>Local AI Media Studio</h3><p>Build a private media project with image OCR and ONNX classification, audio transcription, MiniLM embeddings, and local semantic search across derived records.</p><span class="text-link">Open <span aria-hidden="true">↗</span></span>
         </a></div>
     </section>
     <section class="section-shell lab-principles" aria-labelledby="principles-title">

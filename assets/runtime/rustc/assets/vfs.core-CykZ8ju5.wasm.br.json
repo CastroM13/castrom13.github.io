@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "encoding": "br",
+  "originalFile": "vfs.core-CykZ8ju5.wasm",
+  "originalSize": 450111306,
+  "compressedSize": 56243853,
+  "parts": [
+    {
+      "file": "vfs.core-CykZ8ju5.wasm.br.part-000",
+      "size": 25165824
+    },
+    {
+      "file": "vfs.core-CykZ8ju5.wasm.br.part-001",
+      "size": 25165824
+    },
+    {
+      "file": "vfs.core-CykZ8ju5.wasm.br.part-002",
+      "size": 5912205
+    }
+  ]
+}

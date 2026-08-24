@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-B0Z9INg1.js";import{BE as t,zE as n}from"./standaloneServices-BsmVQR9a.js";var r,i=e((()=>{t(),r=n(`textMateTokenizationFeature`)}));export{i as n,r as t};

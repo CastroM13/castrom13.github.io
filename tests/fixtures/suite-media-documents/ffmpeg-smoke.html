@@ -1,0 +1,69 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Local FFmpeg smoke test</title>
+<body data-result="running">running</body>
+<script type="module">
+  import { FFmpeg } from '/vendor/ffmpeg/ffmpeg/index.js';
+  import { buildVideoFilter, encodeWav, parseFfmpegInspection } from '/assets/tools/suite/media-documents.js';
+
+  const body = document.body;
+  const ffmpeg = new FFmpeg();
+  const probeFfmpeg = new FFmpeg();
+  const logs = [];
+  ffmpeg.on('log', ({ message }) => { logs.push(message); });
+  try {
+    await ffmpeg.load({ coreURL: '/vendor/ffmpeg/core/ffmpeg-core.js', wasmURL: '/vendor/ffmpeg/core/ffmpeg-core.wasm' });
+    const sampleRate = 8_000;
+    const samples = new Float32Array(sampleRate / 4);
+    for (let index = 0; index < samples.length; index += 1) samples[index] = Math.sin(2 * Math.PI * 440 * index / sampleRate) * 0.5;
+    await ffmpeg.writeFile('tone.wav', encodeWav([samples], sampleRate, { bitDepth: 16 }));
+    const audioCode = await ffmpeg.exec(['-i', 'tone.wav', '-c:a', 'libmp3lame', '-q:a', '4', 'tone.mp3'], 60_000);
+    const mp3 = await ffmpeg.readFile('tone.mp3');
+    const flacCode = await ffmpeg.exec(['-i', 'tone.wav', '-c:a', 'flac', 'tone.flac'], 60_000);
+    const flac = await ffmpeg.readFile('tone.flac');
+    const opusCode = await ffmpeg.exec(['-i', 'tone.wav', '-c:a', 'libopus', '-b:a', '64k', 'tone.opus'], 60_000);
+    const opus = await ffmpeg.readFile('tone.opus');
+    const aacCode = await ffmpeg.exec(['-i', 'tone.wav', '-c:a', 'aac', '-b:a', '96k', 'tone.m4a'], 60_000);
+    const m4a = await ffmpeg.readFile('tone.m4a');
+    const videoCode = await ffmpeg.exec(['-f', 'lavfi', '-i', 'color=c=red:s=160x90:d=0.25', '-c:v', 'libx264', '-preset', 'ultrafast', '-pix_fmt', 'yuv420p', 'clip.mp4'], 60_000);
+    const mp4 = await ffmpeg.readFile('clip.mp4');
+    const webmCode = await ffmpeg.exec(['-f', 'lavfi', '-i', 'color=c=blue:s=160x90:d=0.25', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=0.25', '-shortest', '-c:v', 'libvpx-vp9', '-deadline', 'realtime', '-cpu-used', '8', '-c:a', 'libopus', 'clip.webm'], 60_000);
+    const webm = await ffmpeg.readFile('clip.webm');
+    const webpCode = await ffmpeg.exec(['-f', 'lavfi', '-i', 'testsrc=size=64x64:rate=4:duration=0.5', '-c:v', 'libwebp_anim', '-lossless', '0', '-q:v', '70', '-loop', '0', 'anim.webp'], 60_000);
+    const webp = await ffmpeg.readFile('anim.webp');
+    const apngCode = await ffmpeg.exec(['-f', 'lavfi', '-i', 'testsrc=size=64x64:rate=4:duration=0.5', '-plays', '0', '-f', 'apng', 'anim.apng'], 60_000);
+    const apng = await ffmpeg.readFile('anim.apng');
+    const webpSignature = new TextDecoder('latin1').decode(webp.subarray(0, 12));
+    const webpText = new TextDecoder('latin1').decode(webp);
+    const apngSignature = [...apng.subarray(0, 8)].join(',');
+    const apngText = new TextDecoder('latin1').decode(apng);
+    const flacSignature = new TextDecoder('latin1').decode(flac.subarray(0, 4));
+    const opusText = new TextDecoder('latin1').decode(opus.subarray(0, 64));
+    const m4aText = new TextDecoder('latin1').decode(m4a.subarray(0, 32));
+    const webmSignature = [...webm.subarray(0, 4)].join(',');
+    const probeLogs = [];
+    probeFfmpeg.on('log', ({ message }) => { probeLogs.push(message); });
+    await probeFfmpeg.load({ coreURL: '/vendor/ffmpeg/core/ffmpeg-core.js', wasmURL: '/vendor/ffmpeg/core/ffmpeg-core.wasm' });
+    await probeFfmpeg.writeFile('clip.mp4', mp4.slice());
+    const probeCode = await probeFfmpeg.exec(['-hide_banner', '-loglevel', 'info', '-i', 'clip.mp4', '-map', '0:v:0', '-frames:v', '1', '-f', 'null', '-'], 60_000);
+    const probe = parseFfmpegInspection(probeLogs);
+    if (probeCode !== 0 || probe.width !== 160 || probe.height !== 90 || probe.duration <= 0) throw new Error(`invalid probe: ${probeCode}; ${probeLogs.join(' | ')}`);
+    const fadeFilter = buildVideoFilter(128, 0.2, { transition: 'fade', fadeDuration: 0.05, color: '#000000' });
+    const editCode = await ffmpeg.exec(['-i', 'clip.mp4', '-ss', '0', '-t', '0.2', '-map', '0:v:0', '-an', '-vf', fadeFilter, '-r', '24', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '23', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', 'edited.mp4'], 60_000);
+    const edited = await ffmpeg.readFile('edited.mp4');
+    const startCode = await ffmpeg.exec(['-ss', '0', '-i', 'edited.mp4', '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'start.rgb'], 60_000);
+    const middleCode = await ffmpeg.exec(['-ss', '0.1', '-i', 'edited.mp4', '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'middle.rgb'], 60_000);
+    const startFrame = await ffmpeg.readFile('start.rgb'); const middleFrame = await ffmpeg.readFile('middle.rgb');
+    const averageRed = (frame) => { let total = 0; for (let index = 0; index < frame.length; index += 3) total += frame[index]; return total / (frame.length / 3); };
+    const startRed = averageRed(startFrame); const middleRed = averageRed(middleFrame);
+    if (audioCode !== 0 || flacCode !== 0 || opusCode !== 0 || aacCode !== 0 || videoCode !== 0 || webmCode !== 0 || webpCode !== 0 || apngCode !== 0 || editCode !== 0 || startCode !== 0 || middleCode !== 0 || mp3.length < 100 || flacSignature !== 'fLaC' || !opusText.startsWith('OggS') || !opusText.includes('OpusHead') || !m4aText.includes('ftyp') || mp4.length < 500 || webm.length < 500 || webmSignature !== '26,69,223,163' || webp.length < 100 || !webpSignature.startsWith('RIFF') || !webpSignature.endsWith('WEBP') || !webpText.includes('ANIM') || !webpText.includes('ANMF') || apng.length < 100 || apngSignature !== '137,80,78,71,13,10,26,10' || !apngText.includes('acTL') || edited.length < 500 || startRed >= middleRed - 40) throw new Error(`invalid outputs/fade: mp3=${audioCode}/${mp3.length}, flac=${flacCode}/${flac.length}, opus=${opusCode}/${opus.length}, aac=${aacCode}/${m4a.length}, mp4=${videoCode}/${mp4.length}, webm=${webmCode}/${webm.length}, webp=${webpCode}/${webp.length}, apng=${apngCode}/${apng.length}, edited=${editCode}/${edited.length}, red=${startRed.toFixed(1)}→${middleRed.toFixed(1)}; ${logs.slice(-8).join(' | ')}`);
+    body.dataset.result = 'pass';
+    body.textContent = `PASS mp3=${mp3.length} flac=${flac.length} opus=${opus.length} m4a=${m4a.length} mp4=${mp4.length} webm=${webm.length} webp=${webp.length} apng=${apng.length} edited=${edited.length} fadeRed=${startRed.toFixed(1)}→${middleRed.toFixed(1)} probed=${probe.duration}`;
+  } catch (error) {
+    body.dataset.result = 'fail';
+    body.textContent = `FAIL ${error?.message || error}`;
+  } finally {
+    ffmpeg.terminate();
+    probeFfmpeg.terminate();
+  }
+</script>

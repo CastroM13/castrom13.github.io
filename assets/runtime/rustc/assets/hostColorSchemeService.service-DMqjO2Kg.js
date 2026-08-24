@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-B0Z9INg1.js";import{BE as t,zE as n}from"./standaloneServices-BsmVQR9a.js";var r,i=e((()=>{t(),r=n(`preferencesService`)})),a,o=e((()=>{t(),a=n(`hostColorSchemeService`)}));export{i,o as n,r,a as t};

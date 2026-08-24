@@ -1,0 +1,1 @@
+import{BE as e,VE as t,hy as n,my as r}from"./standaloneServices-BsmVQR9a.js";e(),n();var i=t(r);export{i as t};

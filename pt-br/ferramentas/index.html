@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0a0b0d">
   <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/favicon.svg" data-theme-asset>
   <title>Laboratório comunitário — Matheus Castro</title>
-  <meta name="description" content="13 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
+  <meta name="description" content="63 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
   <link rel="canonical" href="https://castrom13.dev/pt-br/ferramentas/">
   <link rel="alternate" hreflang="en" href="https://castrom13.dev/tools/">
   <link rel="alternate" hreflang="pt-BR" href="https://castrom13.dev/pt-br/ferramentas/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Laboratório comunitário — Matheus Castro">
-  <meta property="og:description" content="13 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
+  <meta property="og:description" content="63 utilitários rápidos, acessíveis e processados localmente, sem contas ou uploads desnecessários.">
   <meta property="og:url" content="https://castrom13.dev/pt-br/ferramentas/">
   <meta property="og:image" content="https://castrom13.dev/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -43,57 +43,263 @@
     </header>
     <section class="section-shell tool-directory" aria-labelledby="available-tools">
       <h2 id="available-tools" class="sr-only">Ferramentas disponíveis</h2>
-      <div class="tool-directory-grid"><a class="directory-card" href="/pt-br/ferramentas/qrcode/" data-reveal>
+      <form class="tool-directory-filter" role="search" data-tool-filter>
+        <label><span class="field-label">Pesquisar ferramentas</span><input class="text-input" type="search" autocomplete="off" placeholder="Nome, descrição ou tecnologia" data-tool-search></label>
+        <label><span class="field-label">Categoria</span><select data-tool-category><option value="">Todas as categorias</option><option value="UtilitiesApplication">Utilidades</option><option value="DeveloperApplication">Desenvolvimento e dados</option><option value="MultimediaApplication">Mídia e IA</option><option value="DesignApplication">Design e engenharia</option><option value="SecurityApplication">Segurança</option></select></label>
+        <button class="text-button" type="reset">Limpar filtros</button>
+        <p class="tool-filter-count" role="status" aria-live="polite" data-tool-count data-template="{count} ferramenta(s) exibida(s)">63 ferramentas exibidas</p>
+      </form>
+      <div class="tool-directory-grid"><a class="directory-card" href="/pt-br/ferramentas/qrcode/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">01</span><span class="tool-status">Disponível</span>
           <h3>Estúdio de QR Code</h3><p>Gere e personalize QR codes diretamente no navegador.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/senhas/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/senhas/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">02</span><span class="tool-status">Somente local</span>
           <h3>Senhas e frases-senha</h3><p>Gere credenciais com Web Crypto e uma estimativa clara do espaço de busca.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/contraste/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/contraste/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">03</span><span class="tool-status">WCAG 2.2</span>
           <h3>Bancada de contraste</h3><p>Teste contraste, visualize o par e encontre uma cor próxima que atenda ao critério.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/tokendesk/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/tokendesk/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">04</span><span class="tool-status">Web Crypto</span>
           <h3>TokenDesk</h3><p>Decodifique JWTs, inspecione claims temporais, sinalize algoritmos de risco e, opcionalmente, verifique uma assinatura com uma JWK — sem enviar o token.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/limpeza-de-midia/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/limpeza-de-midia/" data-tool-card data-category="MultimediaApplication" data-reveal>
           <span class="directory-index">05</span><span class="tool-status">Processamento local</span>
           <h3>Removedor de metadados de imagens</h3><p>Inspecione metadados reconhecidos de JPEG, PNG e WebP, gere uma nova codificação via canvas, redimensione e converta imagens sem enviar os originais.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/harsafe/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/harsafe/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">06</span><span class="tool-status">Exportação sanitizada</span>
           <h3>HARsafe</h3><p>Resuma um HAR, informe as categorias de ocultação aplicadas, remova dados de cabeçalhos, cookies, parâmetros de consulta e corpos e exporte uma captura mais segura.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/logglass/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/logglass/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">07</span><span class="tool-status">Fluxo local</span>
           <h3>LogGlass</h3><p>Processe logs de texto ou JSONL em um Web Worker dedicado, filtre sem carregar o arquivo inteiro na memória, resuma por nível e exporte uma seleção com ocultação por melhor esforço.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/edgebench/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/edgebench/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">08</span><span class="tool-status">ONNX · WebGPU</span>
           <h3>EdgeBench</h3><p>Execute um modelo ONNX local com tensores gerados ou JSON usando WebGPU ou WASM e, após aquecimento explícito, veja p50, p95, vazão sequencial e um limite inferior de memória.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/clinica-de-datasets/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/clinica-de-datasets/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">09</span><span class="tool-status">YOLO · COCO</span>
           <h3>Clínica de datasets</h3><p>Audite pastas YOLO ou JSON COCO para encontrar rótulos ausentes, caixas inválidas, distribuição de classes, duplicatas idênticas em bytes e vazamento dessas duplicatas entre partições nomeadas.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/statescope/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/statescope/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">10</span><span class="tool-status">Terraform</span>
           <h3>StateScope</h3><p>Inventarie recursos, provedores, módulos, dependências e itens com possível impacto em custos em um state local e exporte um relatório normalizado com pseudônimos opcionais para os identificadores.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/secretsweep/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/secretsweep/" data-tool-card data-category="DeveloperApplication" data-reveal>
           <span class="directory-index">11</span><span class="tool-status">Sem persistência</span>
           <h3>SecretSweep</h3><p>Procure padrões de credenciais e valores de alta entropia em texto ou arquivos locais e exporte um relatório de correção sem valores brutos.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/pdf-bench/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/pdf-bench/" data-tool-card data-category="UtilitiesApplication" data-reveal>
           <span class="directory-index">12</span><span class="tool-status">PDF local</span>
           <h3>PDF Bench</h3><p>Una, divida, reordene, gire e remova metadados comuns de PDFs sem enviá-los.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a>
-<a class="directory-card" href="/pt-br/ferramentas/transcritor-privado/" data-reveal>
+<a class="directory-card" href="/pt-br/ferramentas/transcritor-privado/" data-tool-card data-category="MultimediaApplication" data-reveal>
           <span class="directory-index">13</span><span class="tool-status">IA no dispositivo</span>
           <h3>Transcritor privado</h3><p>Transcreva áudio local com um modelo Whisper pequeno no navegador, gere marcações de tempo e exporte TXT, VTT ou SRT.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/universal-image-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">14</span><span class="tool-status">Canvas · TIFF · BMP</span>
+          <h3>Conversor universal de imagens</h3><p>Converta localmente imagens PNG, JPEG, WebP, AVIF, TIFF e BMP compatíveis, redimensione e ajuste a qualidade.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/image-compressor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">15</span><span class="tool-status">Lote · Local</span>
+          <h3>Compressor de imagens</h3><p>Comprima lotes de imagens, remova metadados reconhecidos por recodificação e compare tamanho e qualidade antes de baixar.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/raw-photo-processor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">16</span><span class="tool-status">LibRaw WASM</span>
+          <h3>Processador de fotos RAW</h3><p>Revele localmente arquivos de sensor CR2, NEF, ARW, DNG e outros RAW compatíveis, com exposição, balanço de branco da câmera/automático/personalizado e meia/resolução completa.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/svg-studio/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">17</span><span class="tool-status">XML · Local</span>
+          <h3>Otimizador e editor de SVG</h3><p>Edite o código SVG, remova redundâncias seguras, inspecione paths, aplique transformações, visualize e exporte localmente.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/image-metadata-workbench/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">18</span><span class="tool-status">EXIF · XMP</span>
+          <h3>Bancada de metadados de imagens</h3><p>Inspecione metadados de imagem, grave campos EXIF ImageDescription, IPTC Caption-Abstract ou XMP dc:description reais em JPEG, remova blocos JPEG/PNG reconhecidos e exporte uma cópia local.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/ocr-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">19</span><span class="tool-status">OCR no dispositivo</span>
+          <h3>Estúdio de OCR</h3><p>Reconheça texto em imagens locais, preserve caixas de palavras, escolha o idioma e exporte texto ou PDF pesquisável quando o runtime estiver disponível.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/document-scanner/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">20</span><span class="tool-status">Visão em canvas</span>
+          <h3>Scanner de documentos</h3><p>Corrija o enquadramento, gire ou alinhe, ajuste limiar e contraste e exporte um scan limpo localmente.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/panorama-stitcher/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">21</span><span class="tool-status">Alinhamento local</span>
+          <h3>Montador de panoramas</h3><p>Ordene fotografias, estime a sobreposição horizontal, refine o alinhamento, mescle emendas e exporte um panorama localmente.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/hdr-merger/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">22</span><span class="tool-status">Tone mapping</span>
+          <h3>Mesclador de imagens HDR</h3><p>Combine pilhas de exposição alinhadas, rejeite amostras estouradas, ajuste tone mapping e exporte uma imagem pronta para exibição.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/pixel-texture-editor/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">23</span><span class="tool-status">Camadas em canvas</span>
+          <h3>Editor de pixels e texturas</h3><p>Pinte em imagens locais com camadas, opacidade, mesclagem, máscaras, desfazer e filtros para texturas e exporte uma cópia achatada.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/offline-video-player/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">24</span><span class="tool-status">Nativo + FFmpeg</span>
+          <h3>Player de vídeo offline</h3><p>Reproduza mídia local pelo caminho nativo sem cópia ou por transcodificação de compatibilidade FFmpeg informada, adicione legendas VTT/SRT, escolha uma faixa de áudio, inspecione metadados e capture quadros.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/video-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">25</span><span class="tool-status">FFmpeg WASM</span>
+          <h3>Conversor de vídeo</h3><p>Transcodifique vídeo local para WebM VP9/Opus ou MP4 H.264/AAC com controles de resolução, bitrate e quadros inteiramente nesta aba.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/video-compressor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">26</span><span class="tool-status">Compressão FFmpeg</span>
+          <h3>Compressor de vídeo</h3><p>Estime o tamanho, escolha predefinições limitadas de resolução/bitrate/quadros e comprima vídeo local para WebM VP9/Opus ou MP4 H.264/AAC com FFmpeg WASM.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/video-editor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">27</span><span class="tool-status">Timeline · Local</span>
+          <h3>Editor de vídeo</h3><p>Corte um clipe local, adicione texto no caminho do navegador, aplique transições limitadas de fade de entrada/saída, escolha enquadramento e áudio, visualize e exporte WebM ou MP4/WebM por FFmpeg.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/animation-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">28</span><span class="tool-status">Quadros + FFmpeg</span>
+          <h3>Estúdio de GIF / WebP / APNG</h3><p>Crie GIF, WebP animado ou APNG com quadros reordenados e tempos independentes; renderize quadros em WebM ou sprite sheet; ou converta um trecho de vídeo em animação.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/subtitle-editor/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">29</span><span class="tool-status">SRT · VTT · ASS</span>
+          <h3>Editor de legendas</h3><p>Interprete legendas SRT, VTT e ASS, edite falas, desloque ou escale tempos, valide sobreposições, visualize e exporte.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/audio-converter/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">30</span><span class="tool-status">PCM + FFmpeg</span>
+          <h3>Conversor de áudio</h3><p>Decodifique áudio local, recorte, reamostre, remixe canais e exporte saída genuína WAV, FLAC, MP3, Opus ou AAC/M4A.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/daw-lite/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">31</span><span class="tool-status">PCM multipista</span>
+          <h3>DAW-lite</h3><p>Organize faixas locais, ajuste cortes, ganho e panorama, aplique fades e filtros, ouça e exporte um WAV estéreo.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/audio-restoration/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">32</span><span class="tool-status">DSP local</span>
+          <h3>Ferramenta de restauração de áudio</h3><p>Analise áudio local, atenue ruído estacionário, aplique filtros, normalize picos, detecte silêncio e exporte WAV.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/music-analyzer/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">33</span><span class="tool-status">Análise de áudio</span>
+          <h3>Analisador musical</h3><p>Estime BPM e tom musical, meça loudness, detecte ataques, inspecione um espectrograma e exporte um relatório.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/pdf-toolbox/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">34</span><span class="tool-status">PDF local</span>
+          <h3>Caixa de ferramentas PDF</h3><p>Una PDFs, selecione e reordene páginas, gire, divida, remova metadados comuns e salve uma cópia estruturalmente compacta.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/pdf-editor/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">35</span><span class="tool-status">Anotações · Formulários</span>
+          <h3>Editor de PDF</h3><p>Adicione texto e assinaturas desenhadas, preencha campos existentes, gire ou remova páginas e exporte um PDF editado localmente.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/office-viewer/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">36</span><span class="tool-status">OOXML · Local</span>
+          <h3>Visualizador de documentos Office</h3><p>Abra pacotes OOXML DOCX, XLSX e PPTX, inspecione a estrutura e renderize texto, tabelas e tópicos de slides sem upload.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/epub-studio/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">37</span><span class="tool-status">EPUB · ZIP/XML</span>
+          <h3>Estúdio de EPUB</h3><p>Abra EPUBs, leia capítulos, edite metadados e sumário, valide a estrutura obrigatória e exporte um novo EPUB.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/publishing-studio/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">38</span><span class="tool-status">Markdown · Matemática</span>
+          <h3>Estúdio de publicação Markdown / LaTeX</h3><p>Escreva Markdown ou LaTeX leve, visualize HTML sanitizado localmente e exporte HTML autocontido, um PDF gerado ou um PDF estilizado pela impressão do navegador.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/archive-manager/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">39</span><span class="tool-status">ZIP · 7z · TAR.XZ</span>
+          <h3>Gerenciador de arquivos compactados</h3><p>Inspecione e extraia com segurança ZIP, TAR, GZIP, 7z e TAR comprimido com XZ/LZMA, além de outras famílias aceitas pelo libarchive, e crie arquivos ZIP, TAR, TAR.GZ, 7z ou TAR.XZ reais.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/file-inspector/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">40</span><span class="tool-status">Bytes · Local</span>
+          <h3>Inspetor universal de arquivos</h3><p>Inspecione arquivos locais com visão hexadecimal limitada, detecção MIME por assinatura, mapa de entropia, strings, hashes e estruturas conhecidas.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/file-deduplicator/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">41</span><span class="tool-status">SHA-256 · pHash</span>
+          <h3>Deduplicador local de arquivos</h3><p>Examine pastas selecionadas, agrupe arquivos idênticos por SHA-256, encontre imagens visualmente semelhantes e exporte um relatório.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/encryption-vault/" data-tool-card data-category="SecurityApplication" data-reveal>
+          <span class="directory-index">42</span><span class="tool-status">AES-GCM · PBKDF2</span>
+          <h3>Cofre de criptografia local</h3><p>Criptografe um arquivo ou uma seleção/pasta empacotada em ZIP em um contêiner autenticado e versionado, depois descriptografe e verifique sem expor o conteúdo.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/sqlite-workbench/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">43</span><span class="tool-status">SQLite · Local</span>
+          <h3>Bancada SQLite</h3><p>Abra um banco SQLite, valide cabeçalho e páginas, inspecione registros de esquema, execute consultas locais compatíveis, edite linhas quando possível e exporte uma cópia.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/duckdb-studio/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">44</span><span class="tool-status">SQL local</span>
+          <h3>Estúdio de dados DuckDB</h3><p>Carregue CSV, JSON em linhas, JSON e Parquet compatível, inspecione colunas, execute consultas analíticas e exporte tabelas.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/data-converter/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">45</span><span class="tool-status">Tabular · Local</span>
+          <h3>Conversor Parquet / CSV / JSON</h3><p>Converta arquivos tabulares locais compatíveis, selecione e filtre colunas, una dois datasets, agregue grupos e exporte CSV ou JSON.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/bi-dashboard/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">46</span><span class="tool-status">Gráficos · Pivôs</span>
+          <h3>Dashboard local de BI</h3><p>Carregue um dataset local, infira campos, aplique SQL limitado e filtros, crie pivôs e gráficos acessíveis e exporte um relatório autocontido.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/data-notebook/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">47</span><span class="tool-status">Notebook · Local</span>
+          <h3>Notebook de dados estilo Jupyter</h3><p>Crie células Markdown e código, execute a linguagem segura de dados e use Python local quando Pyodide estiver disponível.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/regex-workbench/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">48</span><span class="tool-status">Worker regex cronometrado</span>
+          <h3>Bancada de regex e extração</h3><p>Teste expressões regulares JavaScript em texto ou arquivos locais limitados, inspecione offsets exatos e grupos e exporte correspondências retidas.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/git-client/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">49</span><span class="tool-status">Git · Offline</span>
+          <h3>Cliente Git</h3><p>Abra uma árvore Git local selecionada, inspecione status, refs e histórico, compare arquivos UTF-8 limitados e prepare todas as mudanças em um commit real numa cópia virtual privada.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/binary-diff/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">50</span><span class="tool-status">Patch de bytes</span>
+          <h3>Ferramenta de diff binário</h3><p>Compare dois binários, agrupe intervalos alterados, mapeie entropia, inspecione cabeçalhos, crie um patch verificado e aplique localmente.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/code-playground/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">51</span><span class="tool-status">Worker isolado</span>
+          <h3>Playground de código / compilador</h3><p>Execute sandboxes isolados de JavaScript e web, valide JSON e módulos WebAssembly, compile C/C++ com Clang e compile/execute Rust com um sysroot WASI local.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/packet-analyzer/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">52</span><span class="tool-status">PCAP · Offline</span>
+          <h3>Analisador de pacotes de rede</h3><p>Abra capturas PCAP ou PCAPNG, inspecione Ethernet, IPv4, IPv6, TCP, UDP, ICMP e DNS básico, filtre pacotes e exporte um resumo.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/local-search/" data-tool-card data-category="UtilitiesApplication" data-reveal>
+          <span class="directory-index">53</span><span class="tool-status">Índice invertido</span>
+          <h3>Mecanismo de busca local</h3><p>Indexe arquivos de texto, Markdown, JSON, CSV, HTML e legendas, pesquise frases e termos, ordene resultados, veja contexto e exporte o índice.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/model-viewer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">54</span><span class="tool-status">Malha · Local</span>
+          <h3>Visualizador de modelos 3D</h3><p>Abra malhas comuns, orbite uma prévia 3D local, inspecione limites e topologia, meça pontos, alterne seções e wireframe e exporte um relatório.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/model-converter/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">55</span><span class="tool-status">Conversão de malha</span>
+          <h3>Conversor de modelos 3D</h3><p>Interprete malhas compatíveis, corrija índices e normais básicos, escale ou centralize, reduza vértices duplicados e exporte STL, OBJ, PLY ou glTF incorporado.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/cad-lite/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">56</span><span class="tool-status">Malha paramétrica</span>
+          <h3>CAD-lite</h3><p>Crie retângulos, círculos e polígonos cotados, aplique restrições práticas, extrude perfis, combine sólidos simples e exporte STL.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/mesh-editor/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">57</span><span class="tool-status">Edição de malha</span>
+          <h3>Editor de malha Blender-lite</h3><p>Carregue uma malha, selecione e transforme vértices, arestas ou faces, recalcule normais, aplique espelho e subdivisão, edite UVs básicos e exporte.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/slicer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">58</span><span class="tool-status">STL · G-code</span>
+          <h3>Fatiador para impressão 3D</h3><p>Fatie um STL validado em camadas, configure bico, altura, temperaturas, paredes e infill em grade, visualize trajetórias e exporte G-code revisável.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/gerber-viewer/" data-tool-card data-category="DesignApplication" data-reveal>
+          <span class="directory-index">59</span><span class="tool-status">Gerber · Excellon</span>
+          <h3>Visualizador de PCB / Gerber</h3><p>Carregue arquivos Gerber e Excellon, atribua cobre, máscara, silk e furação, renderize localmente, meça recursos e exporte relatório.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/llm-playground/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">60</span><span class="tool-status">GGUF · IA local</span>
+          <h3>Playground local de LLM</h3><p>Inspecione metadados GGUF, estime memória, configure prompts e amostragem e rode inferência local compatível quando houver runtime informado.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/speech-to-text/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">61</span><span class="tool-status">Whisper no dispositivo</span>
+          <h3>Transcrição local de fala</h3><p>Decodifique áudio ou vídeo local, transcreva com Whisper no dispositivo e timestamps, revise segmentos e exporte TXT, VTT, SRT ou JSON.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/vision-lab/" data-tool-card data-category="DeveloperApplication" data-reveal>
+          <span class="directory-index">62</span><span class="tool-status">ONNX · WebGPU</span>
+          <h3>Laboratório local de visão computacional</h3><p>Carregue um modelo ONNX de visão, configure pré-processamento e adaptadores, rode classificação, detecção ou segmentação localmente e exporte resultados.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
+        </a>
+<a class="directory-card" href="/pt-br/ferramentas/ai-media-studio/" data-tool-card data-category="MultimediaApplication" data-reveal>
+          <span class="directory-index">63</span><span class="tool-status">Workspace privado de IA</span>
+          <h3>Estúdio local de mídia com IA</h3><p>Crie um projeto privado com OCR e classificação ONNX de imagens, transcrição de áudio, embeddings MiniLM e busca semântica local nos registros derivados.</p><span class="text-link">Abrir <span aria-hidden="true">↗</span></span>
         </a></div>
     </section>
     <section class="section-shell lab-principles" aria-labelledby="principles-title">

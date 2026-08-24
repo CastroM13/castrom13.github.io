@@ -1,0 +1,1 @@
+import{i as e,r as t}from"./monaco-vscode-extensions-service-override-CLf23cy0.js";import{S as n}from"./extensions-B6QQ13vA.js";n(),e();export{t as default};

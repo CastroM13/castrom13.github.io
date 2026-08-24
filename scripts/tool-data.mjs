@@ -1,3 +1,5 @@
+import { suiteTools } from './suite-tool-data.mjs';
+
 export const originalTools = [
   {
     index: '01',
@@ -236,6 +238,8 @@ export const newTools = [
     }
   }
 ];
+
+newTools.push(...suiteTools);
 
 export const allTools = [...originalTools, ...newTools];
 export const toolRoutes = allTools.flatMap((tool) => [tool.paths.en, tool.paths.pt]);

@@ -87,6 +87,41 @@ matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', () => {
   }
 });
 
-if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+if ('serviceWorker' in navigator && navigator.serviceWorker.controller?.scriptURL?.endsWith('/sw.js')) {
   navigator.serviceWorker.register('/sw.js').catch(() => {});
+}
+
+const toolFilter = document.querySelector('[data-tool-filter]');
+if (toolFilter) {
+  const search = toolFilter.querySelector('[data-tool-search]');
+  const category = toolFilter.querySelector('[data-tool-category]');
+  const count = toolFilter.querySelector('[data-tool-count]');
+  const cards = [...document.querySelectorAll('[data-tool-card]')];
+  const normalize = (value) => String(value || '').normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLocaleLowerCase();
+  const update = () => {
+    const term = normalize(search.value).trim();
+    const selectedCategory = category.value;
+    const visibleCards = [];
+    for (const card of cards) {
+      const matchesText = !term || normalize(card.textContent).includes(term);
+      const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
+      card.hidden = !(matchesText && matchesCategory);
+      card.removeAttribute('data-grid-column-end');
+      card.removeAttribute('data-grid-last-row');
+      card.removeAttribute('data-grid-last');
+      if (!card.hidden) visibleCards.push(card);
+    }
+    const lastRowSize = visibleCards.length % 3 || Math.min(3, visibleCards.length);
+    const lastRowStart = Math.max(0, visibleCards.length - lastRowSize);
+    visibleCards.forEach((card, index) => {
+      card.toggleAttribute('data-grid-column-end', (index + 1) % 3 === 0);
+      card.toggleAttribute('data-grid-last-row', index >= lastRowStart);
+      card.toggleAttribute('data-grid-last', index === visibleCards.length - 1);
+    });
+    count.textContent = (count.dataset.template || '{count} tools shown').replace('{count}', String(visibleCards.length));
+  };
+  toolFilter.addEventListener('input', update);
+  toolFilter.addEventListener('change', update);
+  toolFilter.addEventListener('reset', () => requestAnimationFrame(update));
+  update();
 }

@@ -1,0 +1,1 @@
+var e=`editor.semanticHighlighting`;function t(t,n,r){let i=r.getValue(e,{overrideIdentifier:t.getLanguageId(),resource:t.uri})?.enabled;return typeof i==`boolean`?i:n.getColorTheme().semanticHighlighting}export{t as n,e as t};

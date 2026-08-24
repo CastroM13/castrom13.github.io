@@ -1,0 +1,1 @@
+var e=``+new URL(`worker-iioT7TnD.js`,import.meta.url).href;export{e as default};

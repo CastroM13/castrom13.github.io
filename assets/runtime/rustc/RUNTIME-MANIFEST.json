@@ -1,0 +1,56 @@
+{
+  "format": "castrom13-rustc-runtime",
+  "version": 1,
+  "upstream": {
+    "name": "Rubrc",
+    "repository": "https://github.com/oligamiq/rubrc",
+    "commit": "807ace9e9cf266b1b1004372abdefc2152785d69",
+    "license": "MIT OR Apache-2.0"
+  },
+  "target": "wasm32-wasip1",
+  "networkPolicy": "same-origin-only",
+  "sourceTransfer": {
+    "storage": "sessionStorage",
+    "key": "m13-rust-source",
+    "maximumCharacters": 1048576
+  },
+  "shell": {
+    "path": "index.html",
+    "sha256": "7f108cd762b598dbf40b62ccd026da478c2d36b3413c2ac61d25050dba577318",
+    "contentSecurityPolicy": "same-origin assets and connections only"
+  },
+  "compiler": {
+    "manifest": "assets/vfs.core-CykZ8ju5.wasm.br.json",
+    "originalBytes": 450111306,
+    "compressedBytes": 56243853,
+    "parts": [
+      {
+        "path": "assets/vfs.core-CykZ8ju5.wasm.br.part-000",
+        "bytes": 25165824,
+        "sha256": "6317a83987e6f206f633060b428b7e3761fcc960d4f86bd4d6907c37efb7a3e0"
+      },
+      {
+        "path": "assets/vfs.core-CykZ8ju5.wasm.br.part-001",
+        "bytes": 25165824,
+        "sha256": "ece21ad96be94cada3fa65adbce8a371980c8cbb31006ee92e876ff4029182f4"
+      },
+      {
+        "path": "assets/vfs.core-CykZ8ju5.wasm.br.part-002",
+        "bytes": 5912205,
+        "sha256": "b830d6489a7ba5713fe7f2780dc6dfb8d9ae6c899bdb7f6e5eca0db9a921f94c"
+      }
+    ]
+  },
+  "sysroot": {
+    "path": "sysroot/wasm32-wasip1.tar.bin",
+    "source": "https://oligamiq.github.io/rust_wasm/v0.2.0/wasm32-wasip1.tar.br",
+    "bytes": 18940938,
+    "sha256": "5c579477e831574ce3fa6abddaa1b9c29543625cd961b298883b5bdeed4191cd"
+  },
+  "localChanges": [
+    "Read an optional bounded source fixture from sessionStorage.",
+    "Load the WASI sysroot from this same-origin runtime directory.",
+    "Disable the external crates proxy and restrict the workspace CSP to same-origin connections.",
+    "Serve the pre-compressed sysroot with a neutral extension to prevent accidental HTTP content decoding."
+  ]
+}
